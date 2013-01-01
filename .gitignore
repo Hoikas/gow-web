@@ -11,7 +11,7 @@ forum/store/*.zip
 forum/store/mods
 
 # GoW Forum Theme -- we have a less cluttered repo for this
-forum/styles/writers
+forum/styles/gow-forum-theme
 
 # Dear God, DO NOT TOUCH THE ATTACHMENTS OR USER AVATARS
 # I nearly died when git deleted them all at 2am on 1.1.13
