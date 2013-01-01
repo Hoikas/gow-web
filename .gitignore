@@ -2,8 +2,14 @@
 site/ds-config.ini.php
 forum/config.php
 
-# Junk phpBB Backups Litters
+# Junk phpBB Litters around the joint
+forum/cache
 *.bak
 
 # GoW Forum Theme -- we have a less cluttered repo for this
 forum/styles/writers
+
+# Dear God, DO NOT TOUCH THE ATTACHMENTS OR USER AVATARS
+# I nearly died when git deleted them all at 2am on 1.1.13
+forum/files
+forum/images/avatars/upload
