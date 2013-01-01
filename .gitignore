@@ -1,3 +1,7 @@
 # Private Configuration (stuff with passwords, etc)
 site/ds-config.ini.php
 forum/config.php
+
+# Automod Junk
+forum/store/*.zip
+forum/store/mods
