@@ -1,0 +1,440 @@
+<html><head><title>CC - Chat with Brice Tebbs</title></head><body style="font-family: Arial; font-size: 10pt; background-color: black;"><span style="color: white;"><span style="font-weight: bold; color: lime;">/////</span> <span style="color: gold;">[Brice]</span> &lt;links in from somewhere on the internet Age&gt; <span style="font-weight: bold; color: lime;">\\\\\</span></span><br />
+<span style="color: white;">[Paradox] Also, if you're running it on your test server, can you check the "Reverse" option to see if that works?</span><br />
+<span style="color: white;">[Nadnerb] ok...</span><br />
+<span style="color: white;">[Paradox] Leh &gt; My CyanChat client</span><br />
+<span style="color: white;">[Paradox] hello Brice :D</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> hi</span><br />
+<span style="color: white;">[Nadnerb] um. where and what is the "reverse" option?</span><br />
+<span style="color: white;">[Paradox] Options-&gt;Client Options The last checkbox ("Messages appear at top")</span><br />
+<span style="color: white;">[Nadnerb] ah</span><br />
+<span style="color: white;">[Nadnerb] ok.. unchecked the box, and restarted.. no change.</span><br />
+<span style="color: white;">[Paradox] oh... 'k</span><br />
+<span style="color: white;">[Paradox] I suppose it always helps when you actually use the bool at a later point &gt;.&gt;</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> it depends on whether or not you are trying to actually fix something or just make people feel better</span><br />
+<span style="color: white;">[Nadnerb] heh.</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> the plamsa tools for model creation had a check box titled "Double Frame Rate" it didnt do anything</span><br />
+<span style="color: white;">[Nadnerb] never checked for that option?</span><br />
+<span style="color: white;">[Paradox] lol</span><br />
+<span style="color: white;">[Paradox] Nad &gt; nope, I hate having message appear at the bottom &gt;.&gt;</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> mf was the funniest graphics genius around</span><br />
+<span style="color: white;">[Paradox] Brice &gt; I only realized a last week that Plasma supports bumpmaps :P</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i dont think they were used much in uru</span><br />
+<span style="color: white;">[Nadnerb] kemo and ahnonnay.</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> hmm</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> kemo? are you sure</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;">[Paradox] That's where I noticed them, on the path and the railings</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> oh right</span><br />
+<span style="color: white;">[Nadnerb] aye, the walkway.. watch it in a thuderstorm..</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> yes you are correct</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> wow its been a while</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> actually its coming back to me. Mf got to have alot of input on the creation of kemo</span><br />
+<span style="color: white;">[Paradox] Mf?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> thats why alot of the lighting effect is so nice in there</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> mark finch</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> he did all the graphics code in plasma back in the day</span><br />
+<span style="color: white;">[Paradox] ah</span><br />
+<span style="color: white;">[Nadnerb] ahh.</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> scary smart</span><br />
+<span style="color: white;">[Nadnerb] mm. he came up with the water effect, right?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> yes</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> it was published in graphics gems</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> he also created the keyed object system</span><br />
+<span style="color: white;">[Paradox] wow</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> iirc</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> moose was the network lead</span><br />
+<span style="color: white;">[Paradox] Keyed Object system is what makes Plasma so cool (from my perspective)</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> mark was the defacto client lead</span><br />
+<span style="color: white;">[Paradox] ah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> the whole keyed object messaging thing was cool. but sometimes it made things hard to debug</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;">[Paradox] Plasma has an insane amount of messages -_-</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> yes</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> some parts are better designed than others</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> overall it came out ok</span><br />
+<span style="color: white;">[Paradox] Worse still, those MsgReceive functions in each class &gt;.&gt; (sure, let's just handle half of Plasma's messaging system in one function)</span><br />
+<span style="color: white;">[Paradox] Yeah, it's a great engine</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> it does a good job of taking a soup of non optimal data and rendering it well</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> im not really happy with how the physics/avatar came out</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but i guess you learn from experience</span><br />
+<span style="color: white;">[Paradox] I assure you, Havok was ten times better than what they've got right now</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> not that im ever likely to do a game engine again</span><br />
+<span style="color: white;">[Paradox] heh</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> Its not an issue of havok vs. ODE vs. PhysX</span><br />
+<span style="color: white;">[Paradox] ah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> its more about how they are integrated</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> Havok is really good</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but you still feel through the floor in uru</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> and garrison was still a nightmare</span><br />
+<span style="color: white;">[Paradox] heh</span><br />
+<span style="color: white;">[Paradox] Garrison is a nightmare in a lot of ways :P</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i am not a believer in physics based gameplay anyway</span><br />
+<span style="color: white;">[Nadnerb] subworld city!</span><br />
+<span style="color: white;">[Nadnerb] ahh gahreesen..</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> the subworld concept was a late add so that things could work at all</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> mostly it was for elevators</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> personally i think Garrison would have worked better if we didnt try to use "physics" and did a much simpler model</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> more like a platformer</span><br />
+<span style="color: white;">[Lehsa] Hi Brice</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> hi</span><br />
+<span style="color: white;">[Lehsa] How goes it?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> good</span><br />
+<span style="color: white;">[Lehsa] :D</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> But like i said Im not a fan of physics gameplay</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> some shooters have done well with it</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but i dont think it fits with uru</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;">[Nadnerb] well... I don't really know if gahreesen really counts as "physics" gameplay..</span><br />
+<span style="color: white;">[Nadnerb] that's more like.. Gira</span><br />
+<span style="color: white;">[Paradox] The fish nets in Gira were always a pain, and Teledahn was bad too</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> yes</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but its all part of the same thing</span><br />
+<span style="color: white;">[Nadnerb] walk on ze baskets without letting them move, kick the rocks around, if you can...</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> You have to make a decision about what your "model" is for how the player moves and interacts with the world</span><br />
+<span style="color: white;">[Nadnerb] gahreesen, on the other hand, had no free moving objects that were essential to gameplay</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> if you want a physical simulation then you kind of have to have it</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> the bridges were essentially that</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> jumping onto them at the right time</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> was all done with sim</span><br />
+<span style="color: white;">[Nadnerb] well.. it was done with subworlds... which are more of a graphics trick than a physics one.</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> actually iirc the subworlds were a physics hack</span><br />
+<span style="color: white;">[Nadnerb] though, the way it's implemented is not .. optimal. &lt;.&lt;</span><br />
+<span style="color: white;">[Nadnerb] it shouldn't be.</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> depends on what you think they are for</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> the idea was when you are in a moving space you are in a subworld for that space which is Not moving</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> so the physics thinks you are still</span><br />
+<span style="color: white;">[Nadnerb] subworlds would be areas that are static..</span><br />
+<span style="color: white;">[Nadnerb] yes</span><br />
+<span style="color: white;">[Nadnerb] exactly</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> so often the avie has to move between subworlds</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> sometimes with limited success....</span><br />
+<span style="color: white;">[Nadnerb] and when you shift subworlds, it warps you to the equivalent spot in another area.</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> y</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> its hard to remember this stuff...</span><br />
+<span style="color: white;">[Nadnerb] it's a graphics hack because of the way they're drawn on top of each other.</span><br />
+<span style="color: white;">[Nadnerb] when the physics engine doesn't see anything moving..</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i guess but if it were not for physics they would not exist</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> you can decide which one is doing the hack i guess :)</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> I would be surprisde tho if the word subworld appears in the graphics code</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> it really should only care about nodes with transforms with animations</span><br />
+<span style="color: white;">[Paradox] The subworld is essentially present so that a "moving" location such as Gahreesen's inside, can exist as a "static", non-moving space</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> yes</span><br />
+<span style="color: white;">[Paradox] Was there any reason that the interior couldn't just rotate?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> aslo iirc you can specify a list of things that are included in each subworld</span><br />
+<span style="color: white;">[Nadnerb] right.</span><br />
+<span style="color: white;">[Nadnerb] and everything that is in the same subworld you are exists, and everything else... doesn't.</span><br />
+<span style="color: white;">[Paradox] basically</span><br />
+<span style="color: white;">[Nadnerb] which causes problems when they intersect.</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> we had trouble (again iirc) with the avie sitting on a rotating object that was really rotating. Force would get imparted to the avie</span><br />
+<span style="color: white;">[Nadnerb] like markers</span><br />
+<span style="color: white;">[Paradox] ah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> we did the sw's initially i think for elevators for a similar reason</span><br />
+<span style="color: white;">[Paradox] Nad &gt; that's partly the DrawableSpans stuff and rendering order</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i have not heard the phrase drawablespan in a long time....</span><br />
+<span style="color: white;">[Nadnerb] subworlds are entirely rendering order. all parts of the subworld get drawn with the same, extra, transformation.</span><br />
+<span style="color: white;">[Paradox] lol I hear it on an hourly basis :P</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> Did you guys ever get any code?</span><br />
+<span style="color: white;">[Paradox] erm, not C++ code that was written by you</span><br />
+<span style="color: white;">[Paradox] We have all of the ASM</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i thought they might have released some of it</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> asm with symbols?</span><br />
+<span style="color: white;">[Paradox] uhm, we got a pdb for one of the early Live builds</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> heh</span><br />
+<span style="color: white;">[Paradox] Nothing from PotS though. The Myst V Mac Demo had all of the function names though</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> heh</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> nice</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> and im sure you have all the python</span><br />
+<span style="color: white;">[Paradox] yep</span><br />
+<span style="color: white;">[Nadnerb] who doesn't.. &lt;.&lt;</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> me</span><br />
+<span style="color: white;">[Paradox] Shortly after Myst V was release (and after we broke the encryption) Colin contacted us, he said that he'd see about getting Mark to release the Myst V engine with some stuff stripped out; but nothing ever came of that</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> So do you guys work mostly with the original uru code, the myst5 code or the new uru code</span><br />
+<span style="color: white;">[Paradox] uhm, The Live code is nearly identical to the PotS code in most aspects, so we've been using the early Live build (with symbols) for most of our work</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> releasing code is hard. there are too many companys and lawyers involved</span><br />
+<span style="color: white;">[Paradox] We use Myst V occaisionally for MV specific stuff, but Myst V is never a high priority</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> When you say Live Code. You mean Uru Live and not MystOnline</span><br />
+<span style="color: white;"><span style="font-weight: bold; color: lime;">/////</span> [Zadok] &lt;links in from somewhere on the internet Age&gt; <span style="font-weight: bold; color: lime;">\\\\\</span></span><br />
+<span style="color: white;">[Zadok] heyoz</span><br />
+<span style="color: white;">[Paradox] I mean Myst Online stuff</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> oh</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i thought it was pretty different from PotS</span><br />
+<span style="color: white;">[Paradox] no surprisingly it isn't; it even keeps the Keyed IDs in the same order</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> my recollection is alot of the net stuff etc was redone for MOUL</span><br />
+<span style="color: white;">[Paradox] Net stuff is all redone, but we've never really looked into the Net stuff much (aside from the people working on Alcugs)</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> didnt they change the securiy some about how the python worked as well?</span><br />
+<span style="color: white;">[Paradox] yep, packed, encrypted, stored as a locked temp file and deleted when UruExplorer is shut down</span><br />
+<span style="color: white;">[Paradox] same with the SDL stuff</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> SDL was moose and the net guys</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> sorry im just playing memory lane</span><br />
+<span style="color: white;">[Paradox] and they got rid of the /To_Dni switch that I used in Beta to by-pass the patcher &gt;.&gt;</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> So other than fun. What is the goal of your project</span><br />
+<span style="color: white;">[Paradox] Someone at Cyan decided that it would be a good idea to implement some of the old D'ni Guilds in MOUL (Myst Online Uru Live), so our tool is meant to allow people to create Ages and edit the flags on certain object types</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> how will these ages get published?</span><br />
+<span style="color: white;">[Paradox] hopefully through Cyan; but if necessary, we'll distribute PotS versions offline</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> hmm</span><br />
+<span style="color: white;">[Paradox] Alcugs already has a plugin for Blender that works with PotS for Age Creation</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> cyan already has plugins for max</span><br />
+<span style="color: white;">[Paradox] yeah, but Blender is free ;)</span><br />
+<span style="color: white;">[Nadnerb] and cyan doesn't go distributing their plugins.</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> well if cyan wants people to make ages why wouldnt they</span><br />
+<span style="color: white;">[Paradox] Too much proprietary code?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i will not comment on whether or not max is free</span><br />
+<span style="color: white;">[GermanShepherd] we don't exactly know WHAT the guilds are for... nobody's told you that, yet ;)</span><br />
+<span style="color: white;">[Paradox] Brice &gt; Oh, Max can be acquired... but I don't think Cyan wants to encourage that sort of behaviour :P</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> well the plugins in binary can't be more code than the app in binary</span><br />
+<span style="color: white;">[Paradox] No one has had any luck getting any sort of information out of Cyan</span><br />
+<span style="color: white;">[Lehsa] Duh</span><br />
+<span style="color: white;">[Lehsa] they have Mr Watson as a good example of "yes..." No" LOL</span><br />
+<span style="color: white;">[Lehsa] maybe</span><br />
+<span style="color: white;">[Lehsa] ;)</span><br />
+<span style="color: white;">[Lehsa] loose lips sink games</span><br />
+<span style="color: white;">[Paradox] Also, Brice, I'm not sure how artist-intensive Cyan's plugins are</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> as in?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> do you know anything about how they work?</span><br />
+<span style="color: white;">[Paradox] Not really :P</span><br />
+<span style="color: white;">[Paradox] But I imagine that Jane Doe couldn't just stretch something out in Max and export it and have it work properly</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> you might be surprised</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> Basically the plugins give you tools to annotate a max model</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> and then you just export</span><br />
+<span style="color: white;">[Paradox] Ah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> there are a few things to get right etc</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but its not out of reach of someone who can use max</span><br />
+<span style="color: white;">[Paradox] I can't imagine how all of those flags can be presented in a user-friendly version all at once though</span><br />
+<span style="color: white;">[Paradox] unless more of them are built into Max than I thought</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> well at least along time ago. the plugins made them mostly seem built into max</span><br />
+<span style="color: white;">[Paradox] wow</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> plamsa defines its own material plugin for max</span><br />
+<span style="color: white;">[Paradox] Ah, that makes sense</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> so all the graphics attributes are selectedin there</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> and then there are lots of other "components" which hang on the max objects for doing other annotations like subworlds, rendering regions etc</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but things like layer blending etc. are in the max material mostly</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> basically it means plasma has its own objects in the .max file</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> which is good and bad</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> presto studios used a different approach</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> the did all of thier annotation with guis done in maxscript</span><br />
+<span style="color: white;">[Paradox] ah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> and then just had a single annotation function ( a maxscript plugin) that let you assign name value pairs to the objects</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> max has something like that built in now</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> cyans approach was good in that the objects(components) could be smarter. They were kind of first class max objects on thier own and could connect to other things etc</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but it means the max file is more fragile</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;">[Paradox] Was there any post-export work done on the PRP files?</span><br />
+<span style="color: white;">[Paradox] (adding PythonFileMods, Sounds, ResponderModifiers, etc?)</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> the expoter itself did some sortings and other optimization</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but then the prp was done</span><br />
+<span style="color: white;">[Paradox] How did Max handled the messages?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> pythonmods, responders, sounds etc. ALL are in the MAX file</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> everything</span><br />
+<span style="color: white;">[Paradox] o.o</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> it is literally 1 step from max to engine</span><br />
+<span style="color: white;">[Paradox] That sounds like its either a stroke of brilliance or a disaster waiting to happen</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> that was the way we did it from the begginning at headspin</span><br />
+<span style="color: white;">[Paradox] ah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> its different i think that most other people</span><br />
+<span style="color: yellow;">** David is back *</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> most people use max to make models</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;">[Paradox] wb David</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> then a Build process collates everything</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but for uru</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> Max is the build process</span><br />
+<span style="color: white;">[Paradox] cool</span><br />
+<span style="color: white;">[David] which version are you guys using now? 7?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> to build uru we had a script which would load max and then have max load the .max file and then export it</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> all this ran in batch</span><br />
+<span style="color: white;">[David] I remember they were using 4 during RealMyst when I was there</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> it took about 4 hours iirc</span><br />
+<span style="color: white;">[Paradox] The only way that we could do that with Blender would be to fork a development branch and hack it to pieces by adding all of Plasma's types to it</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i dont know what version they use now</span><br />
+<span style="color: white;">[Paradox] David &gt; I think they're on 8</span><br />
+<span style="color: white;">[David] ah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> at times we had versions of plasma that ran directly in max</span><br />
+<span style="color: white;">[David] bleh, blender</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but it was pretty unstable</span><br />
+<span style="color: white;">[Paradox] ah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> the thing is process determines how things come out to some degree</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> most shooters (historically anyway) were made using a building block approach</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> level designers imported models done by artists and layed them out</span><br />
+<span style="color: white;">[MC] [Simon_Bitdiddle] *looks up, bleary eyed at unb0rking his mailbox.*</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> in uru the worlds are hand built custom</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> so they don't "look like a game level"</span><br />
+<span style="color: white;">[Paradox] yeah... custom everything</span><br />
+<span style="color: white;">[David] which is basically how Halo builds it's levels instead of how Unreal builds its levels</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> its cool</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but more expensive</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> halo does not I suspect have budget issues</span><br />
+<span style="color: white;">[David] definitely</span><br />
+<span style="color: white;">[David] but they do build the levels in max and then add items and scripting in a seperate editor</span><br />
+<span style="color: white;">[David] as opposed to Unreal engine 2 and beyond which use artist built blocks</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> yeah thats becomeing more common since the geometries are getting more complex</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i think we were doing it before anyone els</span><br />
+<span style="color: white;">[David] yeah, definitely</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> like 97 heh</span><br />
+<span style="color: white;">[Paradox] Random question: Are you responsible for the variable "keyToReadInAndThrowAwaySoJustLiveWithIt" in plRegistryPageNode?</span><br />
+<span style="color: white;">[David] yeah, which makes it contemporary with pre T&amp;L accelerated engines like Quake 3</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> para no</span><br />
+<span style="color: white;">[Paradox] oh :\\</span><br />
+<span style="color: white;">[Paradox] I love that variable, even if it breaks all coding standards :P</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> sounds like chris purvis but i can't be sure</span><br />
+<span style="color: white;">[Paradox] Is anyone from HeadSpin still working with Cyan?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> are you sure QIII was pre tnL david?</span><br />
+<span style="color: white;">[David] yup</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> there is one remaining headspinner</span><br />
+<span style="color: white;">[David] it was one of the last pre- TnL engines</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> Austin</span><br />
+<span style="color: white;">[Paradox] ah</span><br />
+<span style="color: white;">[David] I think it got a patch that moved some of the pipeline to TnL for a bit of speed improvement but it wasn't designed around an acceleratable architecture like Unreal Engine 2 was with precompiled components that could be quickly fed through TnL as a pointlist</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> "3-D Hardware Accelerator with full OpenGL support" from the sys reqs</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> my fav hack in uru is the "adder" hack</span><br />
+<span style="color: white;">[Paradox] eh?</span><br />
+<span style="color: white;">[Nadnerb] what'sat?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> very late in dev (very late) we changed how the ui works when you are on a ladder</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i forget the details but it was something about how the mouse effected your movement if you were more or less than half way up the ladder</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> well</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> it was too hard create a new "ladder" modifier and go in and add it to all the ladders</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> so</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> we put in a hack in the standard oneshot contol mod</span><br />
+<span style="color: white;">[Paradox] hehe</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> where if you were on a ladder it worked one way</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> if not it worked another way</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but the way it decided this</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> is too check for the string "adder" in the keyname</span><br />
+<span style="color: white;">[Paradox] lol</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> We left off the L so we didnt have to worry about case</span><br />
+<span style="color: yellow;">** Paradox fires up HuruStudio to look for "adder" objects *</span><br />
+<span style="color: white;">[David] nice hack</span><br />
+<span style="color: white;">[Paradox] So.. uhm, what would happen if I named a non-ladder "adder"?</span><br />
+<span style="color: white;"><span style="font-weight: bold; color: lime;">\\\\\</span> [Xanos] &lt;mistakenly used an unsafe linking book without a maintainer's suit *ZZZZZWHAP*&gt; <span style="font-weight: bold; color: lime;">/////</span></span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i often wonder if the sting "adder" still appears</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> bad things would happen</span><br />
+<span style="color: white;">[Paradox] Oooh</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but the hack is hopefully long gone by now</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> this was done to ship uru single player on time</span><br />
+<span style="color: white;">[Paradox] It should still be in PotS though :P</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> maybe</span><br />
+<span style="color: white;">[David] I'd love to get ahold of the Plasma 1 tools for Max, realmyst was pretty</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> the plasma 1 tools were simpler</span><br />
+<span style="color: white;">[David] I remember Og showing off some portal culling or something in stoneship back at first Mysterium</span><br />
+<span style="color: white;">[David] the door into the light house was a clipping portal I think</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> in plamsa 1 we started off just typing in flags in the Freetext field that max gives you for each object</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> that worked for the programmers</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but edog couldnt spell</span><br />
+<span style="color: white;">[Paradox] lol</span><br />
+<span style="color: white;">[David] yeah, I remember a lot of people use to use that</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> so we made a plugin for max called "plasmatagger" or something</span><br />
+<span style="color: white;">[David] maxscript?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> which had a zillion checkboxes and then set the values</span><br />
+<span style="color: white;">[David] nice</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> maxscript would have worked too</span><br />
+<span style="color: white;">[Paradox] :P</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but we already knew how to do c++ in max for the exporter</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> and no one new maxscript</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> and maxscript was less cool back then i think as well</span><br />
+<span style="color: white;">[David] yeah, as long as I've been using Max I've still never gotten around to learning Max script</span><br />
+<span style="color: white;">[David] yeah, it wasn't really useful till R5 or 6</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> the first time i saw what all you could do with maxscript and GUI was at presto</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i was impressed</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> that was when they were doing exile</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> dont remember the year</span><br />
+<span style="color: white;">[David] 99 or 200 wasn't it?</span><br />
+<span style="color: white;">[David] *2000</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> if you say so. I am bad at remmebering this kind of stuff</span><br />
+<span style="color: white;">[David] the guy showing of how J'Nanin's rock cliffs were made in the making of video taught the Max master class on normal mapping a year or two ago</span><br />
+<span style="color: white;">[David] I was watching the video ofit trying to figure out why he looked vaguely familiar</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> they had some good people</span><br />
+<span style="color: white;">[David] yeah</span><br />
+<span style="color: white;">[Paradox] Hey! "adder" (as a string) is used in plMultiStageBehMod::MsgReceive() :D</span><br />
+<span style="color: white;">[David] shame they crashed</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> that would be the one</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> they quit more than crashed afaik</span><br />
+<span style="color: white;">[David] I miss the adventure friendly market of the early 90's</span><br />
+<span style="color: white;">[David] ah</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> para in what version?</span><br />
+<span style="color: white;">[Paradox] MOUL Build 2</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> high end graphics is killing videogames</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> para how recent is that</span><br />
+<span style="color: white;">[David] yeah, production requirements are getting out of hand</span><br />
+<span style="color: white;">[Paradox] Last december</span><br />
+<span style="color: white;">[David] can do some insanely nice things but it takes way too much effort</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> yep</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> last dec. then its probably still in there</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> lol</span><br />
+<span style="color: white;">[Paradox] heh</span><br />
+<span style="color: white;">[David] probably noone knows it's there...</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> that was done at 2am maybe 4am a long time ago</span><br />
+<span style="color: white;">[Paradox] yes, it's also in the most recent build :P</span><br />
+<span style="color: white;">[David] so where are you working these days brice?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i made chris put it in cause i knew most of the other coders would balk at such a shamelss hack</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i do contract work out of my house</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> worked on gametap for a while</span><br />
+<span style="color: white;">[David] nice</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> now im doing web dev</span><br />
+<span style="color: white;">[David] been trying to get into that for graphics</span><br />
+<span style="color: white;">[Paradox] cool</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> i like programming again</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> sometimes I miss having people to boss around tho</span><br />
+<span style="color: white;">[David] yeah, programming's nice</span><br />
+<span style="color: white;">[David] my art skills don't seem to be ever getting to where I want them to be so I've been drifting back into programming again</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> they are both hard</span><br />
+<span style="color: white;">[David] started picking up SQL since c++ doesn't seem to be as hot as it used to be</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> javascript is the future</span><br />
+<span style="color: white;">[David] yeah, I'm doing PHP/SQL JS and HTML/CSS</span><br />
+<span style="color: white;">[David] anyways, wife's yelling at me, gotta run</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> cya</span><br />
+<span style="color: white;">[Paradox] cya</span><br />
+<span style="color: white;">[Nadnerb] cya</span><br />
+<span style="color: white;">[David] might be back later if she passes out</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> css just makes me want to hurt people</span><br />
+<span style="color: white;">[Paradox] :\\</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> im going to have to give markd a hard time about adder being in the code still. But then I was the one that put it there</span><br />
+<span style="color: white;">[Paradox] lol</span><br />
+<span style="color: white;">[MC] [Simon_Bitdiddle] Heh.</span><br />
+<span style="color: white;">[Nadnerb] :P</span><br />
+<span style="color: white;">[Paradox] Tell MarkD to release some .pdb files while he's at it :P</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> whats the largest thing made without using cyan tools?</span><br />
+<span style="color: white;">[Paradox] you mean like user-created content?</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> y</span><br />
+<span style="color: white;">[Paradox] Ahra Pahts, without a doubt</span><br />
+<span style="color: white;">[Nadnerb] indeed.</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> what do you have to show your all your decompiling and grepping</span><br />
+<span style="color: white;">[MC] [Simon_Bitdiddle] RSI. :D</span><br />
+<span style="color: white;"><span style="font-weight: bold; color: lime;">\\\\\</span> [Dalken Starbyne] &lt;links safely back to their home Age&gt; <span style="font-weight: bold; color: lime;">/////</span></span><br />
+<span style="color: white;">[Nadnerb] there are some weeird sounds in here...</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> screenies?</span><br />
+<span style="color: white;">[Paradox] http://www.didanka.com/huru/City/SSCity7_04.jpg - Running in Plasma 2.0 (Build 63.12)</span><br />
+<span style="color: white;">[Paradox] (with the Python hack flymode)</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> that is big</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> is that blender</span><br />
+<span style="color: white;">[Paradox] yeah, it's supposed to be a community project</span><br />
+<span style="color: white;">[Paradox] yeah</span><br />
+<span style="color: white;">[Nadnerb] hmm. that's a pretty old pic</span><br />
+<span style="color: white;">[Paradox] Each of those triangles is a "shell" and each shell could be reserved by someone who could build something in there</span><br />
+<span style="color: white;">[Paradox] Nad &gt; That was the best overview one I could find with a quick search of AB</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> its like second life with a decent renderer</span><br />
+<span style="color: white;">[Paradox] http://www.bergen-hill.com/rtr/LinkTest01/prinpahts_09.jpg - Part of an Ahra Pahts "Nexus" running in Plasma</span><br />
+<span style="color: white;">[MC] [Simon_Bitdiddle] I still wonder what that'd be like after a few cycles of development...</span><br />
+<span style="color: white;">[Nadnerb] Tweek's panorama. Ground level: http://beneath.dnijazzclub.com/photos/albums/panorama/ahra-pahts-pano.jpg</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> so is the focus more on rendering ccyan models with user made code or making model for cyan code</span><br />
+<span style="color: white;">[Paradox] making models with Cyan formats and code</span><br />
+<span style="color: white;">[Paradox] Adding our own content to Uru</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> sounds like fun</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> but so does sleep right now</span><br />
+<span style="color: white;">[Paradox] it is ^_^</span><br />
+<span style="color: white;">[Paradox] heh</span><br />
+<span style="color: white;">[Nadnerb] prinpahts full view: http://www.bergen-hill.com/rtr/LinkTest01/prinpahts_08.jpg</span><br />
+<span style="color: white;">[MC] [Simon_Bitdiddle] *ponders creating a kinetic sculpture in Uru...*</span><br />
+<span style="color: white;">[MC] [Simon_Bitdiddle] After all, there's a pretty hefty physics engine involved...</span><br />
+<span style="color: white;"><span style="color: gold;">[Brice]</span> nite all</span><br />
+<span style="color: white;">[Nadnerb] g'night</span><br />
+<span style="color: white;">[Paradox] cya Brice</span><br />
+<span style="color: white;">[MC] [Simon_Bitdiddle] Night, Brice.</span><br />
+<span style="color: yellow;">** Nadnerb wonders how well a chain would work *</span><br />
+<span style="color: white;"> <span style="font-weight: bold; color: lime;">\\\\\</span> <span style="color: gold;">[Brice]</span> &lt;links safely back to their home Age&gt; <span style="font-weight: bold; color: lime;">/////</span></span><br />
+</body></html>
