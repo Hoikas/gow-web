@@ -88,7 +88,13 @@ require($phpbb_root_path . 'includes/session.' . $phpEx);
 require($phpbb_root_path . 'includes/auth.' . $phpEx);
 
 require($phpbb_root_path . 'includes/functions.' . $phpEx);
-require($phpbb_root_path . 'includes/functions_content.' . $phpEx);
+
+/* GUILDOFWRITERS.ORG EXTENSION */
+require($phpbb_root_path . 'includes/functions_gow.' . $phpEx);
+if(!defined('IN_WORDPRESS')) {
+	require($phpbb_root_path . 'includes/functions_content.' . $phpEx);
+}
+/* End GUILDOFWRITERS.ORG */
 
 require($phpbb_root_path . 'includes/constants.' . $phpEx);
 require($phpbb_root_path . 'includes/db/' . $dbms . '.' . $phpEx);

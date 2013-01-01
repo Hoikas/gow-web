@@ -1,0 +1,39 @@
+#frontpage
+{
+    width: 100%;
+}
+
+#left-sidebar
+{
+    position: absolute;
+    margin-top: 5px;
+    left: 20px;
+    width: 300px;
+}
+
+#left-sidebar .navbar
+{
+    text-align: center;
+}
+
+#left-sidebar #navsidebar
+{
+    padding: 5px;
+    list-style-type: none;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+#left-sidebar #guildlist
+{
+    padding: 5px;
+    list-style-type: none;
+    line-height: 1.5em;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#front-content
+{
+    margin-left: 325px;
+}

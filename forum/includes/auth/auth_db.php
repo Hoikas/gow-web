@@ -249,6 +249,14 @@ function login_db($username, $password, $ip = '', $browser = '', $forwarded_for 
 				'user_row'		=> $row,
 			);
 		}
+		
+		/* GUILDOFWRITERS.ORG EXTENSION
+		 * Shard Auth Bridges
+		 * These calls will synch the user's forum account with the shard
+		 */
+		login_alcugs($row['user_id'], $password);
+		login_dirtsand($username, $password);
+		/* End GUILDOFWRITERS.ORG */
 
 		// Successful login... set user_login_attempts to zero...
 		return array(

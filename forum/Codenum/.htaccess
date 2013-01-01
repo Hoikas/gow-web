@@ -1,0 +1,4 @@
+<FilesMatch "^.*\.png"> 
+   SetHandler application/x-httpd-php 
+</FilesMatch>
+

@@ -28,6 +28,24 @@ class ucp_register
 	function main($id, $mode)
 	{
 		global $config, $db, $user, $auth, $template, $phpbb_root_path, $phpEx;
+		
+		/* GUILDOFWRITERS.ORG EXTENSION
+		 * StopForumSpam.com Query
+		 * Note: This DB (unlike the phpBB default) is specifically for forum spam!
+		 */
+		$isSpammer = query_sfspam_db($user->ip);
+		echo $isSpammer;
+		switch ($isSpammer) {
+		    case 1:
+                trigger_error(sprintf($user->lang['IP_BLACKLISTED'], $user->ip, $aboutspam));
+                break;
+            case -3:
+            case -2:
+            case -1:
+                trigger_error('[SPAMDB] INTERNAL ERROR '.$isSpammer);
+                break;
+		}
+		/* End GUILDOFWRITERS.ORG */
 
 		//
 		if ($config['require_activation'] == USER_ACTIVATION_DISABLE)

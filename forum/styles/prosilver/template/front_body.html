@@ -1,0 +1,37 @@
+<!-- INCLUDE front_header.html -->
+
+ <!--   <div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		    <strong>GUILD ANNOUNCEMENTS</strong>
+		<span class="corners-bottom"><span></span></span></div>
+	</div> -->
+	
+<!-- BEGIN globalnews -->
+	<div class="post bg2">
+        <div class="inner"><span class="corners-top"><span></span></span>
+            <div class="postbody">
+                <h3><a href="{globalnews.U_VIEW_TOPIC}">{globalnews.POST_SUBJECT}</a></h3>
+                <p class="author">{globalnews.MINI_POST_IMG} {L_POST_BY_AUTHOR} <strong>{globalnews.POST_AUTHOR_FULL}</strong> {L_POSTED_ON_DATE} {globalnews.POST_DATE} </p>
+                
+                <div class="content">{globalnews.POST_CONTENT}</div>
+
+            </div>
+            
+            <dl class="postprofile" id="profile{globalnews.POST_ID}">
+			<dt>
+			    <strong>{globalnews.POST_AUTHOR_FULL}</strong>
+			    
+<!-- IF globalnews.RANK_TITLE -->
+                <dd>{globalnews.RANK_TITLE}</dd>
+<!-- ENDIF -->
+			    <br /><br />
+<!-- IF globalnews.POSTER_AVATAR -->
+				{globalnews.POSTER_AVATAR}<br />
+<!-- ENDIF -->
+			</dt>
+			</dl>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- END globalnews -->
+
+<!-- INCLUDE front_footer.html -->

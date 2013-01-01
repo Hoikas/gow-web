@@ -1,0 +1,44 @@
+<!-- INCLUDE front_header.html -->
+
+    <div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		    <strong>GUILD COUNCILORS</strong>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	
+<!-- BEGIN councilors -->
+	<div class="post bg2">
+        <div class="inner"><span class="corners-top"><span></span></span>
+            <div class="postbody">
+                <br /><br />
+                <dl class="details">
+                    <dt>{L_JOINED}:</dt> <dd>{councilors.JOINED}</dd>
+                    <dt>{L_VISITED}:</dt> <dd>{councilors.VISITED}</dd>
+                    <dt>{L_TOTAL_POSTS}:</dt> <dd>{councilors.POSTS}</dd>
+<!-- IF councilors.LOCATION -->
+                    <dt>{L_LOCATION}:</dt> <dd>{councilors.LOCATION}</dd>
+<!-- ENDIF -->
+<!-- IF councilors.U_PM -->
+                    <dt>{L_PM}:</dt> <dd><a href="{councilors.U_PM}">{L_SEND_PRIVATE_MESSAGE}</a></dd>
+<!-- ENDIF -->
+                </dl>
+            </div>
+            
+            <dl class="postprofile" id="profile{councilors.USER_ID}">
+			<dt>
+			    <strong>{councilors.USERNAME_FULL}</strong>
+			    
+<!-- IF councilors.RANK_TITLE -->
+                <dd>{councilors.RANK_TITLE}</dd>
+<!-- ENDIF -->
+			    <br /><br />
+<!-- IF councilors.USER_AVATAR -->
+				{councilors.USER_AVATAR}<br />
+<!-- ENDIF -->
+			</dt>
+			</dl>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- END councilors -->
+
+<!-- INCLUDE front_footer.html -->

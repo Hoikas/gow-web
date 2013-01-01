@@ -1,3 +1,9 @@
 # Private Configuration (stuff with passwords, etc)
 site/ds-config.ini.php
 forum/config.php
+
+# Junk phpBB Backups Litters
+*.bak
+
+# GoW Forum Theme -- we have a less cluttered repo for this
+forum/styles/writers

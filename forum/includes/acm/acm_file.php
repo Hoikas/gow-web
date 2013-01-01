@@ -88,11 +88,11 @@ class acm
 			if (!phpbb_is_writable($this->cache_dir))
 			{
 				// We need to use die() here, because else we may encounter an infinite loop (the message handler calls $cache->unload())
-				die('Fatal: ' . $this->cache_dir . ' is NOT writable.');
+				die($this->cache_dir . ' is NOT writable.');
 				exit;
 			}
 
-			die('Fatal: Not able to open ' . $this->cache_dir . 'data_global.' . $phpEx);
+			die('Not able to open ' . $this->cache_dir . 'data_global.' . $phpEx);
 			exit;
 		}
 

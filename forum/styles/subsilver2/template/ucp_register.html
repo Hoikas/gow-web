@@ -64,7 +64,7 @@
 <!-- IF .profile_fields -->
 	<tr>
 		<td class="row2" colspan="2"><span class="gensmall">{L_ITEMS_REQUIRED}</span></td>
-	</tr>
+</tr>
 <!-- BEGIN profile_fields -->
 	<tr>
 		<td class="row1" width="35%">
@@ -74,13 +74,12 @@
 		</td>
 		<td class="row2">{profile_fields.FIELD}<!-- IF profile_fields.ERROR --><br /><span class="gensmall error">{profile_fields.ERROR}</span><!-- ENDIF --></td>
 	</tr>
-	
 <!-- END profile_fields -->
 <!-- ENDIF -->
 
 		<!-- IF CAPTCHA_TEMPLATE -->
 		<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
-		<!-- ENDIF -->
+<!-- ENDIF -->
 
 <!-- IF S_COPPA -->
 	<tr>

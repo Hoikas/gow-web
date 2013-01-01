@@ -4,7 +4,7 @@
 * acp_permissions [English]
 *
 * @package language
-* @version $Id$
+* @version $Id: permissions.php 10017 2009-08-18 14:37:49Z bantu $
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -50,7 +50,7 @@ $lang = array_merge($lang, array(
 
 		<h2>Permission Masks</h2>
 		<p>These are used to view the effective permissions assigned to Users, Moderators (Local and Global), Administrators or Forums.</p>
-
+	
 		<br />
 
 		<p>For further information on setting up and managing permissions on your phpBB3 board, please see <a href="http://www.phpbb.com/support/documentation/3.0/quickstart/quick_permissions.html">Chapter 1.5 of our Quick Start Guide</a>.</p>
@@ -71,7 +71,7 @@ $lang = array_merge($lang, array(
 	'ACL_TYPE_GLOBAL_M_'	=> 'Global Moderator permissions',
 	'ACL_TYPE_LOCAL_M_'		=> 'Forum Moderator permissions',
 	'ACL_TYPE_LOCAL_F_'		=> 'Forum permissions',
-
+	
 	'ACL_NO'				=> 'No',
 	'ACL_VIEW'				=> 'Viewing permissions',
 	'ACL_VIEW_EXPLAIN'		=> 'Here you can see the effective permissions the user/group is having. A red square indicates that the user/group does not have the permission, a green square indicates that the user/group does have the permission.',
@@ -208,7 +208,7 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_USER_NOPM'			=> 'Has a limited feature set, and is not allowed to use Private Messages.',
 	'ROLE_DESCRIPTION_USER_STANDARD'		=> 'Can access most but not all user features. Cannot change user name or ignore the flood limit, for instance.',
 	'ROLE_DESCRIPTION_USER_NEW_MEMBER'		=> 'A role for members of the special newly registered users group; contains <samp>NEVER</samp> permissions to lock features for new users.',
-
+	
 	'ROLE_DESCRIPTION_EXPLAIN'		=> 'You are able to enter a short explanation of what the role is doing or for what it is meant for. The text you enter here will be displayed within the permissions screens too.',
 	'ROLE_DESCRIPTION_LONG'			=> 'The role description is too long, please limit it to 4000 characters.',
 	'ROLE_DETAILS'					=> 'Role details',
