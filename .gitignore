@@ -6,6 +6,10 @@ forum/config.php
 forum/cache
 *.bak
 
+# Automod Junk
+forum/store/*.zip
+forum/store/mods
+
 # GoW Forum Theme -- we have a less cluttered repo for this
 forum/styles/writers
 
