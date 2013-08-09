@@ -1,5 +1,6 @@
 <?php
 // Node types
+define('kNodePlayer', 2);
 define('kNodePlayerInfo', 23);
 define('kNodeAgeInfo', 33);
 
@@ -15,6 +16,18 @@ function get_avatar_count($pq)
     $count = pg_fetch_result($res, 0, 0);
     pg_free_result($res);
     return $count;
+}
+
+function get_avatar_name($pq, $ki)
+{
+    $res = pg_query($pq, "SELECT \"IString64_1\" FROM vault.\"Nodes\" WHERE idx={$ki} AND \"NodeType\"=".kNodePlayer);
+    if (pg_num_rows($res) > 0) {
+        $name = pg_fetch_result($res, 0, 0);
+    } else {
+        $name = false;
+    }
+    pg_free_result($res);
+    return $name;
 }
 
 function get_lake_score($pq)
