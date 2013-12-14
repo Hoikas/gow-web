@@ -38,17 +38,18 @@ define('kPenHeight', 69);
 define('kPenWidth', 71);
 define('kPenDestX', 10);
 define('kPenDestY', 20);
-define('kShardOffsetX', 100);
-define('kShardOffsetY', 63);
+define('kShardOffsetX', 95);
+define('kShardOffsetY', 68);
 
-define('kFont', '/home/writers/www/site/gehnsigs/courbd.ttf');
-define('kFontSize', 11);
-define('kTextOffsetX', 345);
+define('kHeaderFont', '/home/writers/www/site/gehnsigs/TrajanPro-Bold.otf');
+define('kNormalFont', '/home/writers/www/site/gehnsigs/GARABD.ttf');
+define('kFontSize', 12);
+define('kTextOffsetX', 365);
 define('kNameTextOffsetY', 30);
-define('kPlayerIdTextOffsetY', 45);
+define('kPlayerIdTextOffsetY', 47);
 define('kOnlineCountTextOffsetY', 85);
 
-$choices = array('fehnir', 'hood', 'trebivdil', 'vothol');
+$choices = array('fehnir', 'hood', 'kadish', 'trebivdil', 'vothol');
 $base = -1; // haaaax
 
 if (isset($_GET['style'])) {
@@ -93,7 +94,7 @@ imagedestroy($pen);
 // Draw some basic text
 $white = imagecolorallocate($im, 255, 255, 255);
 $shadow = imagecolorallocatealpha($im, 0, 0, 0, 40);
-draw_shadowed_text($im, 24, kShardOffsetX, kShardOffsetY, $white, $shadow, kFont, 'Gehn Shard');
+draw_shadowed_text($im, 25, kShardOffsetX, kShardOffsetY, $white, $shadow, kHeaderFont, 'Gehn Shard');
 
 // Now do the avatar OR shard stats
 if ($ki !== false) {
@@ -103,16 +104,16 @@ if ($ki !== false) {
     $line1 = "Players: {$numAvatars}";
     $line2 = "Lake: {$lakeScore}";
 }
-draw_shadowed_text($im, kFontSize, kTextOffsetX, kNameTextOffsetY, $white, $shadow, kFont, $line1);
-draw_shadowed_text($im, kFontSize, kTextOffsetX, kPlayerIdTextOffsetY, $white, $shadow, kFont, $line2);
+draw_shadowed_text($im, kFontSize, kTextOffsetX, kNameTextOffsetY, $white, $shadow, kNormalFont, $line1);
+draw_shadowed_text($im, kFontSize, kTextOffsetX, kPlayerIdTextOffsetY, $white, $shadow, kNormalFont, $line2);
 
 // Now do online player count OR offline
 if (ds_running()) {
     $plural = ($online_count != 1) ? "s" : "";
-    draw_shadowed_text($im, kFontSize, kTextOffsetX, kOnlineCountTextOffsetY, $white, $shadow, kFont, "{$online_count} Player{$plural} Online");
+    draw_shadowed_text($im, kFontSize, kTextOffsetX, kOnlineCountTextOffsetY, $white, $shadow, kNormalFont, "{$online_count} Player{$plural} Online");
 } else {
     $red = imagecolorallocate($im, 255, 0, 0);
-    draw_shadowed_text($im, kFontSize + 1, kTextOffsetX, kOnlineCountTextOffsetY, $red, $shadow, kFont, "OFFLINE");
+    draw_shadowed_text($im, kFontSize + 1, kTextOffsetX, kOnlineCountTextOffsetY, $red, $shadow, kNormalFont, "OFFLINE");
 }
 
 // Spit it out!
