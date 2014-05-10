@@ -49,7 +49,7 @@ define('kNameTextOffsetY', 30);
 define('kPlayerIdTextOffsetY', 47);
 define('kOnlineCountTextOffsetY', 85);
 
-$choices = array('fehnir', 'hood', 'kadish', 'trebivdil', 'vothol');
+$choices = array('fehnir', 'gomepub', 'hood', 'kadish', 'trebivdil', 'vothol');
 $base = -1; // haaaax
 
 if (isset($_GET['style'])) {
