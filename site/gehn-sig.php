@@ -34,8 +34,8 @@ function draw_shadowed_text($im, $size, $x, $y, $color, $shadow, $font, $text) {
 }
 
 // Konstants
-define('kPenHeight', 69);
-define('kPenWidth', 71);
+define('kPenHeight', 75);
+define('kPenWidth', 75);
 define('kPenDestX', 10);
 define('kPenDestY', 20);
 define('kShardOffsetX', 95);
