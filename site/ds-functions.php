@@ -84,11 +84,14 @@ function get_top_pellet_droppers($pq)
     return $results;
 }
 
-function get_online_player_count($pq)
+function get_online_players($pq)
 {
-    $res = pg_query($pq, 'SELECT COUNT(*) FROM vault."Nodes" WHERE "NodeType"='.kNodePlayerInfo.' AND "Int32_1"=1');
-    $count = pg_fetch_result($res, 0, 0);
+    $res = pg_query($pq, 'SELECT "IString64_1","String64_1" FROM vault."Nodes" WHERE "NodeType"='.kNodePlayerInfo.' AND "Int32_1"=1');
+    $assoc = array();
+    while ($row = pg_fetch_row($res)) {
+        $assoc[] = array($row[0], $row[1]);
+    }
     pg_free_result($res);
-    return $count;
+    return $assoc;
 }
 ?>

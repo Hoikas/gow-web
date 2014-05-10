@@ -22,27 +22,20 @@ function echo_online_count()
     global $pq; // Hacky...
 
     $count = get_online_player_count($pq);
-    if ($count == 0)
-    {
+    if ($count == 0) {
         echo "There are currently no explorers in the cavern.";
-    }
-    else if ($count == 1)
-    {
+    } else if ($count == 1) {
         echo "There is currently one explorer in the cavern.";
-    }
-    else
-    {
+    } else {
          echo "There are currently {$count} explorers in the cavern.";
     }
 }
+
 // What kind of shit do they want?
-if (isset($_GET['type']))
-{
+if (isset($_GET['type'])) {
     // Hope you know what you're doing
     $output = strtolower($_GET['type']);
-}
-else
-{
+} else {
     // Just output the stupid string for plUruLauncher (that troll)
     $output = 'raw';
 }
@@ -50,9 +43,9 @@ else
 // Prep a pq connection
 // You'll want to specify this stuff in ds-config.ini.php
 $pq = pg_connect("host={$dbhost} port={$dbport} dbname={$dbname} user={$dbuser} password={$dbpass}");
+
 // Now do some output
-if ($output == 'json')
-{
+if ($output == 'json') {
     // I love how simple this is!
     $online = ds_running();
     $array = array
@@ -63,9 +56,7 @@ if ($output == 'json')
             kShardPlayerCountKey    =>      $online ? get_online_player_count($pq) : 0,
     );
     echo json_encode($array);
-}
-else if ($output == 'pretty' || $output == 'fancy')
-{
+} else if ($output == 'pretty' || $output == 'fancy') {
     $online = ds_running();
     $img = $online ? kShardIconGreen : kShardIconRed;
     $msg = $online ? kShardIsRunning : kShardIsDown;
@@ -73,17 +64,25 @@ else if ($output == 'pretty' || $output == 'fancy')
     echo "<img id=\"gehn-shard-status\" src=\"{$img}\" /> {$msg}";
     echo '<br />';
     echo_online_count();
-}
-else if ($output == 'stats')
-{
+} else if ($output == 'stats') {
     $avatars = get_avatar_count($pq);
-    $online = get_online_player_count($pq);
+    $online = get_online_players($pq);
     $lakeScore = get_lake_score($pq);
     $turds = get_top_pellet_droppers($pq);
     ?>
     <h2>Gehn Shard Statistics</h2>
     <ul>
-        <li><strong>Players</strong>: <?php echo $online; ?> of <?php echo $avatars; ?> players in the cavern</li>
+        <li>
+            <strong>Players</strong>: <?php echo count($online); ?> of <?php echo $avatars; ?> players in the cavern.
+            <ul>
+                <?php
+                foreach ($online as $i)
+                {
+                    printf('<li><strong>%s</strong> in <em>%s</em></li>', $i[0], $i[1]);
+                }
+                ?>
+            </ul>
+        </li>
         <li><strong>Lake Score</strong>: <?php echo $lakeScore; ?></li>
         <li>
             <strong>Top Player Pellet Scores</strong>
@@ -109,9 +108,7 @@ else if ($output == 'stats')
         </li>
     </ul>
     <?php
-}
-else if ($output == 'help')
-{
+} else if ($output == 'help') {
     ?>
     <p>Thanks for your interest in the <strong>Gehn</strong> Shard status utility!</p>
     <p>
@@ -138,17 +135,12 @@ else if ($output == 'help')
         </ul>
     </p>
     <?php
-}
-else
-{
-    if (ds_running())
-    {
+} else {
+    if (ds_running()) {
         echo kShardIsRunning;
         echo PHP_EOL;
         echo_online_count();
-    }
-    else
-    {
+    } else {
         echo kShardIsDown;
     }
 }
