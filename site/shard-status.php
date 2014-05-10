@@ -21,7 +21,7 @@ function echo_online_count()
 {
     global $pq; // Hacky...
 
-    $count = get_online_player_count($pq);
+    $count = count(get_online_players($pq));
     if ($count == 0) {
         echo "There are currently no explorers in the cavern.";
     } else if ($count == 1) {

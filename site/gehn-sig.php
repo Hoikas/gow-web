@@ -75,7 +75,7 @@ require '/home/writers/www/site/ds-functions.php';
 
 // Init DB connection and find players online and avatar name
 $pq = pg_connect("host={$dbhost} port={$dbport} dbname={$dbname} user={$dbuser} password={$dbpass}");
-$online_count = get_online_player_count($pq);
+$online_count = count(get_online_players($pq));
 if ($ki !== false) {
     $name = get_avatar_name($pq, $ki);
     $name = ($name !== false) ? $name : "{INVALID KI#}";
