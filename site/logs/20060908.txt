@@ -1,0 +1,151 @@
+(09/08 20:41:16) Chat.log started...
+(09/08 21:03:49) Darryl Pogue: welcome to the second AgeBuilder Town Hall meeting. This meeting will focus on the Alcugs PyPRP Blender plugin
+(09/08 21:04:30) Darryl Pogue: ZIb Redlektab will be our facilitator tonight, so if you have any questions, please PM him with the text "question".
+(09/08 21:04:59) Zib Redlektab: and i already have 1. :) he uh...doesnt appear to be here tho...
+(09/08 21:05:03) Darryl Pogue: I am Paradox, and I am one of the PyPRP developers, beside me are J'anim and Aloys, our Blender experts
+(09/08 21:05:41) Darryl Pogue: So, I suppose I'll start be explaining what the plugin is and where to get it, then Aloys and J'anim can explain some of the Blender stuff
+(09/08 21:06:37) Darryl Pogue: The plugin was started by Almlys over a year ago, and was released last November. Although Almlys is no longer actively developing the plugin, he is still looked at as the project leader.
+(09/08 21:07:17) Darryl Pogue: Other developers include trylon, Robert_The_Rebuilder, AdamJohnso, Dustin, and MercAngel
+(09/08 21:08:06) Darryl Pogue: The plugin allows people to build worlds (Ages) in Blender3D and export them to Uru's PRP format
+(09/08 21:08:47) Darryl Pogue: The plugin is written in Python, and support and questions can be posted on the Alcugs fora
+(09/08 21:08:58) Darryl Pogue: http://alcugs.almlys.org/forums/
+(09/08 21:09:39) Darryl Pogue: You can always get the latest plugin at http://alcugs.almlys.org/shots/pyprp/latest.zip
+(09/08 21:10:13) Darryl Pogue: The plugin is in no way finished, and propably will never be 100% complete due to the sheer number of Plasma object types
+(09/08 21:11:01) Darryl Pogue: However, if you feel that there is a type missing in the plugin, please post on Alcugs or talk to one of the developers and we will look into adding it.
+(09/08 21:11:52) Aloys: Hi Robert; Hi Myridean :)
+(09/08 21:12:14) Darryl Pogue: I'd like to hand it over to Aloys and J'anim now; but first, let's give a round of applause for Myridean, who has taken over control of AgeBuilder and is responsible for allowing this meeting to continue
+(09/08 21:12:20) Darryl Pogue claps his hands
+(09/08 21:12:23) Zib Redlektab claps his hands
+(09/08 21:12:27) J'anim Paedet claps his hands
+(09/08 21:12:28) Zib Redlektab claps his hands
+(09/08 21:12:40) Zib Redlektab does a dance
+(09/08 21:12:56) Darryl Pogue: Aloys and J'anim, it's all yours
+(09/08 21:13:20) Aloys: I'll let J'anim talk for now :)
+(09/08 21:13:34) J'anim Paedet: Right! Blender is the 3D application used for fan-made ages. It is very flexable and expandable, as long as it works properly :)
+(09/08 21:13:43) Robert The Rebuilder smirks
+(09/08 21:13:52) Branan rolls eyes knowingly
+(09/08 21:14:40) J'anim Paedet: The city Age Ahra Pahts was/is being created entirely by Blender. It's free for all, and not a very large download either
+(09/08 21:15:23) J'anim Paedet: However, there are several steps to getting it to run. These are detailed on the the Alcugs wiki and forums, should you want to try it yourself
+(09/08 21:16:40) J'anim Paedet: once you have it installed, it is fairly easy to get started. First, you use the prp plugin to create a "Book" in Blender's scene
+(09/08 21:17:52) J'anim Paedet: to this you may add as many "Pages" as you like -- they export seperately, and help get the Age off Blender, and onto Uru. Ahra Pahts, for examples, has well over a hundred!
+(09/08 21:19:08) J'anim Paedet: At this time, the Ages Blender is capable of creating are very sparce, compared to Cyan's Ages. They lack ambient sound, and many programming-related features that Ages such as the one we are in possess
+(09/08 21:20:37) J'anim Paedet: However, as the prp plugin steadily evolves, more and more features are added to Blender's Uru section, and eventually we might well be able to create Ages on this level.
+(09/08 21:21:36) J'anim Paedet: Exporting an age, once complete, is (theoretically) simple. You just go to "Export", select one of the export options under "Uru", and click Save!
+(09/08 21:22:31) Aloys: and then you pray that it'll actually export and not crash.. :o
+(09/08 21:22:36) J'anim Paedet: importing also works to an extent. However, results are usually unpredictable
+(09/08 21:22:39) Robert The Rebuilder laughs
+(09/08 21:22:45) AdamJohnso: pfft, it's "theoretically simple" when the ResManager crashes :P!
+(09/08 21:23:17) J'anim Paedet: And that's Blender, in a nutshell!
+(09/08 21:23:25) Robert The Rebuilder claps his hands
+(09/08 21:23:45) Branan: with gusto!
+(09/08 21:24:12) Darryl Pogue: If you have any questions please PM zib Redlektab
+(09/08 21:24:25) Zib Redlektab: question time? ok well first is zadok. zadok:?
+(09/08 21:25:30) Zib Redlektab: you had a question?
+(09/08 21:25:40) Darryl Pogue: We'd like to welcome AdamJohnso to our QA Team so that he can help answer plugin-related questions
+(09/08 21:25:43) Robert The Rebuilder points
+(09/08 21:28:33) Zib Redlektab: uh ok kato? :)
+(09/08 21:28:46) Kato: 1. Is there any timeframe for shader functionality (pretty water and such) or is it even possible? 2. How about sounds (beyond footsteps)?!
+(09/08 21:29:10) Darryl Pogue: 1.No timeframe, whenever our monkeys figure out how they work
+(09/08 21:29:30) Darryl Pogue: 2. We're working on that. Hopefully soon
+(09/08 21:29:40) Kato: thanks :)!
+(09/08 21:29:49) AdamJohnso objects to being called a monkey!
+(09/08 21:29:59) Aloys: :p
+(09/08 21:30:01) Zib Redlektab thinks its a compliment :)
+(09/08 21:30:07) Darryl Pogue: lol
+(09/08 21:30:48) Zib Redlektab: ok stephen c?
+(09/08 21:31:56) Robert The Rebuilder: Stephen:!
+(09/08 21:32:01) Robert The Rebuilder: Yes.!
+(09/08 21:32:08) Zib Redlektab: stephen c? its your turn?
+(09/08 21:32:18) Robert The Rebuilder: The plugin supports clickable objects...!
+(09/08 21:32:22) Zib Redlektab: hey do you want to ask your question again?
+(09/08 21:32:25) Robert The Rebuilder: and there are script commands for animating items.!
+(09/08 21:32:32) Robert The Rebuilder: For an example...!
+(09/08 21:32:51) Robert The Rebuilder: see the Functionality Check Age, which can be downloaded at the Alcugs Wiki.!
+(09/08 21:33:01) Stephen C.: thanks!
+(09/08 21:33:09) Darryl Pogue: However, scripts for animating objects are hopefully only temporary while we dig into the Plasma Animation class
+(09/08 21:33:22) Robert The Rebuilder: That would be the ideal way to go.!
+(09/08 21:33:27) AdamJohnso: *cross fingers*
+(09/08 21:33:49) Branan: Once I've got my current project into a state that it can be left to the general community to maintain, I may start doing some reasearch into that area
+(09/08 21:34:06) Darryl Pogue: plATCAnim will hopefully be working in the future
+(09/08 21:34:25) Aloys: You'd be welcome Branan :)
+(09/08 21:34:39) J'anim Paedet: More than! :)
+(09/08 21:34:57) Zib Redlektab: Ok well next is T_S_Kimball :)
+(09/08 21:35:21) Robert The Rebuilder: I think we need to bring this to Almlys's attention.!
+(09/08 21:35:27) Robert The Rebuilder: For now, you can PM one of us.!
+(09/08 21:35:39) Branan: Actually, I know the answer to that...
+(09/08 21:35:44) Aloys: That is a problem right now indeed
+(09/08 21:35:56) Branan: You need to register on the forum, then you can log in with that name on the wiki
+(09/08 21:36:06) Darryl Pogue: Please type your question out with /shout so that everyone can hear it
+(09/08 21:36:11) Branan: it took me about three hours to figure that out
+(09/08 21:36:48) Zib Redlektab: next up is Kato :)
+(09/08 21:36:49) Kato: or just use /autoshout!
+(09/08 21:37:26) Kato: Any plans (long-term even) for skeletal animation? I know that's quite an...ambitious...goal...I'm just wondering if it's in the plans.!
+(09/08 21:37:45) AdamJohnso: Interesting idea... do you mean new avatars?!
+(09/08 21:37:54) Kato: Yup.!
+(09/08 21:37:58) Kato: Like Zandi or Yeesha.!
+(09/08 21:38:03) autoshout activated
+(09/08 21:38:05) AdamJohnso: possible: probably!
+(09/08 21:38:08) Darryl Pogue: That would be part of the Animation class plATCAnim
+(09/08 21:38:16) Kato: That's what I thought :)!
+(09/08 21:38:25) AdamJohnso: That would be for new animations!
+(09/08 21:38:30) Darryl Pogue: We're working on it as much as we can
+(09/08 21:38:30) Robert The Rebuilder: Kato: were you also referring to new animations for avatars, i.e. yawn, pick nose, etc.?!
+(09/08 21:38:32) Myridean pipes up from the back, "We'd like to use our hands"
+(09/08 21:38:49) Kato: Not necessarily, but that might be good too. Anything on that? :)!
+(09/08 21:38:58) AdamJohnso: PlATCAnim!
+(09/08 21:39:08) Darryl Pogue: What he said :P
+(09/08 21:39:09) Robert The Rebuilder: Does anyone here know how to do character animations within Blender?!
+(09/08 21:39:14) Kato: Yes.!
+(09/08 21:39:20) Aloys agrees with Myridean
+(09/08 21:39:20) Branan: Any kind of animation. As Myri said, custom animations for poking buttons, or for moving gears around, or for new avatar actions, or reallly anything that moves. plATCAnim does it all. And it does it with Class.!
+(09/08 21:39:22) J'anim Paedet: Indeed!
+(09/08 21:39:55) Kato: Sounds good :)!
+(09/08 21:40:02) Darryl Pogue: yes. Blender uses Armatures to deform meshes
+(09/08 21:40:13) Kato: mhm :-D!
+(09/08 21:40:16) Darryl Pogue: Almlys was working on something before he vanished
+(09/08 21:41:17) Kato: He vanished? :-P!
+(09/08 21:41:33) Darryl Pogue: Well he hasn't been very active lately
+(09/08 21:41:42) Kato: Yeah, I have noticed that.!
+(09/08 21:41:48) Zib Redlektab: zadok, you can go again
+(09/08 21:42:13) Zib Redlektab: since we couldn't get your full question last time i think
+(09/08 21:43:13) Darryl Pogue: he was having virtual memory problems a while ago...
+(09/08 21:43:48) Zib Redlektab: adok?
+(09/08 21:43:54) Zib Redlektab: *zadok :-\
+(09/08 21:44:12) Robert The Rebuilder: Remember to use /shout or /autoshout, folks!!
+(09/08 21:45:23) Myridean: He might have crashed again? Who's turn is it now to ask the next question?!
+(09/08 21:45:28) Zadok: my question was basically regarding just how much of the Blender scene gets to the PRP format... is it just the 3D mesh and UV textures or does it also export animations and scripts that controls objects with the Game Engine?
+(09/08 21:45:49) Darryl Pogue: Just meshes and textures and properties right now
+(09/08 21:46:09) Robert The Rebuilder: Plus hooks to the Python scripts.!
+(09/08 21:46:12) Darryl Pogue: hopefully we will be able to use Blender's capabilities directly in the future
+(09/08 21:46:25) AdamJohnso: Physics mostly!
+(09/08 21:46:30) Robert The Rebuilder: Physical properties: mass, friction, elasticity!
+(09/08 21:46:43) Robert The Rebuilder: Collision properties: collision type, camera flags, etc.!
+(09/08 21:47:05) Robert The Rebuilder: Yes, that's where the properties are stored per object.!
+(09/08 21:47:06) Darryl Pogue: Yes. All of the properties are from the logic panel
+(09/08 21:47:41) Branan: For now. I'm working on a graphical script that hides that panel from being needed. !
+(09/08 21:47:54) Robert The Rebuilder smiles
+(09/08 21:48:08) Darryl Pogue: That's a great project Paladin and one that will certainly be useful
+(09/08 21:48:10) Aloys: It should prove to be very useful.
+(09/08 21:48:24) AdamJohnso: That would be in the python!
+(09/08 21:48:29) Zib Redlektab: ok cool, next is robert the rebuilder :)
+(09/08 21:48:33) Robert The Rebuilder: Zadok: right now, the programming is done directly in the python scripts.!
+(09/08 21:48:40) Robert The Rebuilder: Oh - here's my question to the Blender folks!
+(09/08 21:48:46) Darryl Pogue: As you probably know, all of Uru's game logic is controlled via Python scripts. These scripts can be attached to objects using the plugin
+(09/08 21:49:18) Robert The Rebuilder: QUsetion: What is the proper way to append objects to a blender file from an external blender file?!
+(09/08 21:49:53) Darryl Pogue: Zadok > yes
+(09/08 21:50:01) Aloys: Robert: Shift F1 ;)
+(09/08 21:50:14) Darryl Pogue: RTR > File->Appent and select Objects
+(09/08 21:50:18) J'anim Paedet: that :)!
+(09/08 21:50:21) Darryl Pogue: Append*
+(09/08 21:50:30) Robert The Rebuilder: SO that will also take care of meshes as well?!
+(09/08 21:50:52) Darryl Pogue: yes because meshes are tied to the objects
+(09/08 21:50:57) J'anim Paedet: indeed it will!
+(09/08 21:50:57) Aloys: yes. Any objects: meshes, lamps, and their associated properties.
+(09/08 21:51:16) Robert The Rebuilder: OK.  I'll give it a try.  THought I did try that and had no luck, but will try it again.  Thanks!!
+(09/08 21:51:30) Branan: Anything appended automatically pulls in anything that it depends on. So if you import an object, it should also pull in the mesh and the material!
+(09/08 21:51:40) Robert The Rebuilder: ok!
+(09/08 21:52:11) Zib Redlektab: anyone else?
+(09/08 21:52:49) Robert The Rebuilder: A quick poll: who out there is currently working on an age or shell?!
+(09/08 21:52:52) Zib Redlektab: because if not, that's it :)
+(09/08 21:52:59) Zib Redlektab: bothkinda :)
+(09/08 21:53:15) Darryl Pogue: Well that concludes this meeting then. Whoever has a log, please post it on the AgeBuilder forum.

@@ -1,0 +1,227 @@
+(08/06 17:22:49) Aloys: You do need to know a bit about Age creation for Uru though. 
+(08/06 17:22:56) From Darryl Pogue: Hi, Aloys is just explaining a bit about our city age: Ahra Pahts
+(08/06 17:23:16) To Darryl Pogue: I appreciate the invite.  I will be quiet; I'm going to log this for others who might want to read it later, if that's ok.
+(08/06 17:23:20) Aloys: And that means Blender and the associated Uru PRP plugin essentially.
+(08/06 17:23:30) Aloys: Welcome Marten :)
+(08/06 17:23:32) To Darryl Pogue: In fact, I have to be going, so just going to stay idle here and log.
+(08/06 17:24:13) Aloys: So if you already know a bit about Uru Age creation, or want to get started, Ahra Pahts is a good starting point.
+(08/06 17:24:32) Aloys: Did I forgot anything Kirsten?
+(08/06 17:25:48) KirstenBirch: Not that I am aware of.
+(08/06 17:25:50) Darryl Pogue: If you have a question, Please PM it to me. Marein has the first one.
+(08/06 17:26:15) Marein: Yes, should I ask it now?
+(08/06 17:26:40) KirstenBirch: It looks like were at that part of the meeting. So go ahead.
+(08/06 17:27:23) Marein: Can you tell something about the different types of shells? (Residential, Commercial, Industrial and Community)
+(08/06 17:28:06) Aloys: Essentially we are trying to regroup shells of similar interests in specific areas,
+(08/06 17:28:42) Aloys: Residential Shells are for Houses and similar buildings, personal constructions.
+(08/06 17:29:21) Linkbookmaster: Sorry to interrupt, but I'm back
+(08/06 17:29:37) Aloys: Commercial shells are for people who either want to show some of their work (be it 3d works, Art, poems etc) or people who want to share things that might come to use in other shells, like:
+(08/06 17:30:14) Aloys: furnitures, plants, any thing you might need to build a shell. Or that you might need in another Age.
+(08/06 17:30:36) Aloys: This is not real 'commerce', but it's as far as we can do in Uru
+(08/06 17:31:26) Aloys: Industrial Shells are about well, industry. It is mostly up to whoever get one of these to do whatever they want of industrial in it.
+(08/06 17:31:28) Linkbookmaster: hrm, hopefully when the Drc lets people back in (the opening of UruLiv II) , we might vbe able to do some commerce
+(08/06 17:31:35) Linkbookmaster: *Urulive*
+(08/06 17:31:42) Linkbookmaster: stupid keyboard
+(08/06 17:31:59) Linkbookmaster: maybe with D'ni M'ni :-P
+(08/06 17:32:02) Aloys: Community shells are places of interest to everyone: parks, gardens, libraries.. things like that.
+(08/06 17:32:19) Aloys: But you are really only limited by your imagination. :)
+(08/06 17:32:45) Linkbookmaster: heh
+(08/06 17:33:06) Aloys: does that answer your question?
+(08/06 17:33:23) Linkbookmaster: sit
+(08/06 17:33:24) Marein: Very much, thank you
+(08/06 17:33:25) Linkbookmaster: oops
+(08/06 17:33:28) Darryl Pogue: Deg has the next question
+(08/06 17:33:44) KirstenBirch: For those of you who just arrived please pm that you have a question to Darryl and he will call you when its your turn. Also remember to use shout.
+(08/06 17:33:50) Zib Redlektab: Hey
+(08/06 17:34:23) Aloys: Hi Zib
+(08/06 17:34:37) Zib Redlektab: Someone is logging, right?
+(08/06 17:34:40) Deg: Sorry, my KI ias acting up a bit
+(08/06 17:35:17) Marein: I started a log now
+(08/06 17:35:19) Linkbookmaster: Ok, not to be rude, but what's the general topic we are discussing?
+(08/06 17:35:31) KirstenBirch: Ahra Pahts
+(08/06 17:35:36) Deg: Ah yes, I remember now...
+(08/06 17:35:42) Linkbookmaster: name sounds familiar....
+(08/06 17:35:46) Darryl Pogue: LMB > AgeBuilding and Ahra Pahts
+(08/06 17:35:51) Deg: is there a tutorial walkthrough online to help me write my first Age?
+(08/06 17:35:55) Linkbookmaster: I wonder if the DRc Left one of their laptops here....
+(08/06 17:36:23) KirstenBirch: There is one at Alcugs wiki. Not sure how current or how good it is.
+(08/06 17:36:36) Deg: Linkbookmaster, the Explorers Guild recovered one of the DRC laptops with the screensaver on it... but not much else was on theharddrive
+(08/06 17:36:41) Darryl Pogue: It's at http://alcugs.almlys.org/wiki/
+(08/06 17:36:47) Aloys: There are some at the Alcugs Wiki: http://alcugs.almlys.org/wiki
+(08/06 17:37:31) Linkbookmaster: Deg> oh.... I was hoping to use it to find out about his Eder Delin....
+(08/06 17:37:32) Deg: Thanks.  I'll check it out
+(08/06 17:37:41) Darryl Pogue: does anyone else have any questions?
+(08/06 17:37:50) Aloys: These will teach you about Blender and the Prp Plugin we use to export Ages to Uru.
+(08/06 17:38:02) Linkbookmaster: oh, wait, I have one right here! *pulls Laptop out of convenient bag*
+(08/06 17:38:07) Deg: LBM, the Explorers Guild is currently talking to Liaisons about getting some more info :)
+(08/06 17:38:41) Marein: I have a small question
+(08/06 17:38:44) KirstenBirch: Anything at all. It can be about the programing side, storyline, or even just general stuff related to AB.
+(08/06 17:39:09) Darryl Pogue: Marein, ask away
+(08/06 17:40:10) Marein: Looking at the sign-up map for Ahra Pahts, how come the the Residential Shalls in the Green District are all crowded up and those in the other districts are not?
+(08/06 17:40:18) Marein: (-the)
+(08/06 17:40:26) Aloys: That's a good question;
+(08/06 17:41:33) Aloys: district have specific themes going on. Which will influence their aspect, 
+(08/06 17:41:56) Aloys: Green district is about nature: trees, gardens, plants everywhere etc;
+(08/06 17:42:18) Aloys: Red one is about rocks, sands, and maybe even Lava.
+(08/06 17:42:37) Aloys: Blue one is about water: lakes, ponds, water canals etc.
+(08/06 17:42:52) Linkbookmaster: that's what I thought...
+(08/06 17:42:57) Aloys: Maybe nature just appeals more to people than rocks and sand. :)
+(08/06 17:43:13) Zib Redlektab: or they picked their shell randomly, like me :P
+(08/06 17:43:15) Aloys: We are trying to make Red district more appealing though.
+(08/06 17:43:15) Marein: What about the white district?
+(08/06 17:43:48) Marein: I like the Red district
+(08/06 17:43:54) Aloys: White district is less specific, it's the center of the city, dedicated to community activities. It will be more 'generic'.
+(08/06 17:44:03) Marein: I see
+(08/06 17:44:06) Linkbookmaster: I have a question
+(08/06 17:44:14) Zib Redlektab: white district's theme is like 'city' :P
+(08/06 17:44:18) From Cycreim in Cycreim's Relto: Hey Marten I'm here I just went to grab some food.
+(08/06 17:44:28) Aloys: Yes, more or less.
+(08/06 17:44:41) Aloys: Sure LBM
+(08/06 17:44:54) Darryl Pogue: Acutally Shinohara has a question
+(08/06 17:45:03) Shinohara: is there any documentation on the .prp format? I've been thinking about porting the .prp plugin to Max and wondered if there's solid docs or if it would be best to work backwards from the blender plugin
+(08/06 17:45:32) Aloys: Darryl do you want to answer that one?
+(08/06 17:45:33) Darryl Pogue: The Clockwork Orange BBS Wiki has all of the file formats on it
+(08/06 17:45:37) Zib Redlektab: if there are, they'd be on the COBBS wiki
+(08/06 17:45:42) Darryl Pogue: http://wiki.cobbs.ca/
+(08/06 17:45:56) Shinohara: ok
+(08/06 17:45:59) Aloys: BTW,
+(08/06 17:46:19) Aloys: it is most likely that in the future, when Cyan release their Age creation tools,
+(08/06 17:46:27) KirstenBirch: There will be a future Q&A session on Blender to be announced at a later date.
+(08/06 17:46:35) Aloys: these will be for 3DS Max indeed. while we are using now BLender.
+(08/06 17:46:54) Darryl Pogue: Linkbookmaster, you had a question?
+(08/06 17:47:25) Linkbookmaster: Well, I had one pretaining to Ahra Pahts, but I can read the log later, but I do have another qquestion...
+(08/06 17:47:59) Deg: I've gotta get going.  It was nice talking with all of you. :)
+(08/06 17:48:01) Deg waves
+(08/06 17:48:06) Marein: See you Deg!
+(08/06 17:48:07) Marein waves
+(08/06 17:48:14) Aloys: Thanks for coming Deg :)
+(08/06 17:48:15) KirstenBirch: There may not be a complete log. I nor Aloys started one till just a little bit ago.
+(08/06 17:48:31) Marein: (hey, what about me)
+(08/06 17:48:34) Darryl Pogue: Marein has two questions for you guys.
+(08/06 17:48:41) Darryl Pogue: and Marten has a log
+(08/06 17:48:43) KirstenBirch: Sorry Marein
+(08/06 17:48:48) Marein: Hehe, no problem
+(08/06 17:48:55) Marein: Who's making the hub and what will be in it?
+(08/06 17:49:17) Linkbookmaster: I'm sorry, I had to take a phone call
+(08/06 17:49:21) Marein: (actually I have three questions. I counted that one as one)
+(08/06 17:49:31) Aloys: J'anim is making the hub. It is the central building of the city,
+(08/06 17:50:19) Aloys: so it will host 'official things' like, a map of the city, a registry of the shells owners, a meeting room, and more. 
+(08/06 17:50:22) Aloys: Also,
+(08/06 17:50:57) Aloys: later in the future it will host docks for the boats that will roam the city rivers and canals.
+(08/06 17:51:16) KirstenBirch: J'anim Paedet has been working on the Hub. Right now the plan is for it to be the Headquarters for the NTC. The IC group restoring the age. As far as the Registry goes in IC terms the shell owners are helping to restore the age.
+(08/06 17:51:43) JWPlatt: Hi Darryl, thanks, I heard.  Thought I'd drop in to listen for a bit.
+(08/06 17:52:06) Aloys: Hi JWPlatt
+(08/06 17:52:15) Linkbookmaster: I'm sorry I didn't ask my question, I had a phone call to take
+(08/06 17:52:27) Zib Redlektab: thats ok, LBM
+(08/06 17:53:10) KirstenBirch: That's ok, LBM. We'll come back to ya after Marein is finished.
+(08/06 17:53:23) Linkbookmaster: thank you
+(08/06 17:53:38) Darryl Pogue: Marein, you have any other questions?
+(08/06 17:53:53) Marein: Is there a bigger version of the map in the corner of the Shell Signup picture around?
+(08/06 17:54:15) KirstenBirch: There should be one on the Wiki.
+(08/06 17:54:23) Marein: I searched but didn't find it
+(08/06 17:54:33) Marein: Maybe I'm just blind though
+(08/06 17:54:47) KirstenBirch: Let me have a quick look for ya.
+(08/06 17:54:50) Darryl Pogue: Read the Ahra Pahts Shell Sign-Up thread. There's one there
+(08/06 17:54:58) KirstenBirch: K, never mind.
+(08/06 17:55:07) Marein: Oh, okay. Thanks
+(08/06 17:55:08) Aloys: I have a very large one I use to work on, but it isn't 'public' :)
+(08/06 17:55:10) Marein: *goes to look*
+(08/06 17:55:27) Darryl Pogue: Linkbookmaster (sorry my list got a bit out of order)
+(08/06 17:55:36) KirstenBirch: Maybe that is the one I am thinking of.
+(08/06 17:55:41) Linkbookmaster: ok,....
+(08/06 17:56:02) Linkbookmaster: This question pertains to Cyan and might be difficult to answer...
+(08/06 17:56:24) Linkbookmaster: *pretains sorry...*
+(08/06 17:56:25) KirstenBirch: If we have an answer we'll try to answer it.
+(08/06 17:56:34) From Darryl Pogue: 'k I've added you again
+(08/06 17:56:51) From Darryl Pogue: sorry
+(08/06 17:57:09) Linkbookmaster: do you have any knowledge of CYan's age creation tools having any generic things for an age?
+(08/06 17:57:19) Linkbookmaster: like grass, water, buildings
+(08/06 17:57:31) Linkbookmaster: things that you pick out from a list?
+(08/06 17:57:48) Aloys: As much as we would like to see that; that doesn't seem to be the case. 
+(08/06 17:57:50) Linkbookmaster: like a sort of simulation-type thing
+(08/06 17:58:10) Aloys: Maybe in the future but not for now unfortunately
+(08/06 17:58:33) Darryl Pogue: Marein has more questions. I think he intends to get every last drop of information out of you ;p
+(08/06 17:58:40) Linkbookmaster: Well, the reason I'm asking is because the list lacks uniqueness
+(08/06 17:59:21) Marein: I have one question, because the other one is being answered by Aloys...
+(08/06 17:59:30) Marein: What's this Nexus thing I read about?
+(08/06 18:00:18) Aloys: The nexus is very much like the Uru Nexus, it's a separate Age that will be used to go around the city faster.
+(08/06 18:00:47) Aloys: But it will be much faster that the regular Uru nexus. It will be quite different in fact;
+(08/06 18:01:38) Aloys: it will not use a 'computer' interface, it will look like a mini model of the city, so you can visually locate where you want to go.
+(08/06 18:01:50) Aloys: Robert and Besharen are working on this right now.
+(08/06 18:02:02) Aloys: And I have to say i can't wait to see it finished :)
+(08/06 18:02:10) Marein: Me neither, sounds cool
+(08/06 18:02:24) Darryl Pogue: JWPlatt wanted some information
+(08/06 18:06:45) JWPlatt: Two questions: 1) What are your thoughts on how Uru Live will affect all the efforts going toward UU ages?  2) For a technically literate software development professional, but new to age-building, what are the tools to begin with?  3) Is there a place to find the technical architecture of UU such as database structure, file formats, clustering, etc?
+(08/06 18:07:13) Marein: That's three questions.
+(08/06 18:07:14) JWPlatt: :) Said 2, asked 3.
+(08/06 18:08:11) Aloys: Ok.  1) It all depends on whether UU can stay active once Live is officially launched. 
+(08/06 18:08:23) JWPlatt: Programmers often are the victims of off-by-one errors.  ;)
+(08/06 18:08:47) Linkbookmaster: lol
+(08/06 18:08:51) Linkbookmaster laughs
+(08/06 18:08:52) Aloys: If UU stays, tools for UU Ages will stay around of course. Regardless, of that tools for offline Ages should always be availabe; unless Cyan disagree.
+(08/06 18:09:52) Aloys: 2) Tools you will need; blender, and the Prp Plugin. You can find all that on the Alcugs Wiki
+(08/06 18:10:12) Linkbookmaster: where is that agin?
+(08/06 18:10:25) Aloys: alcugs.almlys.org/wiki
+(08/06 18:10:33) Linkbookmaster: tthanks
+(08/06 18:10:47) Aloys: Darryl can you answer question 3?
+(08/06 18:11:02) Darryl Pogue: sure
+(08/06 18:11:11) Linkbookmaster: It was nice talking to you but I wanna try blender...
+(08/06 18:11:18) Aloys: Hi Belteshazzar
+(08/06 18:11:26) Belteshazzar: hi
+(08/06 18:11:29) Marein: Shorah
+(08/06 18:11:30) Darryl Pogue: http://wiki.cobbs.ca has a lot of file formats and technical stuff on it
+(08/06 18:11:35) Belteshazzar waves
+(08/06 18:11:57) JWPlatt: Thanks
+(08/06 18:12:09) Darryl Pogue: Most of the UU stuff might be missing because we aren't supposed to hack Network Packets ;p
+(08/06 18:12:15) Aloys: Another question?
+(08/06 18:13:37) Darryl Pogue: OK, if you do have a question later, you can ask it on the AgeBuilder forums
+(08/06 18:13:46) Darryl Pogue: http://forum.agebuilder.org
+(08/06 18:15:05) Aloys: We can take a couple last questions if you have some
+(08/06 18:16:07) Darryl Pogue: I would like to thank everyone who came, watch for more meetings like this in the future. And definately watch for the release of Ahra Pahts: you won't want to miss it.
+(08/06 18:16:10) Marein: Oh yeah, I thought of one
+(08/06 18:16:17) Darryl Pogue: 'k Marein ask away
+(08/06 18:16:38) Marein: What are Ahlnay and Tahmlah like?
+(08/06 18:17:26) KirstenBirch: There still in the development stage so nothing solid has been decided on them.
+(08/06 18:18:17) KirstenBirch: And right now I don't expect us to get started on them till sometimes next year.
+(08/06 18:18:44) Marein: So just the names are known?
+(08/06 18:19:35) KirstenBirch: Pretty much. I don't think the New Tree when it was still under Durane had done much work except on Yevahn. So all we know pretty much is names.
+(08/06 18:19:56) Marein: Okay
+(08/06 18:20:20) Aloys: Any other questions?
+(08/06 18:20:39) Marein: Yes!
+(08/06 18:20:46) KirstenBirch laughs
+(08/06 18:20:51) Aloys: :P
+(08/06 18:21:03) Darryl Pogue laughs
+(08/06 18:21:07) Shinohara: hehe
+(08/06 18:21:19) Marein: What's the concept art in the background of the banner on the wiki frontpage?
+(08/06 18:21:23) Shinohara awards marein the "best questions" award
+(08/06 18:21:34) Marein cheers
+(08/06 18:22:00) KirstenBirch: It was concept art for Ahra Pahts. I think the hub but I can't remember for sure.
+(08/06 18:22:26) Marein: Can the original be found on the forums?
+(08/06 18:22:29) Aloys: Yes part of it is for the Hub, part of it is for a shell that may or may not see the light of day :)
+(08/06 18:22:40) Aloys: I think it is here somewhere..
+(08/06 18:22:57) Marein: Looks pretty cool
+(08/06 18:23:20) Aloys: TheEnlightened did it.
+(08/06 18:23:35) KirstenBirch: Not unless your on the AB team. With recent move to closing off some topics. The concept Art was moved into that new topic secret area. And I think that image is in there also.
+(08/06 18:24:00) Aloys: TE does quite a bit of sketches for the Age. 
+(08/06 18:24:16) KirstenBirch: T.E. did all the sketches for the age.
+(08/06 18:24:26) Marein: Actually Kirsten, II found it
+(08/06 18:24:27) Zib Redlektab: Lol
+(08/06 18:24:35) Marein: I*
+(08/06 18:24:55) KirstenBirch: K
+(08/06 18:25:00) Darryl Pogue: Marein, have you satisefied your curiosity? ;p
+(08/06 18:25:04) Aloys: Unless Marein or someone else has more questions I will have to go. :)
+(08/06 18:25:17) Marein: I think I'm finished
+(08/06 18:25:24) KirstenBirch: Marein satisfy curiousity, lol. 
+(08/06 18:25:35) Aloys: Good. ;)
+(08/06 18:25:39) Darryl Pogue: Thank you again for coming. We hope to see you again in the future.
+(08/06 18:26:01) Marein: Thanks for the information!
+(08/06 18:26:13) Aloys: Thank you all, if you have more questions, the forum is always open :)
+(08/06 18:26:29) Marein: Oh hey, I found that map I was looking for!
+(08/06 18:26:32) KirstenBirch: In the coming weeks we will be holding another meeting. It will be either on Blender or the VofD's D'ni Decimal Task Force. We'll announce it when we nail down specifics.
+(08/06 18:26:58) From Darryl Pogue: Marten, thanks for logging this, if you could post the log file at http://forum.agebuilder.org/ it would be very much appreciated. Thank you for attending
+(08/06 18:27:32) Aloys: Thanks for coming. I'll have to go now. Bye all. :)
+(08/06 18:27:40) Marein: See you Aloys!
+(08/06 18:27:47) Darryl Pogue: Bye Aloys
+(08/06 18:27:47) Shinohara: later all
+(08/06 18:27:49) Zib Redlektab: bye aloys, thanks for coming
+(08/06 18:28:22) KirstenBirch: Thank you all for coming, tonight.
+(08/06 18:28:57) Marein: Thanks for the nice meeting

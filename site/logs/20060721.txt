@@ -1,0 +1,574 @@
+(07/21 20:56:21) Chat.log started...
+(07/21 20:56:22) Darryl Pogue: 'k I don't know a lot about either of those, but I can answer technical questions
+(07/21 20:56:33) Robert The Rebuilder: Right!
+(07/21 20:56:59) Robert The Rebuilder: Don't know if Besharen will make it or not; I think we straightened out the time zone confusion.
+(07/21 20:57:06) Robert The Rebuilder: TE mentioned he might make it.
+(07/21 20:57:22) Robert The Rebuilder: Here's a tech question for ya:
+(07/21 20:57:27) Darryl Pogue: he said on the forums he'd be here for about 15 minutes. Zib should be here soon too
+(07/21 20:57:31) Robert The Rebuilder: OK
+(07/21 20:57:42) Darryl Pogue: salut aloys
+(07/21 20:57:44) Robert The Rebuilder: Shorah, Aloys!
+(07/21 20:57:52) Robert The Rebuilder: Man - it must be late late late for you?
+(07/21 20:57:53) Aloys: Hi there 
+(07/21 20:58:04) Darryl Pogue: Or early early early
+(07/21 20:58:04) Aloys: yes, 3 am 
+(07/21 20:58:15) Robert The Rebuilder: Thanks so much for coming.
+(07/21 20:58:19) Aloys: :smiley:
+(07/21 20:58:26) Robert The Rebuilder: Great interview, BTW.
+(07/21 20:58:27) Aloys: I couldn't attend the first meeting so..
+(07/21 20:58:33) Aloys: thanks
+(07/21 20:58:41) Robert The Rebuilder: Shorah, Zib!
+(07/21 20:58:41) Darryl Pogue: Yeah. The interview was really good
+(07/21 20:58:42) Aloys: Are you french Darryl?
+(07/21 20:58:49) Aloys: Hi Zib
+(07/21 20:58:49) Zib Redlektab: zibindahouse!
+(07/21 20:58:55) Zib Redlektab: Hey all
+(07/21 20:58:59) Robert The Rebuilder: Got the cones all set for you, Zib!
+(07/21 20:59:00) Darryl Pogue: No, but I took French Immersion in elementary school
+(07/21 20:59:03) Zib Redlektab: :tongue:
+(07/21 20:59:14) Robert The Rebuilder: Say - did you get Galamay to export?
+(07/21 20:59:19) Zib Redlektab: Je peux parler francais :tongue:
+(07/21 20:59:22) Zib Redlektab: Uhh not yet
+(07/21 20:59:35) Zib Redlektab: Been in uru all day, blender and uru are on the same comp
+(07/21 20:59:41) Robert The Rebuilder: Ah, yes.
+(07/21 20:59:59) Darryl Pogue: What was the question you had for me Robert?
+(07/21 21:00:15) Robert The Rebuilder: Will there be a common PRP editor tool?
+(07/21 21:00:27) Robert The Rebuilder: I know you have Huru Tools
+(07/21 21:00:31) Darryl Pogue: hopefully PRPExplorer
+(07/21 21:00:36) Robert The Rebuilder: OK
+(07/21 21:00:42) Aloys: (I haven't tried exporting Ahra with the new plugin.)
+(07/21 21:00:42) Zib Redlektab: ?
+(07/21 21:00:59) Zib Redlektab: Common for what? eoa and uru or live or what?
+(07/21 21:01:07) Robert The Rebuilder: ngilb120/Tahgtahv mentioned his work on a tool; is it the same one as PRP Explorer?
+(07/21 21:01:14) Robert The Rebuilder: Or is he working on Zrax's tool?
+(07/21 21:01:16) Darryl Pogue: tahgtahv just got PRPExplorer working with some other projects, so if I can fix the errors, I can see about getting it up and running
+(07/21 21:01:26) From Darryl Pogue: can't tell you that here
+(07/21 21:01:34) To Darryl Pogue: Got it
+(07/21 21:01:54) Zib Redlektab: Oh is anyone here a member of this hood who would be kind enough to help me join?
+(07/21 21:02:06) Zib Redlektab: Im still in drc 2 :tongue:
+(07/21 21:02:14) Robert The Rebuilder: How do you become a member?
+(07/21 21:02:34) Zib Redlektab: delete ur hoo dbook then go to someone elses relto and use theres
+(07/21 21:02:54) Zib Redlektab: U join whatever hood they're a member of
+(07/21 21:03:00) Robert The Rebuilder: So, we need to find out who is a member of this hood.  I assume Starfyre is.
+(07/21 21:03:05) Zib Redlektab: Yeah
+(07/21 21:03:13) Robert The Rebuilder: Let's wake her up.
+(07/21 21:03:14) Zib Redlektab: I forgot to ask Besharen earlier....
+(07/21 21:03:27) Robert The Rebuilder nudges Starfyre from her dep sleep.
+(07/21 21:03:31) Zib Redlektab points
+(07/21 21:03:34) Zib Redlektab pokes star
+(07/21 21:03:40) Robert The Rebuilder: Tickle tickle
+(07/21 21:03:59) Zib Redlektab: wheres slider when u need him? we could mess around with some cones...
+(07/21 21:04:17) Robert The Rebuilder: Anyone here know how to cone sit?
+(07/21 21:04:22) Darryl Pogue: Nope
+(07/21 21:04:29) Zib Redlektab: Oo i wish
+(07/21 21:04:39) Aloys: too bad we can't push avvies
+(07/21 21:04:52) Zib Redlektab: u can with cones
+(07/21 21:05:03) Robert The Rebuilder: Aloys: there's another plugin coming tomorrow (or, at 8 am your time).  It has some issues fixed, mostly related for exporting while using .raw files.
+(07/21 21:05:11) Zib Redlektab: but she was clever and sat where there are no cones
+(07/21 21:05:14) Aloys: right, but getting a cone here isn't easy
+(07/21 21:05:29) Robert The Rebuilder: Where's eddie the beach ball?
+(07/21 21:05:39) Zib Redlektab: I dont think hes here :-\
+(07/21 21:05:45) Robert The Rebuilder: :-(
+(07/21 21:05:45) Darryl Pogue: it's so hot up on the surface here. Over 100 F (+40 C)
+(07/21 21:05:57) Zib Redlektab: O.o where are u darryl?
+(07/21 21:05:58) Aloys: same here :frown:
+(07/21 21:06:01) Robert The Rebuilder: Surface in Vancouver?
+(07/21 21:06:05) Aloys: (and it's the night here...)
+(07/21 21:06:06) Zib Redlektab: Ah
+(07/21 21:06:22) Aloys: where do you all live?
+(07/21 21:06:27) Aloys: (if I may ask)
+(07/21 21:06:31) Robert The Rebuilder: Virginia
+(07/21 21:07:00) Zib Redlektab: Its only 70 here
+(07/21 21:07:04) Darryl Pogue: Very close to vancouver
+(07/21 21:07:17) Darryl Pogue: shorah Besharen
+(07/21 21:07:17) Robert The Rebuilder: Shorah, Besharen!
+(07/21 21:07:18) Aloys: lucky you Zib :-)
+(07/21 21:07:23) Aloys: Hi Besharen
+(07/21 21:07:30) Besharen (AB): Hello everyone!
+(07/21 21:07:44) Zib Redlektab: Hey besharen
+(07/21 21:07:51) Zib Redlektab: (or hello again)
+(07/21 21:08:03) Robert The Rebuilder: Nice work on the pedestal, Besharen!
+(07/21 21:08:14) Darryl Pogue: Where are we holding this meeting, in the Community Hall, or just here?
+(07/21 21:08:25) Zib Redlektab: Y not the hall?
+(07/21 21:08:27) Robert The Rebuilder: I think just here, so that people who arrive can see us.
+(07/21 21:08:31) Zib Redlektab: O ok
+(07/21 21:08:31) Robert The Rebuilder: Shorah, Cuthbert
+(07/21 21:08:56) Zib Redlektab: Oh...
+(07/21 21:09:00) Aloys swims
+(07/21 21:09:08) Cuthbert: Greetings
+(07/21 21:09:22) Zib Redlektab: aloys are u an admin on another shard?
+(07/21 21:09:27) Darryl Pogue: shorah Welcome to the AgeBuilder and Vivarium of D'ni meeting
+(07/21 21:09:28) Robert The Rebuilder: Welcome to the Age Builder hood.  We have several age crafters here, along with some developers.
+(07/21 21:09:36) Aloys: no, I don't even have a Kagi key :]
+(07/21 21:09:44) Zib Redlektab: Oh ok, jw
+(07/21 21:10:20) Aloys: I wish I had
+(07/21 21:10:21) Zib Redlektab: does anyone know what happened to star?
+(07/21 21:10:40) Robert The Rebuilder: I wish I had enough memory to run a browser, otherwise, I'd check the AB forums/
+(07/21 21:10:48) Aloys: maybe she just fell asleep
+(07/21 21:10:52) Zib Redlektab: yeah, tho d'mala is very easy to be jaded by...the other servers arent nearly as powerful as this
+(07/21 21:10:52) From Besharen (AB): Thanks Robert. I've done some more work on it, I'll try to post an update tomorrow
+(07/21 21:10:58) Zib Redlektab: Plus they're older
+(07/21 21:11:05) To Besharen (AB): Cool! Looking forward to it.  
+(07/21 21:11:16) Zib Redlektab: :P ive got my laptop acting as a boombox next to me, ill check the forums
+(07/21 21:11:40) Robert The Rebuilder: Gosh - didn't think to supply music for this event.  Anyone have team speak?
+(07/21 21:12:03) Robert The Rebuilder: Cuthbert - help yourself to the h'ors d'oeuvres, theyre up here on the fountain.
+(07/21 21:12:04) Darryl Pogue: robert, it's a meeting, not a party
+(07/21 21:12:14) Cuthbert: thanks
+(07/21 21:12:15) Robert The Rebuilder: Oh heck, why not make it both!
+(07/21 21:12:19) Zib Redlektab: Lol
+(07/21 21:12:21) Cuthbert: just finished a pizza
+(07/21 21:12:28) Robert The Rebuilder: Beers are also in the fountain, keeping cool.
+(07/21 21:12:32) Zib Redlektab: If not enough ppl come we should have a party instead
+(07/21 21:12:44) Robert The Rebuilder chugs the last precious drops of his bottle and tosses it at Starfyre.
+(07/21 21:12:44) Zib Redlektab: Does anyone know if the cavern has wifi?
+(07/21 21:12:51) Darryl Pogue: I assume so
+(07/21 21:13:01) Cuthbert: it has fiwi
+(07/21 21:13:04) Zib Redlektab: Hmm, no post from star
+(07/21 21:13:06) Cuthbert: but no wifi
+(07/21 21:13:06) Zib Redlektab: Lol
+(07/21 21:13:09) Aloys: Not to crash the party, but if noone comes I'd gladly get some sleep ;)
+(07/21 21:13:10) Zib Redlektab: What about kiwi?
+(07/21 21:13:23) Cuthbert: a bit of that as well
+(07/21 21:13:28) Zib Redlektab: Lol yeah those in unfortunate time zones can leave if we dont have enough ppl
+(07/21 21:13:29) Aloys: yum kiwis...makes me hungry
+(07/21 21:13:30) Cuthbert: the is music on gtchat
+(07/21 21:13:37) Besharen (AB): how many people are we expecting?
+(07/21 21:13:40) Cuthbert: donahoo is spinning platters
+(07/21 21:13:41) Robert The Rebuilder: Hey, Aloys: one question before you go.  Will you be fornally releasing Ahra Pahts tomorrow (or today, for you)?
+(07/21 21:14:12) Aloys: I wanted to have teh shells ready for today, but my evening was busier than expected
+(07/21 21:14:25) Aloys: they'll definitely be ready tomorrow though,
+(07/21 21:14:29) Robert The Rebuilder: Oh - and thanks for the nexus shell.
+(07/21 21:14:30) Aloys: and the new version has well :-)
+(07/21 21:14:37) Aloys: You're welcome
+(07/21 21:14:39) Robert The Rebuilder: RIght. Looking forward to them.
+(07/21 21:14:59) Aloys: The new version has tons of new stuff I'm quite happy with it I must say
+(07/21 21:15:14) Robert The Rebuilder: Very cool!
+(07/21 21:15:18) Besharen (AB): Ooo, sounds interesting!
+(07/21 21:15:19) Zib Redlektab: Care to explain? or do we wait for tomorrow?
+(07/21 21:15:25) Aloys: sure,
+(07/21 21:15:35) Aloys: first of course are all the new shells ;)
+(07/21 21:16:02) Aloys: then there are new bridges. (I'll need to finish the texture though)
+(07/21 21:16:02) Robert The Rebuilder: [Sorry to interrupt - please use /shout so that we can all hear you.  Thanks]
+(07/21 21:16:26) Besharen (AB): testing shout...answer if you can hear me
+(07/21 21:16:31) Aloys: then there are the lampposts, they're everywhere and they got a new texture
+(07/21 21:16:32) Zib Redlektab: I hear ya
+(07/21 21:16:33) Robert The Rebuilder: Loud and clear
+(07/21 21:16:35) Darryl Pogue: I can hear
+(07/21 21:16:44) Besharen (AB): Alright
+(07/21 21:16:56) Robert The Rebuilder: Can't wait to see the new bridges
+(07/21 21:17:00) Zib Redlektab: Yeah
+(07/21 21:17:00) Aloys: then there are the new walls separating the districts.
+(07/21 21:17:10) Robert The Rebuilder: New walls?!?
+(07/21 21:17:32) Darryl Pogue: So are we using the square city? or the triangular one?
+(07/21 21:17:33) Zib Redlektab: Yeah, whats this new walls business?
+(07/21 21:17:40) Zib Redlektab: Triangle
+(07/21 21:17:40) Aloys: not really in fact:
+(07/21 21:17:50) Cuthbert: off to 37 to intercept newbies to the cavern
+(07/21 21:17:53) Cuthbert: take care all
+(07/21 21:17:56) Cuthbert: Adios
+(07/21 21:17:59) Aloys: they were there before, but I've totally redone them
+(07/21 21:18:04) Zib Redlektab: See ya cuthbert
+(07/21 21:18:04) Robert The Rebuilder: THanks for stopping by, Cuthbert!
+(07/21 21:18:08) Zib Redlektab: Ah ok
+(07/21 21:18:13) Aloys: bye Cuthbert
+(07/21 21:18:18) Cuthbert: see ya
+(07/21 21:18:24) Robert The Rebuilder: I get it: walls between districts, not walls between shells.
+(07/21 21:18:25) Darryl Pogue: [Note to hosts, please ask visitors to stand behind the cones, we should be in front]
+(07/21 21:18:25) Cuthbert (I'm on the surface, be back in a minute):  
+(07/21 21:18:43) Aloys: the bridges have been made so that a boat with passengers can pass below
+(07/21 21:18:46) Darryl Pogue goes to fix the cones again
+(07/21 21:18:51) Robert The Rebuilder: So that they don't catch our germs, or so that we don't catch theirs? ;-)
+(07/21 21:19:14) Besharen (AB): Ooops..sorry I kicked the cones around when I came in
+(07/21 21:19:38) Darryl Pogue: no Besharen, it just wasn't symmetrical ;p
+(07/21 21:19:39) Aloys: and finally the water has turned to Ice :(
+(07/21 21:19:43) Otter waves
+(07/21 21:19:48) hailah: shorah ya'll
+(07/21 21:19:52) Darryl Pogue: Hi Otter and Hailahh
+(07/21 21:19:52) Aloys: Hi there :-)
+(07/21 21:19:56) Error: Don't know how to '/Shorah, Hailah and otter'
+(07/21 21:19:58) Zib Redlektab: Ah
+(07/21 21:20:05) Zib Redlektab: Does it have reduced friction? :D
+(07/21 21:20:09) Besharen (AB): Hello Otter and Hailahh
+(07/21 21:20:12) Aloys: yes :P
+(07/21 21:20:18) Aloys: it should be fun
+(07/21 21:20:23) Otter: hi, guys
+(07/21 21:20:31) Zib Redlektab: note to all visitors: will all visitors please stand behind the cones? :-)
+(07/21 21:20:37) Robert The Rebuilder: Welcome - Aloys was just talking about his new work on Ahra Pahts, the new Uru age
+(07/21 21:20:38) Besharen (AB): Ice skating!
+(07/21 21:20:43) Otter: Does what have reduced friction?
+(07/21 21:20:53) Aloys: the ice in the Age
+(07/21 21:20:57) Darryl Pogue: I just got a cool idea. What if we change the seasons in Ahra Pahts, so that at some times the rivers are ice
+(07/21 21:21:00) Besharen (AB): The ice in the new age, Ahra Pahts
+(07/21 21:21:10) To Darryl Pogue: So, why should people stand behind the cones? They will hardly hear us unless we use shout.
+(07/21 21:21:17) Darryl Pogue: and other times they are water
+(07/21 21:21:29) From Darryl Pogue: We'll have to /shout anyways
+(07/21 21:21:39) To Darryl Pogue: true
+(07/21 21:21:43) Otter: is it ice in an area that has fluctuating temp?
+(07/21 21:21:56) Otter: and do I really need to be in the cone pen?
+(07/21 21:22:05) Besharen (AB): Oh, sorry guys, I have to go to a soccer game...good luck with the rest of the meeting.
+(07/21 21:22:11) Aloys: we have Rivers and canals that have frozen
+(07/21 21:22:14) Besharen (AB): Bye
+(07/21 21:22:21) Robert The Rebuilder: Good night, Besharen!  And good luck!
+(07/21 21:22:21) Zib Redlektab: Idk, that was the format we came up with...idk why we dont just move to the community hall
+(07/21 21:22:22) Aloys: Goodbye Besharen
+(07/21 21:22:22) Darryl Pogue: Well, I suppose not. Since you're the only visitor right now
+(07/21 21:22:29) Otter laughs
+(07/21 21:22:33) Otter: well, ok then
+(07/21 21:22:38) Darryl Pogue: bye besharen
+(07/21 21:22:40) Robert The Rebuilder: Those crowds can get unruly... ;-)
+(07/21 21:22:52) Robert The Rebuilder: Where are those bodyguards we ordered, anyway?  
+(07/21 21:23:05) Otter: because areas where there is melting and refreezing will produce ice with a reduced friction.
+(07/21 21:23:12) Otter: just sayin'
+(07/21 21:23:14) Robert The Rebuilder makes a note to talk to the DRC about their poor service.
+(07/21 21:23:44) Robert The Rebuilder: Otter : have you visited Ahra pahts yet?
+(07/21 21:23:46) Darryl Pogue: Where's TE? He said he would be here
+(07/21 21:23:54) Otter: No, I haven't
+(07/21 21:24:01) Otter: I've gone to the Wiki
+(07/21 21:24:02) Zib Redlektab: He'll show up eventually and tell us a story i bet :P
+(07/21 21:24:04) Robert The Rebuilder: Hailah - how about you?
+(07/21 21:24:05) hailah: is Starfyre going to wake up?
+(07/21 21:24:07) Darryl Pogue realizes that he hasn't actually been in  the city either
+(07/21 21:24:15) hailah: how about me what?
+(07/21 21:24:22) Robert The Rebuilder: We don't know - we cannot seem to reach her?
+(07/21 21:24:30) Robert The Rebuilder: Have you visited Ahra pahts?
+(07/21 21:24:40) hailah: no, i was going to ask how...
+(07/21 21:24:50) hailah: I've been criminally busy lately
+(07/21 21:24:55) hailah: but I might have some time this we
+(07/21 21:25:10) Darryl Pogue: no *Is embarrased, since he's been working on it for a while and doesn't know what it looks like in Uru*
+(07/21 21:25:10) Robert The Rebuilder: Aloys: where is the best place to get it?  Is there a post you can refer folks to that has a link?
+(07/21 21:25:17) Aloys: That cool because we've got a new version coming up
+(07/21 21:25:34) hailah: I'd love to check it out
+(07/21 21:25:42) Zib Redlektab: Well they should wait for the next release, its the official release :P
+(07/21 21:25:51) Aloys: hmm right now the download link is buried somewhere..
+(07/21 21:26:00) Robert The Rebuilder: Very true - Aloys has been telling us about all the enhancements he's made.
+(07/21 21:26:03) Darryl Pogue: Oh. Just to remind everyone:
+(07/21 21:26:11) Aloys: Yes, I'll definitely make an official post tomorrow
+(07/21 21:26:25) Robert The Rebuilder: What is it, Darryl?
+(07/21 21:26:33) Darryl Pogue: THE PRPPY BLENDER EXPORT PLUGIN HAS BEEN REFACTORED AND HAS BEEN RELEASED!
+(07/21 21:26:43) Zib Redlektab: Hooray!
+(07/21 21:26:48) Robert The Rebuilder: Oh yeah - right!
+(07/21 21:26:48) Darryl Pogue is glad he got that out
+(07/21 21:26:53) Aloys: :D
+(07/21 21:27:07) Zib Redlektab: Though does anyone know if it actually works yet? i havent heard of anyone actually exporting with it...
+(07/21 21:27:13) Darryl Pogue: Don't think it has any new features, but it does work
+(07/21 21:27:24) Robert The Rebuilder: There is a patched version coming out tomorrow; there was an issue with export if you had those directories with the .raw files.
+(07/21 21:27:48) Robert The Rebuilder: I've successfully exported a number of ages
+(07/21 21:28:04) Robert The Rebuilder: But by all means, please try it out and let us know if there are any problems.
+(07/21 21:28:06) Aloys: I'll give it a try with Ahra Pahts tomorrow too.
+(07/21 21:28:15) Darryl Pogue: No info on the myst V ages yet?
+(07/21 21:28:16) Zib Redlektab: And i with galamay
+(07/21 21:28:27) Darryl Pogue: I'll take a look at that later
+(07/21 21:28:41) Zib Redlektab: What with the importing and exporting of myst v ages?
+(07/21 21:29:14) Zib Redlektab: My goal is to get todelmer into uru, after galamay and my other projects are done :D
+(07/21 21:29:29) Darryl Pogue: Well, we've been experimenting with it. There will most likely NOT be any export support for Myst V
+(07/21 21:29:31) Robert The Rebuilder: Shhh... Cyan might be listening. ;-)
+(07/21 21:29:36) Zib Redlektab: Lol
+(07/21 21:29:45) Zib Redlektab: I wish....
+(07/21 21:29:56) Zib Redlektab: CYAN! I WANT IN ON URU LIVE!
+(07/21 21:30:00) Aloys: just importing from EoA would be great
+(07/21 21:30:14) Zib Redlektab: Yeah'
+(07/21 21:30:28) Robert The Rebuilder: Would Cyan have to wait until Ubisoft releases its grip on Myst V ages before incorporating them into Uru Live?
+(07/21 21:30:51) Aloys: good question, I'm not sure about the terms on this.
+(07/21 21:31:08) Aloys: I think they could use them though
+(07/21 21:31:13) Darryl Pogue: Cyan has said that Myst V Ages will be in Live, but "not in a way that we would expect"
+(07/21 21:31:24) Aloys: Right
+(07/21 21:31:49) Aloys: I"d love to see the Shaft at least
+(07/21 21:31:58) Robert The Rebuilder: Hailah - did you want to say something about the D'ni Decimal System and other V of D topics?
+(07/21 21:32:09) hailah: There are other Ubisoft games on Gametap, so maybe eventually IV and V will be there too
+(07/21 21:32:22) Darryl Pogue: Yeah Hailahh, what's going on with that?
+(07/21 21:32:26) Otter waves
+(07/21 21:32:28) Darryl Pogue: shorah Whilyam
+(07/21 21:32:34) Zib Redlektab: Hey whil
+(07/21 21:32:36) Whilyam: Shorah.
+(07/21 21:32:43) Robert The Rebuilder: Welcom, Whilyam - glad you can make it.
+(07/21 21:32:44) hailah: Don't have much to say, actually.  I know only that Myridean was going to package up our work on DDC
+(07/21 21:32:44) Aloys: Hi Whilyam
+(07/21 21:32:49) hailah: and sent it to Cyan.
+(07/21 21:33:01) Robert The Rebuilder: Hailah is talking about V of D's efforts.
+(07/21 21:33:22) hailah: I asked Michael Engberg at the forum he was at, whether any librarianship was involved in "the drc exploration"
+(07/21 21:33:31) hailah: And he said "Marie knows about that"
+(07/21 21:33:34) To Darryl Pogue: Should I restrain Whilyam and force him behind the cones, or is he ok?
+(07/21 21:33:37) To Darryl Pogue: :-)
+(07/21 21:34:00) hailah: i haven't heard from Myridean, but she's taking a hiatus from things uru for now
+(07/21 21:34:01) From Darryl Pogue: Just let them be for now, if we reach 5, then ask them to move back
+(07/21 21:34:08) Robert The Rebuilder: Any contact with Marie?
+(07/21 21:34:24) Whilyam: Lots of people have been taking a break from the cavern...
+(07/21 21:34:28) hailah: starfyre agreed to take over the running of Vivarium, but she's, uh, not quite with us at the moment
+(07/21 21:34:33) Zib Redlektab: i dont understand them
+(07/21 21:34:36) Zib Redlektab: Lol
+(07/21 21:34:36) hailah: No contact by me
+(07/21 21:34:43) Zib Redlektab: someone should PM her
+(07/21 21:34:53) Otter: What is Vivarium?
+(07/21 21:35:06) hailah: sorry, I was hoping Starfyre knew more.  I have been absolutely swamed with work (7 days a week) 
+(07/21 21:35:12) Aloys: It's summer I guess. Holidays and all. People aren't much online
+(07/21 21:35:16) Whilyam: A library of explorer-made Ages, correct?
+(07/21 21:35:16) Robert The Rebuilder: Yuk!
+(07/21 21:35:31) Otter: Thanks, Whilyam
+(07/21 21:35:32) hailah: it's an organization started by Myridean, activities sort of related to "librarianship"
+(07/21 21:35:40) hailah: In some way
+(07/21 21:35:52) Whilyam: I would've thought summer would be when people would be down here the most with some free time, etc.
+(07/21 21:35:56) Zib Redlektab: Yeah
+(07/21 21:36:06) Robert The Rebuilder: Any word on when Myridean may return?
+(07/21 21:36:15) hailah: yes, our last project was working on a way to mark and classify the ages in some way, so people could tell them apart when there are a lot of them
+(07/21 21:36:18) hailah: No...
+(07/21 21:36:21) Aloys: I agree,but that doesn't seem to be the case :(
+(07/21 21:36:40) hailah: Ok, I will volunteer to try to get in touch with her and see how she's doing and whether she heard anything from Cyan.
+(07/21 21:37:09) Darryl Pogue: be sure to post on the fora if you get any word back from her.
+(07/21 21:37:22) Zib Redlektab: Brb
+(07/21 21:37:22) Robert The Rebuilder: I think you all are doing a fine job of continuing the V of D tradition - don't get me wrong.
+(07/21 21:37:40) Robert The Rebuilder: Just curious about here - that's all.
+(07/21 21:37:48) Robert The Rebuilder: here = her
+(07/21 21:38:21) hailah: me too.  
+(07/21 21:38:33) hailah: but I know how it is, people get busy...
+(07/21 21:38:34) hailah: I
+(07/21 21:38:39) hailah: ll tell her she's missed
+(07/21 21:38:48) Robert The Rebuilder: Thanks.
+(07/21 21:38:49) Aloys: this VoD activity is great, it's highly specialized and it's cool Cyan allows you do to that
+(07/21 21:39:19) Zib Redlektab: Back
+(07/21 21:39:24) Zib Redlektab: Yeah its very unique
+(07/21 21:39:26) hailah: I wish we had been able to get our pathfinder out - we did a lot of work on that but it kind of stalled out
+(07/21 21:39:32) hailah: due to people falling away...
+(07/21 21:39:40) Robert The Rebuilder: Could you remind us about the pathfinder?
+(07/21 21:39:42) Aloys: as is often the case..
+(07/21 21:39:47) Robert The Rebuilder: What its about, etc.?
+(07/21 21:39:49) Otter grins
+(07/21 21:40:03) hailah: It was going to be a guide to web resources (sites etc.) about D'ni... 
+(07/21 21:40:22) hailah: we had a very detailed evaluation checklist so only the best sites would get selected
+(07/21 21:40:33) Zib Redlektab: Sounds cool...
+(07/21 21:40:35) hailah: but we couldn't get enough reviewers to keep it going
+(07/21 21:40:49) hailah: We set it up with mediawiki
+(07/21 21:41:06) hailah: I developed a "subject tree" to use in describing the sites
+(07/21 21:41:22) hailah: I wanted to also use that to describe other things, like the books and games
+(07/21 21:41:29) Robert The Rebuilder: Is it on the AgeBuilder Wiki, or another site?
+(07/21 21:41:35) Aloys: (sounds like you put a lot of work into this)
+(07/21 21:41:40) hailah: No, it's on a site Myri set up
+(07/21 21:41:47) Robert The Rebuilder: Ah
+(07/21 21:41:51) Otter: what were the criteria for evaluating the sites?
+(07/21 21:42:38) Otter hears crickets chirping
+(07/21 21:42:41) Robert The Rebuilder: .
+(07/21 21:42:51) Whilyam hears them too
+(07/21 21:42:56) Robert The Rebuilder: [Don't forget to use shout, everyone]
+(07/21 21:42:56) Otter: lol
+(07/21 21:43:02) hailah: It had to have enough content that was new to be worthwhile, info needed to be reliable, navigation good, identified who owned it etc.
+(07/21 21:43:05) Whilyam has heard them an awful lot this week
+(07/21 21:43:28) Robert The Rebuilder: Once the sites have been reviewed and posted, is there a need for continual review?
+(07/21 21:43:34) Zib Redlektab thinks you should have heard them at 2:00 today, it was just him and besharen here after all
+(07/21 21:43:48) Otter roars with laughter
+(07/21 21:44:15) Otter not roars exactly, sorry to interrupt, continual review?
+(07/21 21:44:21) hailah: darn, you can't paste urls here
+(07/21 21:44:21) Whilyam thinks Zib was lucky not to catch the cavern at about 7 when there were precisely two people in the whole place
+(07/21 21:44:42) Robert The Rebuilder: It would be great to see what you all have come up with.  I guess we'll wait for you to type in that URL manually.  ;-)
+(07/21 21:45:08) hailah: that's why doing something like a pathfinder would be a commitment - yes - sites disappear or change so quickly
+(07/21 21:45:33) Robert The Rebuilder: But some sites have been around for ages: DWPR, D'ni Desk Reference, D'ni Linguist Guild, etc.
+(07/21 21:45:39) hailah: we started collecting approved sites and had a few months not working on it and went back, and half were either gone or had changed a lot
+(07/21 21:45:40) Otter: did it include fora?
+(07/21 21:45:49) Otter: that's a yes
+(07/21 21:45:52) Otter: : )
+(07/21 21:46:07) hailah: Myri didn't want to include community sites at one point, but I think she changed her ming...
+(07/21 21:46:09) hailah: Mind
+(07/21 21:46:20) Darryl Pogue: shorah Mari
+(07/21 21:46:21) Otter waves
+(07/21 21:46:23) hailah: She wanted it to be more like the reference collection at your library
+(07/21 21:46:25) Mari': hello all
+(07/21 21:46:28) Aloys: Hello Mari
+(07/21 21:46:31) Robert The Rebuilder: By "community sites", do you mean ones with forums?
+(07/21 21:46:32) Whilyam: Hello Mari
+(07/21 21:46:33) hailah: Atlases, dictionaries, encyclopedias, etc.
+(07/21 21:46:45) hailah: Right, sites with forums = community sites
+(07/21 21:47:05) hailah: But you know, most public libraries have information on community activities
+(07/21 21:47:05) Robert The Rebuilder: Well, maybe those can be put in a separate section
+(07/21 21:47:10) hailah: Right.
+(07/21 21:47:10) Robert The Rebuilder: Right
+(07/21 21:47:20) Otter: because they can be a great resource
+(07/21 21:47:26) Aloys: indeed
+(07/21 21:47:34) Robert The Rebuilder: Mari', Hailahh is filling us in on Vivarium's Pathfinder project.
+(07/21 21:47:52) Mari': ty robert....
+(07/21 21:47:52) hailah: And I think, we can take some liberties between what we do and the "RL" library world
+(07/21 21:47:59) hailah: otherwise it becomes too much work
+(07/21 21:48:03) To Darryl Pogue: OK - we're at 3 so far, right?  Two more, and we push them behind the cones?
+(07/21 21:48:06) hailah is a librarian in RL
+(07/21 21:48:16) Robert The Rebuilder: Ah - that explains it. ;-)
+(07/21 21:48:17) From Darryl Pogue: Sure
+(07/21 21:48:38) To Darryl Pogue: Otherwise, what happens: will we crash?
+(07/21 21:48:54) hailah: it's at http://vofd.org/pathfinder
+(07/21 21:49:00) From Darryl Pogue: No, but those unruly crowds could get the better of us ;p
+(07/21 21:49:03) hailah: i think you have to create a login to see anything
+(07/21 21:49:25) Robert The Rebuilder: I'll definitely check it out.  Thanks, Hailahh!
+(07/21 21:49:46) hailah: If you're interested, my email is hailahh@yahoo.com
+(07/21 21:49:46) Whilyam: As much as I hate to leave the first group of people who can actually talk that I've seen all day, I need to go to bed... Shorah b'shemtee. Gorevehn boyihm.
+(07/21 21:49:47) Otter is writing it down
+(07/21 21:49:51) To Darryl Pogue: I think I can take Whilyam, but you gotta take Mari' and Otter.  ;-)
+(07/21 21:49:58) hailah: Bye Whilyam
+(07/21 21:50:00) Darryl Pogue: [It is not advisable to sit if your system has low memory. Sitting and using the KI have been known to increase lag and memory consumption]
+(07/21 21:50:03) Darryl Pogue: Bye whil
+(07/21 21:50:12) Otter: Good night Whilyam
+(07/21 21:50:12) Robert The Rebuilder: By Whilyam!
+(07/21 21:50:21) Mari': goon night Whil
+(07/21 21:50:21) Aloys: bye Whilyam
+(07/21 21:50:34) Robert The Rebuilder: Try splashing water on her, Hailahh
+(07/21 21:50:35) Aloys: I'll need to goo as well actually.
+(07/21 21:50:47) Robert The Rebuilder: Thanks for staying up so late, Aloys!
+(07/21 21:50:52) Robert The Rebuilder: Great to see you, finally!
+(07/21 21:51:03) Otter: can anyone tell me about ahra pahts (know I'm spelling that wrong)
+(07/21 21:51:10) Aloys: Yes, we'll need to do more of those meeting :-)
+(07/21 21:51:11) Otter: It was nice to meet you Aloys
+(07/21 21:51:22) Robert The Rebuilder: Aloys: I can fill her in, if you want to sleep
+(07/21 21:51:29) Aloys: Good night all, see you tomorrow for the new version of Ahra ;)
+(07/21 21:51:31) Mari': yes, 
+(07/21 21:51:39) Zib Redlektab: Good night aloys, get some sleep
+(07/21 21:51:41) Mari': good night Aloys
+(07/21 21:51:51) hailah: night Aloys
+(07/21 21:51:52) Otter waves
+(07/21 21:51:56) hailah waves
+(07/21 21:52:02) Robert The Rebuilder: Aloys was telling us about the improvements he's been making.  But first, how much do you want me to tell of Ahra's background?
+(07/21 21:52:03) Darryl Pogue: Au revoir Aloys.
+(07/21 21:52:24) Otter: as much as you'd care to
+(07/21 21:52:28) Mari': all of it, I haven't been following it as well as I should on the forum
+(07/21 21:52:45) From Darryl Pogue: I'm gonna be AFK a bit, but I'll check back every few minutes
+(07/21 21:52:50) Robert The Rebuilder: Well, there's the IC story, which can be found on the New Tree Council site.
+(07/21 21:52:59) Robert The Rebuilder: [I apologize - I don't have the URL handy]
+(07/21 21:53:05) Otter: no worries
+(07/21 21:53:10) Mari': I can check that out
+(07/21 21:53:12) Otter: we can find it
+(07/21 21:53:16) Robert The Rebuilder: I can tell you about the OOC stuff, if you prefer.
+(07/21 21:53:18) Mari' nods her head
+(07/21 21:53:29) Otter nods too
+(07/21 21:53:29) Zib Redlektab: drsorg.com/forums i think
+(07/21 21:53:41) Robert The Rebuilder: Thanks, Zib! The idea is that Ahra Pahts is an 
+(07/21 21:53:49) Robert The Rebuilder: age created by the community
+(07/21 21:53:50) Zib Redlektab: np
+(07/21 21:54:00) Robert The Rebuilder: Aloys has created the "framework"
+(07/21 21:54:09) Robert The Rebuilder: And everyone is invited to fill in their city block.
+(07/21 21:54:24) Zib Redlektab: its a great way to get into age creation
+(07/21 21:54:34) Zib Redlektab: cuz its like making your own little age
+(07/21 21:54:38) Robert The Rebuilder: If you're interested in creating a city block, visit http://www.agebuilder.org, and click on the links for Ahra Pahts.  There is a sign up sheet.
+(07/21 21:54:43) Mari': How much talent and software do you need?
+(07/21 21:54:45) Robert The Rebuilder: Or you can post on the forums
+(07/21 21:55:03) Robert The Rebuilder: Well, you do need modeler experience.
+(07/21 21:55:09) Mari': :-)
+(07/21 21:55:10) Darryl Pogue: You will need the 3D Modelling program Blender3D to build your Age
+(07/21 21:55:16) Zib Redlektab: just the ability to use basic blender controls
+(07/21 21:55:19) Robert The Rebuilder: The amount of development experience is questionable.
+(07/21 21:55:30) Mari': leaves me out.... but can we visit it soon?
+(07/21 21:55:32) Robert The Rebuilder: You can get away without seeing any code, and still explore and create ages.
+(07/21 21:55:35) Darryl Pogue: or you can use any other modellling program and send it to somewhere so that they can convert it and export
+(07/21 21:55:46) Robert The Rebuilder: Yes: Aloys will release a new version Saturday
+(07/21 21:55:50) Zib Redlektab: yeah
+(07/21 21:55:55) Zib Redlektab: u just need UAM
+(07/21 21:56:05) Otter: UAM?
+(07/21 21:56:07) Mari': A second installation?
+(07/21 21:56:16) Zib Redlektab: uru age manager
+(07/21 21:56:16) Robert The Rebuilder: UAM = UruAgeManager
+(07/21 21:56:24) Zib Redlektab: and an offline copy of uru, yeah
+(07/21 21:56:45) Robert The Rebuilder: For step-by-step instructions, start on the AgeBuilder FAQ (on http://www.agebuilder.org).  
+(07/21 21:56:58) Mari': will UAM effect access to UU
+(07/21 21:57:02) Robert The Rebuilder: We'll be the first to admit that it is a steep learning curve.
+(07/21 21:57:22) Robert The Rebuilder: You should have a separate installation of Uru
+(07/21 21:57:46) Mari': And UAM only effects that seperate installation?
+(07/21 21:57:52) Zib Redlektab: yeah
+(07/21 21:57:54) Robert The Rebuilder: UAM modifies only the standalone verion - yes
+(07/21 21:58:06) hailah: Ah.
+(07/21 21:58:25) Robert The Rebuilder: And that is where you place your new age's files - in the standalone version
+(07/21 21:58:28) Mari': ok, I have been afraid of setting it up because I thought it might affect D'mala
+(07/21 21:58:50) hailah: i was thinking that also
+(07/21 21:58:52) Robert The Rebuilder: No worries about that.  Just be sure to keep your desktop shortcuts well marked!
+(07/21 21:59:01) hailah: Plus, I need to start doing backups on my puter.  right now I'm going bare...
+(07/21 21:59:05) hailah: No insurance...
+(07/21 21:59:16) Robert The Rebuilder: Yikes!
+(07/21 21:59:23) Zib Redlektab: yeah :P i have like 6 copies of uru right now...very hard keeping track
+(07/21 21:59:28) hailah: So, i tend not to take risks
+(07/21 21:59:42) hailah: But I'm going to have to get responsible
+(07/21 21:59:59) hailah: And then I can take risks with beta software...  :-)
+(07/21 22:00:38) Robert The Rebuilder: For more guidance on getting started with creating ages, feel free to post your questions on Age Builder forums.
+(07/21 22:00:52) Robert The Rebuilder: The best way to start is by modifying an existing age.
+(07/21 22:01:00) Mari': Akkkk... i Have to leave, darn!
+(07/21 22:01:08) Otter: in python?
+(07/21 22:01:10) Mari': See you latter
+(07/21 22:01:13) Mari' waves
+(07/21 22:01:13) Zib Redlektab: see ya
+(07/21 22:01:14) Robert The Rebuilder: Thanks for stopping by, Mari'
+(07/21 22:01:16) Otter: bye, Mari
+(07/21 22:01:16) Zib Redlektab: no in blender
+(07/21 22:01:25) Darryl Pogue: Bye Mari'
+(07/21 22:01:27) Zib Redlektab: u can import ages as well
+(07/21 22:01:29) hailah: Nice seeing ya Mari
+(07/21 22:01:31) Robert The Rebuilder: Python is used just for the scripts.
+(07/21 22:01:32) hailah: Bye...
+(07/21 22:01:37) Otter: oh, ok'
+(07/21 22:01:54) Zib Redlektab: yeah galamay has no python in it :P
+(07/21 22:01:57) Robert The Rebuilder: Blender is for the visual placement of the objects in the scene, as well as texturing and collision information.
+(07/21 22:02:06) Otter: what kind of modifications can you do in blender?
+(07/21 22:02:06) Darryl Pogue: 'k I'd better be going too. I have to test that pyPRP code and get Myst V Ages working
+(07/21 22:02:14) Robert The Rebuilder: Good luck, Darryl!
+(07/21 22:02:16) Otter: oh, thanks RTR
+(07/21 22:02:24) Otter: nice to meet you Darryl
+(07/21 22:02:32) hailah: Nice seeing you Darryl
+(07/21 22:02:36) hailah: Oops, too late
+(07/21 22:02:53) Robert The Rebuilder: There are many folks who have great ideas for ages, but need assistance with the building part.
+(07/21 22:02:57) Otter: so Ravin's tutorials...
+(07/21 22:03:00) hailah: Did anybody do a chatlog of this?
+(07/21 22:03:04) Otter: I did
+(07/21 22:03:05) Robert The Rebuilder: I do.
+(07/21 22:03:07) Otter: : )
+(07/21 22:03:12) Robert The Rebuilder: Jinx!
+(07/21 22:03:12) hailah: Good
+(07/21 22:03:17) Otter: buy me a coke
+(07/21 22:03:26) Robert The Rebuilder: Hey - you can't talk!
+(07/21 22:03:29) Robert The Rebuilder: ;-)
+(07/21 22:03:32) hailah: yeah, we need vending machines in here
+(07/21 22:03:36) Zib Redlektab: i have a log ;)
+(07/21 22:03:44) Robert The Rebuilder: Forgot to mention - we have cold beers in the fountain.
+(07/21 22:03:58) Otter would respond but her mouth is temporarily sipped
+(07/21 22:04:04) hailah: Mmm hmmm
+(07/21 22:04:05) Robert The Rebuilder: What did you say, Otter?
+(07/21 22:04:07) Otter is *zipped
+(07/21 22:04:08) Robert The Rebuilder: Oops!
+(07/21 22:04:31) Robert The Rebuilder: So, do you all have any ideas for ages?
+(07/21 22:04:34) Otter: when I was little we used to say, jinx, buy me a coke
+(07/21 22:04:38) Otter: me?
+(07/21 22:04:41) Robert The Rebuilder: Got it.
+(07/21 22:04:48) Robert The Rebuilder: Sure, you, hailah, anyone.
+(07/21 22:04:58) Robert The Rebuilder: I'll sign an NDA, if you like. ;-)
+(07/21 22:05:04) Zib Redlektab: lol
+(07/21 22:05:12) Otter: well, I noticed all the commercial ages were not being grabbed
+(07/21 22:05:24) Robert The Rebuilder: In Ahra Pahts?
+(07/21 22:05:25) Otter: and was wondering (looking at the others)...
+(07/21 22:05:28) Otter: yup
+(07/21 22:05:47) Otter: whether an overall topography had been decided upon?
+(07/21 22:06:07) Robert The Rebuilder: Welcome, Herold!
+(07/21 22:06:09) Otter: (or natural landscape)
+(07/21 22:06:16) Zib Redlektab: yey Red's here :P
+(07/21 22:06:22) Robert The Rebuilder: Actually, talk to Herald about the landscape.
+(07/21 22:06:28) Otter: or Medecine Man
+(07/21 22:06:31) Otter waves
+(07/21 22:06:33) Robert The Rebuilder: [Herald = Medecine man]
+(07/21 22:06:38) Otter: thanks
+(07/21 22:06:53) Zib Redlektab: Red = MM too :P
+(07/21 22:07:19) Otter: Herald, I was just asking about the overall natural landscape for ahra pahts
+(07/21 22:07:23) Otter: (sp?)
+(07/21 22:07:40) Medicine Man: Ah yes
+(07/21 22:07:46) Otter: (because of how that can influence architecture)
+(07/21 22:07:48) Robert The Rebuilder: Looks like we lost Hailahh
+(07/21 22:08:11) Robert The Rebuilder: [Sorry to interrupt, Herald, please continue]
+(07/21 22:08:25) Medicine Man: What we have observed thus far is a domed canopy of plant matter above the city
+(07/21 22:08:40) Otter: suspended by?
+(07/21 22:08:53) Medicine Man: Its self
+(07/21 22:08:57) Otter: (not meaning to interrupt)
+(07/21 22:09:55) Medicine Man: It seem to be as if it grew over a mound, then was left standing as if the mound was washed away
+(07/21 22:10:09) Otter: So perhaps trees along the edges, and then vines and other plants in between?
+(07/21 22:10:32) Otter: or would we look up to dirt?
+(07/21 22:10:44) Otter: (not being a jerk, trying to understand)
+(07/21 22:11:11) Medicine Man: As I said, there has been little exploration beyond the city
+(07/21 22:11:42) Otter: does the city have a natural water source?
+(07/21 22:11:51) Medicine Man: Yes
+(07/21 22:11:53) Robert The Rebuilder: Herald, will there be any sketches accompanying your online journal of your explorations?
+(07/21 22:12:07) Medicine Man: That can be in order
+(07/21 22:12:19) Robert The Rebuilder: Wonderful - we all will look forward to it.
+(07/21 22:12:20) Medicine Man: But yes, we do have a water source
+(07/21 22:12:32) Medicine Man: And a fresh one at that
+(07/21 22:12:51) Robert The Rebuilder: Great! I am so sick of smelling this orange lake here.
+(07/21 22:12:58) Medicine Man smiles
+(07/21 22:12:59) Zib Redlektab: lol
+(07/21 22:13:12) Otter: I look forward to seeing the images.  
+(07/21 22:13:27) Medicine Man: Yes it is quite vile when you city near it in the ferry area of the city
+(07/21 22:13:46) Robert The Rebuilder: I stay away from that area, keeping to the higher altitudes.

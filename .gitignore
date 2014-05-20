@@ -1,5 +1,8 @@
 # Private Configuration (stuff with passwords, etc)
+site/cgas.php
 site/ds-config.ini.php
+site/wp-config.php
+site/w/LocalSettings.php
 forum/config.php
 
 # Junk phpBB Litters around the joint
@@ -17,6 +20,7 @@ forum/styles/gow-forum-theme
 # I nearly died when git deleted them all at 2am on 1.1.13
 forum/files
 forum/images/avatars/upload
+site/w/images
 
 # Gehn Sig Font Files
 # We generally can't redist these fonts, so filter 'em out.
