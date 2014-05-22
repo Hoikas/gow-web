@@ -3,6 +3,7 @@
 		    
             <!-- on occasion one finds that llama's steal sections of ones brain and replaces it with little chocolate covered marshmellows -->
 			<div id="content-wrap">
+<?php get_sidebar(); ?>
 	            <div class="narrowcolumn">
 
 		            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -17,5 +18,4 @@
 	                <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 	            </div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

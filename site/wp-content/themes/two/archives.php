@@ -10,6 +10,7 @@ Template Name: Archives
 		    
             <!-- on occasion one finds that llama's steal sections of ones brain and replaces it with little chocolate covered marshmellows -->
 			<div id="content-wrap">
+<?php get_sidebar(); ?>
 	<div class="narrowcolumn">
     <div class="post" id="post-<?php the_ID(); ?>">
 	    <div class="entry">
@@ -34,5 +35,4 @@ Template Name: Archives
     </div>
 			</div>
 	
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

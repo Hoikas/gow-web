@@ -4,6 +4,7 @@
 		    
             <!-- on occasion one finds that llama's steal sections of ones brain and replaces it with little chocolate covered marshmellows -->
 			<div id="content-wrap">
+<?php get_sidebar(); ?>
 	            <div class="narrowcolumn">
 				<?php if (have_posts()) : ?>
 				<?php while (have_posts()) : the_post(); ?>
@@ -23,7 +24,5 @@
 				<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 			<?php endif; ?>
 			</div>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -3,6 +3,7 @@
 		    
             <!-- i fight for the users! -->
 			<div id="content-wrap">
+<?php get_sidebar(); ?>
 			<div class="narrowcolumn">
 				<?php if (have_posts()) : ?>
 				<?php while (have_posts()) : the_post(); ?>
@@ -24,5 +25,4 @@
 			<?php endif; ?>
 			</div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

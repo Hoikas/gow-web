@@ -9,6 +9,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 
 	<div id="container">
 		<div id="content-wrap">
+<?php get_sidebar(); ?>
 			<div class="narrowcolumn">
 				<?php if (have_posts()) : ?>
 				
@@ -55,7 +56,4 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 			<?php endif; ?>
 			</div>
 
-<?php
-get_sidebar();
-get_footer();
-?>
+<?php get_footer(); ?>
