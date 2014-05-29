@@ -148,7 +148,7 @@ ul#navigation li a:hover, ul#navigation li a.active {
 	text-transform: uppercase;
 	letter-spacing: 4px;
 	color: #fff;
-	margin: .6em 0 2em 0;
+	margin: .6em 0 1em 0;
 	padding: 0 0 .5em 0;
 	border-bottom: 1px solid #3A3A39;
 	}
@@ -178,7 +178,7 @@ ul#navigation li a:hover, ul#navigation li a.active {
 	text-decoration: none;
 	}
 
-.entry { margin: 5em 0 0 0; padding: 0;}
+.entry { margin-top: 0em; padding: 0; }
 
 .post h3 {
     font-family: Georgia, 'Times New Roman', Serif;
@@ -188,7 +188,7 @@ ul#navigation li a:hover, ul#navigation li a.active {
 	text-transform: uppercase;
 	letter-spacing: 4px;
 	color: #fff;
-	margin: 3em 0 2em 0;
+	margin: 2em 0 1em 0;
 	padding: 0 0 .5em 0;
 	border-bottom: 1px solid #3A3A39;
 	}
