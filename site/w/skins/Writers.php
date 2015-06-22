@@ -34,19 +34,19 @@ class WritersTemplate extends BaseTemplate {
 <div id="nav-wrap">
 	<div id="nav">
 		<ul id="navigation">
-			<li><a href="http://www.guildofwriters.org/index.php">Home</a></li>
-			<li><a href="http://www.guildofwriters.org/wiki" title="Guild of Writers Wiki">Wiki</a></li>
-			<li><a href="http://forum.guildofwriters.org" title="Discussion Forum">Forum</a></li>
-			<li><a href="http://www.guildofwriters.org/council" title="Guild Council">Council</a></li>
-			<li><a href="http://www.guildofwriters.org/journals/" title="Writers&#8217; Development Journals">Development Journals</a></li>
-			<li><a href="http://www.guildofwriters.org/cwe-dev" title="CyanWorlds.com Engine Development">Engine Development</a></li>
-			<li><a href="http://www.guildofwriters.org/gehn/">Gehn Shard</a></li>
+			<li><a href="//guildofwriters.org/index.php">Home</a></li>
+			<li><a href="//guildofwriters.org/wiki" title="Guild of Writers Wiki">Wiki</a></li>
+			<li><a href="//forum.guildofwriters.org" title="Discussion Forum">Forum</a></li>
+			<li><a href="/guildofwriters.org/council" title="Guild Council">Council</a></li>
+			<li><a href="//guildofwriters.org/journals/" title="Writers&#8217; Development Journals">Development Journals</a></li>
+			<li><a href="//guildofwriters.org/cwe-dev" title="CyanWorlds.com Engine Development">Engine Development</a></li>
+			<li><a href="//guildofwriters.org/gehn/">Gehn Shard</a></li>
 		</ul>
 	</div>
 </div>
 <div id="header">
 	<h1>Guild of Writers</h1>
-	<a href="/" title="Guild of Writers"><img class="title" src="http://guildofwriters.org/wp-content/themes/two/images/title.png" alt="Guild of Writers" /></a>
+	<a href="/" title="Guild of Writers"><img class="title" src="//guildofwriters.org/wp-content/themes/two/images/title.png" alt="Guild of Writers" /></a>
 </div>
 <div id="container">
 	<div id="content-wrap">
@@ -106,7 +106,7 @@ class WritersTemplate extends BaseTemplate {
 		<div id="content-bottom"></div>
 	</div>
 	<div id="footer">
-		<p><a href="http://www.guildofwriters.org/index.php">Home</a> | <a href="http://www.guildofwriters.org/wiki" title="Guild of Writers Wiki">Wiki</a> | <a href="http://forum.guildofwriters.org" title="Discussion Forum">Forum</a> | <a href="http://www.guildofwriters.org/council" title="Guild Council">Council</a> | <a href="http://www.guildofwriters.org/journals/" title="Writers&#8217; Development Journals">Development Journals</a> | <a href="http://www.guildofwriters.org/cwe-dev" title="CyanWorlds.com Engine Development">Engine Development</a> | <a href="http://www.guildofwriters.org/gehn/">Gehn Shard</a> |</p>
+		<p><a href="//guildofwriters.org/index.php">Home</a> | <a href="//www.guildofwriters.org/wiki" title="Guild of Writers Wiki">Wiki</a> | <a href="//forum.guildofwriters.org" title="Discussion Forum">Forum</a> | <a href="//guildofwriters.org/council" title="Guild Council">Council</a> | <a href="//guildofwriters.org/journals/" title="Writers&#8217; Development Journals">Development Journals</a> | <a href="//guildofwriters.org/cwe-dev" title="CyanWorlds.com Engine Development">Engine Development</a> | <a href="//guildofwriters.org/gehn/">Gehn Shard</a> |</p>
 	</div>
 </div>
 <?php $this->printTrail(); ?>
