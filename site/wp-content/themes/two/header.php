@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="http://guildofwriters.com/feed" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-		<link rel="shortcut icon" type="image/ico" href="http://guildofwriters.com/favicon.ico" />
+		<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
 		<style type="text/css" media="screen">
             <?php include_once('./wp-content/themes/two/backgrounds.php'); echo($tagline); ?>
         </style>
