@@ -667,6 +667,15 @@ div#toctitle {
 	width: 100%;
 }
 
+#editform, #toolbar, #wpTextbox1 {
+	clear: none;
+}
+
+.editOptions {
+	background-color: #2B2B2B !important;
+	border-color: #000000 !important;
+}
+
 /* Headings */
 span.mw-editsection {
 	float: right;
@@ -975,4 +984,12 @@ div.magnify a, div.magnify img {
 	display: block;
 	border: none !important;
 	background: none !important;
+}
+
+table.wikitable {
+	color: #FFFFFF;
+}
+
+table.wikitable * tr th {
+	background-color: #2B2B2B;
 }
