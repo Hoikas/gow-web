@@ -1,12 +1,12 @@
 <?php
 /**
- * Look for 'orphan' revisions hooked to pages which don't exist
- * And 'childless' pages with no revisions.
+ * Look for 'orphan' revisions hooked to pages which don't exist and
+ * 'childless' pages with no revisions.
  * Then, kill the poor widows and orphans.
  * Man this is depressing.
  *
- * Copyright (C) 2005 Brion Vibber <brion@pobox.com>
- * http://www.mediawiki.org/
+ * Copyright © 2005 Brion Vibber <brion@pobox.com>
+ * https://www.mediawiki.org/
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,25 +23,30 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  * http://www.gnu.org/copyleft/gpl.html
  *
+ * @file
  * @author <brion@pobox.com>
  * @ingroup Maintenance
  */
 
-require_once( dirname( __FILE__ ) . '/Maintenance.php' );
+require_once __DIR__ . '/Maintenance.php';
 
+/**
+ * Maintenance script that looks for 'orphan' revisions hooked to pages which
+ * don't exist and 'childless' pages with no revisions.
+ *
+ * @ingroup Maintenance
+ */
 class Orphans extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->mDescription = "Look for 'orphan' revisions hooked to pages which don't exist\n" .
-								"And 'childless' pages with no revisions\n" .
+								"and 'childless' pages with no revisions\n" .
 								"Then, kill the poor widows and orphans\n" .
 								"Man this is depressing";
 		$this->addOption( 'fix', 'Actually fix broken entries' );
 	}
 
 	public function execute() {
-		global $wgTitle;
-		$wgTitle = Title::newFromText( 'Orphan revision cleanup script' );
 		$this->checkOrphans( $this->hasOption( 'fix' ) );
 		$this->checkSeparation( $this->hasOption( 'fix' ) );
 		# Does not work yet, do not use
@@ -53,10 +58,11 @@ class Orphans extends Maintenance {
 	 * @param $db DatabaseBase object
 	 * @param $extraTable String The name of any extra tables to lock (eg: text)
 	 */
-	private function lockTables( &$db, $extraTable = null ) {
+	private function lockTables( $db, $extraTable = array() ) {
 		$tbls = array( 'page', 'revision', 'redirect' );
-		if ( $extraTable )
-			$tbls[] = $extraTable;
+		if ( $extraTable ) {
+			$tbls = array_merge( $tbls, $extraTable );
+		}
 		$db->lockTables( array(), $tbls, __METHOD__, false );
 	}
 
@@ -79,7 +85,7 @@ class Orphans extends Maintenance {
 			FROM $revision LEFT OUTER JOIN $page ON rev_page=page_id
 			WHERE page_id IS NULL
 		" );
-		$orphans = $dbw->numRows( $result );
+		$orphans = $result->numRows();
 		if ( $orphans > 0 ) {
 			global $wgContLang;
 			$this->output( "$orphans orphan revisions...\n" );
@@ -131,7 +137,7 @@ class Orphans extends Maintenance {
 			FROM $page LEFT OUTER JOIN $revision ON page_latest=rev_id
 			WHERE rev_id IS NULL
 		" );
-		$widows = $dbw->numRows( $result );
+		$widows = $result->numRows();
 		if ( $widows > 0 ) {
 			$this->output( "$widows childless pages...\n" );
 			$this->output( sprintf( "%10s %11s %2s %s\n", 'page_id', 'page_latest', 'ns', 'page_title' ) );
@@ -163,11 +169,11 @@ class Orphans extends Maintenance {
 	 */
 	private function checkSeparation( $fix ) {
 		$dbw = wfGetDB( DB_MASTER );
-		$page     = $dbw->tableName( 'page' );
+		$page = $dbw->tableName( 'page' );
 		$revision = $dbw->tableName( 'revision' );
 
 		if ( $fix ) {
-			$dbw->lockTables( $dbw, 'text', __METHOD__ );
+			$this->lockTables( $dbw, array( 'user', 'text' ) );
 		}
 
 		$this->output( "\nChecking for pages whose page_latest links are incorrect... (this may take a while on a large wiki)\n" );
@@ -201,12 +207,12 @@ class Orphans extends Maintenance {
 							'revision',
 							'rev_id',
 							array(
-								'rev_page'      => $row->page_id,
+								'rev_page' => $row->page_id,
 								'rev_timestamp' => $row2->max_timestamp ) );
 						$this->output( "... updating to revision $maxId\n" );
 						$maxRev = Revision::newFromId( $maxId );
 						$title = Title::makeTitle( $row->page_namespace, $row->page_title );
-						$article = new Article( $title );
+						$article = WikiPage::factory( $title );
 						$article->updateRevisionOn( $dbw, $maxRev );
 					}
 				}
@@ -231,4 +237,4 @@ class Orphans extends Maintenance {
 }
 
 $maintClass = "Orphans";
-require_once( RUN_MAINTENANCE_IF_MAIN );
+require_once RUN_MAINTENANCE_IF_MAIN;

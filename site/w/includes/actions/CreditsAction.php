@@ -23,30 +23,29 @@
  * @author <evan@wikitravel.org>
  */
 
+/**
+ * @ingroup Actions
+ */
 class CreditsAction extends FormlessAction {
 
 	public function getName() {
 		return 'credits';
 	}
 
-	public function getRestriction() {
-		return null;
-	}
-
 	protected function getDescription() {
-		return wfMsg( 'creditspage' );
+		return $this->msg( 'creditspage' )->escaped();
 	}
 
 	/**
 	 * This is largely cadged from PageHistory::history
 	 *
-	 * @return String HTML
+	 * @return string HTML
 	 */
 	public function onView() {
 		wfProfileIn( __METHOD__ );
 
 		if ( $this->page->getID() == 0 ) {
-			$s = wfMsg( 'nocredits' );
+			$s = $this->msg( 'nocredits' )->parse();
 		} else {
 			$s = $this->getCredits( -1 );
 		}
@@ -59,54 +58,56 @@ class CreditsAction extends FormlessAction {
 	/**
 	 * Get a list of contributors
 	 *
-	 * @param $cnt Int: maximum list of contributors to show
-	 * @param $showIfMax Bool: whether to contributors if there more than $cnt
-	 * @return String: html
+	 * @param int $cnt Maximum list of contributors to show
+	 * @param bool $showIfMax Whether to contributors if there more than $cnt
+	 * @return string html
 	 */
 	public function getCredits( $cnt, $showIfMax = true ) {
 		wfProfileIn( __METHOD__ );
 		$s = '';
 
-		if ( isset( $cnt ) && $cnt != 0 ) {
-			$s = self::getAuthor( $this->page );
+		if ( $cnt != 0 ) {
+			$s = $this->getAuthor( $this->page );
 			if ( $cnt > 1 || $cnt < 0 ) {
 				$s .= ' ' . $this->getContributors( $cnt - 1, $showIfMax );
 			}
 		}
 
 		wfProfileOut( __METHOD__ );
+
 		return $s;
 	}
 
 	/**
 	 * Get the last author with the last modification time
-	 * @param $article Article object
-	 * @return String HTML
+	 * @param Page $page
+	 * @return string HTML
 	 */
-	protected static function getAuthor( Page $article ) {
-		global $wgLang;
+	protected function getAuthor( Page $page ) {
+		$user = User::newFromName( $page->getUserText(), false );
 
-		$user = User::newFromId( $article->getUser() );
-
-		$timestamp = $article->getTimestamp();
+		$timestamp = $page->getTimestamp();
 		if ( $timestamp ) {
-			$d = $wgLang->date( $article->getTimestamp(), true );
-			$t = $wgLang->time( $article->getTimestamp(), true );
+			$lang = $this->getLanguage();
+			$d = $lang->date( $page->getTimestamp(), true );
+			$t = $lang->time( $page->getTimestamp(), true );
 		} else {
 			$d = '';
 			$t = '';
 		}
-		return wfMessage( 'lastmodifiedatby', $d, $t )->rawParams( self::userLink( $user ) )->params( $user->getName() )->escaped();
+
+		return $this->msg( 'lastmodifiedatby', $d, $t )->rawParams(
+			$this->userLink( $user ) )->params( $user->getName() )->escaped();
 	}
 
 	/**
 	 * Get a list of contributors of $article
-	 * @param $cnt Int: maximum list of contributors to show
-	 * @param $showIfMax Bool: whether to contributors if there more than $cnt
-	 * @return String: html
+	 * @param int $cnt Maximum list of contributors to show
+	 * @param bool $showIfMax Whether to contributors if there more than $cnt
+	 * @return string html
 	 */
 	protected function getContributors( $cnt, $showIfMax ) {
-		global $wgLang, $wgHiddenPrefs;
+		global $wgHiddenPrefs;
 
 		$contributors = $this->page->getContributors();
 
@@ -115,8 +116,10 @@ class CreditsAction extends FormlessAction {
 		# Hmm... too many to fit!
 		if ( $cnt > 0 && $contributors->count() > $cnt ) {
 			$others_link = $this->othersLink();
-			if ( !$showIfMax )
-				return wfMessage( 'othercontribs' )->rawParams( $others_link )->params( $contributors->count() )->escaped();
+			if ( !$showIfMax ) {
+				return $this->msg( 'othercontribs' )->rawParams(
+					$others_link )->params( $contributors->count() )->escaped();
+			}
 		}
 
 		$real_names = array();
@@ -124,17 +127,18 @@ class CreditsAction extends FormlessAction {
 		$anon_ips = array();
 
 		# Sift for real versus user names
+		/** @var $user User */
 		foreach ( $contributors as $user ) {
-			$cnt--; 
+			$cnt--;
 			if ( $user->isLoggedIn() ) {
-				$link = self::link( $user );
+				$link = $this->link( $user );
 				if ( !in_array( 'realname', $wgHiddenPrefs ) && $user->getRealName() ) {
 					$real_names[] = $link;
 				} else {
 					$user_names[] = $link;
 				}
 			} else {
-				$anon_ips[] = self::link( $user );
+				$anon_ips[] = $this->link( $user );
 			}
 
 			if ( $cnt == 0 ) {
@@ -142,22 +146,24 @@ class CreditsAction extends FormlessAction {
 			}
 		}
 
+		$lang = $this->getLanguage();
+
 		if ( count( $real_names ) ) {
-			$real = $wgLang->listToText( $real_names );
+			$real = $lang->listToText( $real_names );
 		} else {
 			$real = false;
 		}
 
 		# "ThisSite user(s) A, B and C"
 		if ( count( $user_names ) ) {
-			$user = wfMessage( 'siteusers' )->rawParams( $wgLang->listToText( $user_names ) )->params(
+			$user = $this->msg( 'siteusers' )->rawParams( $lang->listToText( $user_names ) )->params(
 				count( $user_names ) )->escaped();
 		} else {
 			$user = false;
 		}
 
 		if ( count( $anon_ips ) ) {
-			$anon = wfMessage( 'anonusers' )->rawParams( $wgLang->listToText( $anon_ips ) )->params(
+			$anon = $this->msg( 'anonusers' )->rawParams( $lang->listToText( $anon_ips ) )->params(
 				count( $anon_ips ) )->escaped();
 		} else {
 			$anon = false;
@@ -172,19 +178,20 @@ class CreditsAction extends FormlessAction {
 		}
 
 		$count = count( $fulllist );
+
 		# "Based on work by ..."
 		return $count
-			? wfMessage( 'othercontribs' )->rawParams(
-				$wgLang->listToText( $fulllist ) )->params( $count )->escaped()
+			? $this->msg( 'othercontribs' )->rawParams(
+				$lang->listToText( $fulllist ) )->params( $count )->escaped()
 			: '';
 	}
 
 	/**
 	 * Get a link to $user's user page
-	 * @param $user User object
-	 * @return String: html
+	 * @param User $user
+	 * @return string Html
 	 */
-	protected static function link( User $user ) {
+	protected function link( User $user ) {
 		global $wgHiddenPrefs;
 		if ( !in_array( 'realname', $wgHiddenPrefs ) && !$user->isAnon() ) {
 			$real = $user->getRealName();
@@ -201,35 +208,33 @@ class CreditsAction extends FormlessAction {
 
 	/**
 	 * Get a link to $user's user page
-	 * @param $user User object
-	 * @return String: html
+	 * @param User $user
+	 * @return string Html
 	 */
-	protected static function userLink( User $user ) {
-		$link = self::link( $user );
+	protected function userLink( User $user ) {
+		$link = $this->link( $user );
 		if ( $user->isAnon() ) {
-			return wfMsgExt( 'anonuser', array( 'parseinline', 'replaceafter' ), $link );
+			return $this->msg( 'anonuser' )->rawParams( $link )->parse();
 		} else {
 			global $wgHiddenPrefs;
 			if ( !in_array( 'realname', $wgHiddenPrefs ) && $user->getRealName() ) {
 				return $link;
 			} else {
-				return wfMessage( 'siteuser' )->rawParams( $link )->params( $user->getName() )->escaped();
+				return $this->msg( 'siteuser' )->rawParams( $link )->params( $user->getName() )->escaped();
 			}
 		}
 	}
 
 	/**
 	 * Get a link to action=credits of $article page
-	 * @param $article Article object
-	 * @return String: html
+	 * @return string HTML link
 	 */
 	protected function othersLink() {
-		return Linker::link(
+		return Linker::linkKnown(
 			$this->getTitle(),
-			wfMsgHtml( 'others' ),
+			$this->msg( 'others' )->escaped(),
 			array(),
-			array( 'action' => 'credits' ),
-			array( 'known' )
+			array( 'action' => 'credits' )
 		);
 	}
 }

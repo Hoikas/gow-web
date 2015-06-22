@@ -42,7 +42,12 @@ class ApiQueryStashImageInfo extends ApiQueryImageInfo {
 		$result = $this->getResult();
 
 		if ( !$params['filekey'] && !$params['sessionkey'] ) {
-			$this->dieUsage( "One of filekey or sessionkey must be supplied", 'nofilekey');
+			$this->dieUsage( "One of filekey or sessionkey must be supplied", 'nofilekey' );
+		}
+
+		// Alias sessionkey to filekey, but give an existing filekey precedence.
+		if ( !$params['filekey'] && $params['sessionkey'] ) {
+			$params['filekey'] = $params['sessionkey'];
 		}
 
 		try {
@@ -55,7 +60,7 @@ class ApiQueryStashImageInfo extends ApiQueryImageInfo {
 				$result->addValue( array( 'query', $this->getModuleName() ), null, $imageInfo );
 				$result->setIndexedTagName_internal( array( 'query', $this->getModuleName() ), $modulePrefix );
 			}
-		//TODO: update exception handling here to understand current getFile exceptions
+		// @todo Update exception handling here to understand current getFile exceptions
 		} catch ( UploadStashNotAvailableException $e ) {
 			$this->dieUsage( "Session not available: " . $e->getMessage(), "nosession" );
 		} catch ( UploadStashFileNotFoundException $e ) {
@@ -67,7 +72,7 @@ class ApiQueryStashImageInfo extends ApiQueryImageInfo {
 
 	private $propertyFilter = array(
 		'user', 'userid', 'comment', 'parsedcomment',
-		'mediatype', 'archivename',
+		'mediatype', 'archivename', 'uploadwarning',
 	);
 
 	public function getAllowedParams() {
@@ -107,8 +112,9 @@ class ApiQueryStashImageInfo extends ApiQueryImageInfo {
 	 */
 	public function getParamDescription() {
 		$p = $this->getModulePrefix();
+
 		return array(
-			'prop' => self::getPropertyDescriptions( $this->propertyFilter ),
+			'prop' => self::getPropertyDescriptions( $this->propertyFilter, $p ),
 			'filekey' => 'Key that identifies a previous upload that was stashed temporarily.',
 			'sessionkey' => 'Alias for filekey, for backward compatibility.',
 			'urlwidth' => "If {$p}prop=url is set, a URL to an image scaled to this width will be returned.",
@@ -118,20 +124,19 @@ class ApiQueryStashImageInfo extends ApiQueryImageInfo {
 		);
 	}
 
-	public function getDescription() {
-		return 'Returns image information for stashed images';
+	public function getResultProperties() {
+		return ApiQueryImageInfo::getResultPropertiesFiltered( $this->propertyFilter );
 	}
 
-	protected function getExamples() {
+	public function getDescription() {
+		return 'Returns image information for stashed images.';
+	}
+
+	public function getExamples() {
 		return array(
 			'api.php?action=query&prop=stashimageinfo&siifilekey=124sd34rsdf567',
-			'api.php?action=query&prop=stashimageinfo&siifilekey=b34edoe3|bceffd4&siiurlwidth=120&siiprop=url',
+			'api.php?action=query&prop=stashimageinfo&siifilekey=b34edoe3|bceffd4&' .
+				'siiurlwidth=120&siiprop=url',
 		);
 	}
-
-	public function getVersion() {
-		return __CLASS__ . ': $Id: ApiQueryStashImageInfo.php 92459 2011-07-18 19:31:38Z raindrift $';
-	}
-
 }
-

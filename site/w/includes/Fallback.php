@@ -1,6 +1,7 @@
 <?php
-
 /**
+ * Fallback functions for PHP installed without mbstring support.
+ *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
@@ -16,24 +17,31 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  * http://www.gnu.org/copyleft/gpl.html
  *
+ * @file
  */
 
 /**
  * Fallback functions for PHP installed without mbstring support
  */
 class Fallback {
-	
+
+	/**
+	 * @param $from
+	 * @param $to
+	 * @param $string
+	 * @return string
+	 */
 	public static function iconv( $from, $to, $string ) {
 		if ( substr( $to, -8 ) == '//IGNORE' ) {
 			$to = substr( $to, 0, strlen( $to ) - 8 );
 		}
-		if( strcasecmp( $from, $to ) == 0 ) {
+		if ( strcasecmp( $from, $to ) == 0 ) {
 			return $string;
 		}
-		if( strcasecmp( $from, 'utf-8' ) == 0 ) {
+		if ( strcasecmp( $from, 'utf-8' ) == 0 ) {
 			return utf8_decode( $string );
 		}
-		if( strcasecmp( $to, 'utf-8' ) == 0 ) {
+		if ( strcasecmp( $to, 'utf-8' ) == 0 ) {
 			return utf8_encode( $string );
 		}
 		return $string;
@@ -48,7 +56,7 @@ class Fallback {
 	 * Larger offsets are still fairly efficient for Latin text, but
 	 * can be up to 100x slower than native if the text is heavily
 	 * multibyte and we have to slog through a few hundred kb.
-	 * 
+	 *
 	 * @param $str
 	 * @param $start
 	 * @param $count string
@@ -56,28 +64,33 @@ class Fallback {
 	 * @return string
 	 */
 	public static function mb_substr( $str, $start, $count = 'end' ) {
-		if( $start != 0 ) {
+		if ( $start != 0 ) {
 			$split = self::mb_substr_split_unicode( $str, intval( $start ) );
 			$str = substr( $str, $split );
 		}
-	
-		if( $count !== 'end' ) {
+
+		if ( $count !== 'end' ) {
 			$split = self::mb_substr_split_unicode( $str, intval( $count ) );
 			$str = substr( $str, 0, $split );
 		}
-	
+
 		return $str;
 	}
-	
+
+	/**
+	 * @param $str
+	 * @param $splitPos
+	 * @return int
+	 */
 	public static function mb_substr_split_unicode( $str, $splitPos ) {
-		if( $splitPos == 0 ) {
+		if ( $splitPos == 0 ) {
 			return 0;
 		}
-	
+
 		$byteLen = strlen( $str );
-	
-		if( $splitPos > 0 ) {
-			if( $splitPos > 256 ) {
+
+		if ( $splitPos > 0 ) {
+			if ( $splitPos > 256 ) {
 				// Optimize large string offsets by skipping ahead N bytes.
 				// This will cut out most of our slow time on Latin-based text,
 				// and 1/2 to 1/3 on East European and Asian scripts.
@@ -90,8 +103,8 @@ class Fallback {
 				$charPos = 0;
 				$bytePos = 0;
 			}
-	
-			while( $charPos++ < $splitPos ) {
+
+			while ( $charPos++ < $splitPos ) {
 				++$bytePos;
 				// Move past any tail bytes
 				while ( $bytePos < $byteLen && $str[$bytePos] >= "\x80" && $str[$bytePos] < "\xc0" ) {
@@ -102,7 +115,7 @@ class Fallback {
 			$splitPosX = $splitPos + 1;
 			$charPos = 0; // relative to end of string; we don't care about the actual char position here
 			$bytePos = $byteLen;
-			while( $bytePos > 0 && $charPos-- >= $splitPosX ) {
+			while ( $bytePos > 0 && $charPos-- >= $splitPosX ) {
 				--$bytePos;
 				// Move past any tail bytes
 				while ( $bytePos > 0 && $str[$bytePos] >= "\x80" && $str[$bytePos] < "\xc0" ) {
@@ -110,10 +123,10 @@ class Fallback {
 				}
 			}
 		}
-	
+
 		return $bytePos;
 	}
-	
+
 	/**
 	 * Fallback implementation of mb_strlen, hardcoded to UTF-8.
 	 * @param string $str
@@ -123,78 +136,59 @@ class Fallback {
 	public static function mb_strlen( $str, $enc = '' ) {
 		$counts = count_chars( $str );
 		$total = 0;
-	
+
 		// Count ASCII bytes
-		for( $i = 0; $i < 0x80; $i++ ) {
+		for ( $i = 0; $i < 0x80; $i++ ) {
 			$total += $counts[$i];
 		}
-	
+
 		// Count multibyte sequence heads
-		for( $i = 0xc0; $i < 0xff; $i++ ) {
+		for ( $i = 0xc0; $i < 0xff; $i++ ) {
 			$total += $counts[$i];
 		}
 		return $total;
 	}
-	
-	
+
 	/**
 	 * Fallback implementation of mb_strpos, hardcoded to UTF-8.
 	 * @param $haystack String
 	 * @param $needle String
-	 * @param $offset String: optional start position
-	 * @param $encoding String: optional encoding; ignored
+	 * @param string $offset optional start position
+	 * @param string $encoding optional encoding; ignored
 	 * @return int
 	 */
 	public static function mb_strpos( $haystack, $needle, $offset = 0, $encoding = '' ) {
 		$needle = preg_quote( $needle, '/' );
-	
+
 		$ar = array();
 		preg_match( '/' . $needle . '/u', $haystack, $ar, PREG_OFFSET_CAPTURE, $offset );
-	
-		if( isset( $ar[0][1] ) ) {
+
+		if ( isset( $ar[0][1] ) ) {
 			return $ar[0][1];
-		} else {
-			return false;
-		}
-	}	
-	
-	/**
-	 * Fallback implementation of mb_strrpos, hardcoded to UTF-8.
-	 * @param $haystack String
-	 * @param $needle String
-	 * @param $offset String: optional start position
-	 * @param $encoding String: optional encoding; ignored
-	 * @return int
-	 */
-	public static function mb_strrpos( $haystack, $needle, $offset = 0, $encoding = '' ) {
-		$needle = preg_quote( $needle, '/' );
-	
-		$ar = array();
-		preg_match_all( '/' . $needle . '/u', $haystack, $ar, PREG_OFFSET_CAPTURE, $offset );
-	
-		if( isset( $ar[0] ) && count( $ar[0] ) > 0 &&
-			isset( $ar[0][count( $ar[0] ) - 1][1] ) ) {
-			return $ar[0][count( $ar[0] ) - 1][1];
 		} else {
 			return false;
 		}
 	}
 
 	/**
-	 * Fallback implementation of stream_resolve_include_path()
-	 * Native stream_resolve_include_path is available for PHP 5 >= 5.3.2
-	 * @param $filename String
-	 * @return String
+	 * Fallback implementation of mb_strrpos, hardcoded to UTF-8.
+	 * @param $haystack String
+	 * @param $needle String
+	 * @param string $offset optional start position
+	 * @param string $encoding optional encoding; ignored
+	 * @return int
 	 */
-	public static function stream_resolve_include_path( $filename ) {
-		$pathArray = explode( PATH_SEPARATOR, get_include_path() );
-		foreach ( $pathArray as $path ) {
-			$fullFilename = $path . DIRECTORY_SEPARATOR . $filename;
-			if ( file_exists( $fullFilename ) ) {
-				return $fullFilename;
-			}
+	public static function mb_strrpos( $haystack, $needle, $offset = 0, $encoding = '' ) {
+		$needle = preg_quote( $needle, '/' );
+
+		$ar = array();
+		preg_match_all( '/' . $needle . '/u', $haystack, $ar, PREG_OFFSET_CAPTURE, $offset );
+
+		if ( isset( $ar[0] ) && count( $ar[0] ) > 0 &&
+			isset( $ar[0][count( $ar[0] ) - 1][1] ) ) {
+			return $ar[0][count( $ar[0] ) - 1][1];
+		} else {
+			return false;
 		}
-		return false;
 	}
-		
 }

@@ -25,3 +25,6 @@ site/w/images
 # Gehn Sig Font Files
 # We generally can't redist these fonts, so filter 'em out.
 site/gehnsigs/*.[o|t]tf
+
+# WTF?!
+site/wp-content/uploads

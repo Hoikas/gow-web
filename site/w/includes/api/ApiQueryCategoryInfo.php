@@ -4,7 +4,7 @@
  *
  * Created on May 13, 2007
  *
- * Copyright © 2006 Yuri Astrakhan <Firstname><Lastname>@gmail.com
+ * Copyright © 2006 Yuri Astrakhan "<Firstname><Lastname>@gmail.com"
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,13 +24,9 @@
  * @file
  */
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	// Eclipse helper - will be ignored in production
-	require_once( "ApiQueryBase.php" );
-}
-
 /**
- * This query adds the <categories> subelement to all pages with the list of categories the page is in
+ * This query adds the "<categories>" subelement to all pages with the list of
+ * categories the page is in.
  *
  * @ingroup API
  */
@@ -49,9 +45,10 @@ class ApiQueryCategoryInfo extends ApiQueryBase {
 		$categories = $alltitles[NS_CATEGORY];
 
 		$titles = $this->getPageSet()->getGoodTitles() +
-					$this->getPageSet()->getMissingTitles();
+			$this->getPageSet()->getMissingTitles();
 		$cattitles = array();
 		foreach ( $categories as $c ) {
+			/** @var $t Title */
 			$t = $titles[$c];
 			$cattitles[$c] = $t->getDBkey();
 		}
@@ -66,7 +63,13 @@ class ApiQueryCategoryInfo extends ApiQueryBase {
 				'pp_propname' => 'hiddencat' ) ),
 		) );
 
-		$this->addFields( array( 'cat_title', 'cat_pages', 'cat_subcats', 'cat_files', 'pp_propname AS cat_hidden' ) );
+		$this->addFields( array(
+			'cat_title',
+			'cat_pages',
+			'cat_subcats',
+			'cat_files',
+			'cat_hidden' => 'pp_propname'
+		) );
 		$this->addWhere( array( 'cat_title' => $cattitles ) );
 
 		if ( !is_null( $params['continue'] ) ) {
@@ -111,19 +114,43 @@ class ApiQueryCategoryInfo extends ApiQueryBase {
 		);
 	}
 
-	public function getDescription() {
-		return 'Returns information about the given categories';
+	public function getResultProperties() {
+		return array(
+			ApiBase::PROP_LIST => false,
+			'' => array(
+				'size' => array(
+					ApiBase::PROP_TYPE => 'integer',
+					ApiBase::PROP_NULLABLE => false
+				),
+				'pages' => array(
+					ApiBase::PROP_TYPE => 'integer',
+					ApiBase::PROP_NULLABLE => false
+				),
+				'files' => array(
+					ApiBase::PROP_TYPE => 'integer',
+					ApiBase::PROP_NULLABLE => false
+				),
+				'subcats' => array(
+					ApiBase::PROP_TYPE => 'integer',
+					ApiBase::PROP_NULLABLE => false
+				),
+				'hidden' => array(
+					ApiBase::PROP_TYPE => 'boolean',
+					ApiBase::PROP_NULLABLE => false
+				)
+			)
+		);
 	}
 
-	protected function getExamples() {
+	public function getDescription() {
+		return 'Returns information about the given categories.';
+	}
+
+	public function getExamples() {
 		return 'api.php?action=query&prop=categoryinfo&titles=Category:Foo|Category:Bar';
 	}
 
 	public function getHelpUrls() {
 		return 'https://www.mediawiki.org/wiki/API:Properties#categoryinfo_.2F_ci';
-	}
-
-	public function getVersion() {
-		return __CLASS__ . ': $Id: ApiQueryCategoryInfo.php 104449 2011-11-28 15:52:04Z reedy $';
 	}
 }

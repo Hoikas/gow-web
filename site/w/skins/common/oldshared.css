@@ -1,32 +1,24 @@
-/*
+/**
  * oldshared.css
  * This file contains CSS settings common to Wikistandard, Nostalgia and
  * CologneBlue, the old pre-Monobook skins
  */
 
-/* For clarity, explicitly state some recommendations from <http://www.w3.org/
-   TR/CSS21/sample.html> to make sure the editsection links scale right */
+/* For clarity, explicitly state some recommendations from
+ * http://www.w3.org/TR/CSS21/sample.html to make sure the editsection links scale right
+ */
 
 h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
-h5 { font-size: .83em; }
-h6 { font-size: .75em; }
+h4 { font-size: 1.11em; }
+h5 { font-size: 1.05em; }
+h6 { font-size: 1em; }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bolder;
 }
 
 /* Now the custom parts */
-
-/* Make edit sections (which are inside h# tags) normal-sized */
-.editsection {
-	font-weight: normal;
-}
-h1 .editsection { font-size: 50%; }
-h2 .editsection { font-size: 66.7%; }
-h3 .editsection { font-size: 85.5%; }
-h5 .editsection { font-size: 120%; }
-h6 .editsection { font-size: 133%; }
 
 #footer { clear: both }
 /* images */
@@ -52,12 +44,6 @@ div.floatleft {
 /* @noflip */
 div.floatleft p {
 	font-style: italic;
-}
-
-
-/* Print-specific things to hide */
-.printfooter {
-	display: none;
 }
 
 /* table standards */
@@ -98,8 +84,10 @@ div.magnify {
 	float: right;
 	border: none !important;
 	background: none !important;
+	margin-left: 3px;
 }
-div.magnify a, div.magnify img {
+div.magnify a,
+div.magnify img {
 	display: block;
 	border: none !important;
 	background: none !important;
@@ -134,6 +122,25 @@ img { border: none; }
 	padding: 5px;
 	font-size: 95%;
 	text-align: center;
+	display: -moz-inline-block;
+	display: inline-block;
+	display: table;
+
+	/* IE7 and earlier */
+	zoom: 1;
+	*display: inline;
+
+	padding: 7px;
+}
+/* CSS for backwards-compatibility with cached page renders and creative uses in wikitext */
+table#toc,
+table.toc {
+	border-collapse: collapse;
+}
+/* Remove additional paddings inside table-cells that are not present in <div>s */
+table#toc td,
+table.toc td {
+	padding: 0;
 }
 #toc h2,
 .toc h2 {
@@ -165,9 +172,6 @@ img { border: none; }
 }
 
 /* preference page with js-genrated toc */
-#mw-pref-clear {
-	clear: both;
-}
 #preftoc {
 	float: left;
 	margin: 1em 1em 1em 1em;
@@ -287,7 +291,7 @@ li span.deleted {
 	font-style: italic;
 }
 
-/* Classes for EXIF data display */
+/* Classes for Exif data display */
 table.mw_metadata {
 	margin-left: 0.5em;
 }
@@ -306,7 +310,8 @@ table.mw_metadata {
 	border: none;
 	border-collapse: collapse;
 }
-table.mw_metadata td, table.mw_metadata th {
+table.mw_metadata td,
+table.mw_metadata th {
 	border: 1px solid #aaaaaa;
 	padding-left: 4px;
 	padding-right: 4px;
@@ -386,7 +391,9 @@ table.multipageimage td {
 .TablePager {
 	border-collapse: collapse;
 }
-.TablePager, .TablePager td, .TablePager th {
+.TablePager,
+.TablePager td,
+.TablePager th {
 	border: 0.15em solid #777777;
 	padding: 0 0.15em 0 0.15em;
 }
@@ -400,7 +407,8 @@ table.multipageimage td {
 	background-color: #eeeeff;
 }
 
-.imagelist td, .imagelist th {
+.imagelist td,
+.imagelist th {
 	white-space: nowrap;
 }
 .imagelist .TablePager_col_links {

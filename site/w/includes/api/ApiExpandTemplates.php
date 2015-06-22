@@ -4,7 +4,7 @@
  *
  * Created on Oct 05, 2007
  *
- * Copyright © 2007 Yuri Astrakhan <Firstname><Lastname>@gmail.com
+ * Copyright © 2007 Yuri Astrakhan "<Firstname><Lastname>@gmail.com"
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,11 +24,6 @@
  * @file
  */
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	// Eclipse helper - will be ignored in production
-	require_once( "ApiBase.php" );
-}
-
 /**
  * API module that functions as a shortcut to the wikitext preprocessor. Expands
  * any templates in a provided string, and returns the result of this expansion
@@ -37,10 +32,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * @ingroup API
  */
 class ApiExpandTemplates extends ApiBase {
-
-	public function __construct( $main, $action ) {
-		parent::__construct( $main, $action );
-	}
 
 	public function execute() {
 		// Cache may vary on $wgUser because ParserOptions gets data from it
@@ -51,15 +42,15 @@ class ApiExpandTemplates extends ApiBase {
 
 		// Create title for parser
 		$title_obj = Title::newFromText( $params['title'] );
-		if ( !$title_obj ) {
-			$title_obj = Title::newFromText( 'API' ); // default
+		if ( !$title_obj || $title_obj->isExternal() ) {
+			$this->dieUsageMsg( array( 'invalidtitle', $params['title'] ) );
 		}
 
 		$result = $this->getResult();
 
 		// Parse text
 		global $wgParser;
-		$options = new ParserOptions();
+		$options = ParserOptions::newFromContext( $this->getContext() );
 
 		if ( $params['includecomments'] ) {
 			$options->setRemoveComments( false );
@@ -74,14 +65,14 @@ class ApiExpandTemplates extends ApiBase {
 				$xml = $dom->__toString();
 			}
 			$xml_result = array();
-			$result->setContent( $xml_result, $xml );
+			ApiResult::setContent( $xml_result, $xml );
 			$result->addValue( null, 'parsetree', $xml_result );
 		}
 		$retval = $wgParser->preprocess( $params['text'], $title_obj, $options );
 
 		// Return result
 		$retval_array = array();
-		$result->setContent( $retval_array, $retval );
+		ApiResult::setContent( $retval_array, $retval );
 		$result->addValue( null, $this->getModuleName(), $retval_array );
 	}
 
@@ -108,11 +99,25 @@ class ApiExpandTemplates extends ApiBase {
 		);
 	}
 
-	public function getDescription() {
-		return 'Expands all templates in wikitext';
+	public function getResultProperties() {
+		return array(
+			'' => array(
+				'*' => 'string'
+			)
+		);
 	}
 
-	protected function getExamples() {
+	public function getDescription() {
+		return 'Expands all templates in wikitext.';
+	}
+
+	public function getPossibleErrors() {
+		return array_merge( parent::getPossibleErrors(), array(
+			array( 'invalidtitle', 'title' ),
+		) );
+	}
+
+	public function getExamples() {
 		return array(
 			'api.php?action=expandtemplates&text={{Project:Sandbox}}'
 		);
@@ -120,9 +125,5 @@ class ApiExpandTemplates extends ApiBase {
 
 	public function getHelpUrls() {
 		return 'https://www.mediawiki.org/wiki/API:Parsing_wikitext#expandtemplates';
-	}
-
-	public function getVersion() {
-		return __CLASS__ . ': $Id: ApiExpandTemplates.php 104449 2011-11-28 15:52:04Z reedy $';
 	}
 }

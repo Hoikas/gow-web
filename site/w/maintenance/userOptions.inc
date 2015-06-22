@@ -25,12 +25,12 @@
 $options = array( 'list', 'nowarn', 'quiet', 'usage', 'dry' );
 $optionsWithArgs = array( 'old', 'new' );
 
-require_once( dirname( __FILE__ ) . '/commandLine.inc' );
+require_once __DIR__ . '/commandLine.inc';
 
 /**
  * @ingroup Maintenance
  */
-class userOptions {
+class UserOptions {
 	public $mQuick;
 	public $mQuiet;
 	public $mDry;
@@ -38,24 +38,30 @@ class userOptions {
 	public $mOldValue;
 	public $mNewValue;
 
-	private $mMode, $mReady ;
+	private $mMode, $mReady;
 
 	/** Constructor. Will show usage and exit if script options are not correct */
 	function __construct( $opts, $args ) {
 		if ( !$this->checkOpts( $opts, $args ) ) {
-			userOptions::showUsageAndExit();
+			UserOptions::showUsageAndExit();
 		} else {
 			$this->mReady = $this->initializeOpts( $opts, $args );
 		}
 	}
 
-
-	/** This is used to check options. Only needed on construction */
+	/**
+	 * This is used to check options. Only needed on construction
+	 *
+	 * @param $opts array
+	 * @param $args array
+	 *
+	 * @return bool
+	 */
 	private function checkOpts( $opts, $args ) {
 		// The three possible ways to run the script:
-		$list   = isset( $opts['list'] );
-		$usage  = isset( $opts['usage'] ) && ( count( $args ) <= 1 );
-		$change = isset( $opts['old'] ) && isset( $opts['new'] ) && ( count( $args ) <= 1 ) ;
+		$list = isset( $opts['list'] );
+		$usage = isset( $opts['usage'] ) && ( count( $args ) <= 1 );
+		$change = isset( $opts['old'] ) && isset( $opts['new'] ) && ( count( $args ) <= 1 );
 
 		// We want only one of them
 		$isValid = ( ( $list + $usage + $change ) == 1 );
@@ -63,23 +69,30 @@ class userOptions {
 		return $isValid;
 	}
 
-	/** load script options in the object */
+	/**
+	 * load script options in the object
+	 *
+	 * @param $opts array
+	 * @param $args array
+	 *
+	 * @return bool
+	 */
 	private function initializeOpts( $opts, $args ) {
 
 		$this->mQuick = isset( $opts['nowarn'] );
 		$this->mQuiet = isset( $opts['quiet'] );
-		$this->mDry   = isset( $opts['dry'] );
+		$this->mDry = isset( $opts['dry'] );
 
 		// Set object properties, specially 'mMode' used by run()
 		if ( isset( $opts['list'] ) ) {
-			$this->mMode = 'LISTER' ;
+			$this->mMode = 'LISTER';
 		} elseif ( isset( $opts['usage'] ) ) {
-			$this->mMode = 'USAGER' ;
-			$this->mAnOption = isset( $args[0] ) ? $args[0] : false ;
+			$this->mMode = 'USAGER';
+			$this->mAnOption = isset( $args[0] ) ? $args[0] : false;
 		} elseif ( isset( $opts['old'] ) && isset( $opts['new'] ) ) {
-			$this->mMode = 'CHANGER' ;
-			$this->mOldValue = $opts['old'] ;
-			$this->mNewValue = $opts['new'] ;
+			$this->mMode = 'CHANGER';
+			$this->mOldValue = $opts['old'];
+			$this->mNewValue = $opts['new'];
 			$this->mAnOption = $args[0];
 		} else {
 			die( "There is a bug in the software, this should never happen\n" );
@@ -94,8 +107,8 @@ class userOptions {
 			return false;
 		}
 
-		$this-> { $this->mMode } ( );
-
+		$this->{ $this->mMode } ();
+		return true;
 	}
 
 	#
@@ -103,7 +116,7 @@ class userOptions {
 	#
 
 	/** List default options and their value */
-	private function LISTER( ) {
+	private function LISTER() {
 		$def = User::getDefaultOptions();
 		ksort( $def );
 		$maxOpt = 0;
@@ -116,7 +129,7 @@ class userOptions {
 	}
 
 	/** List options usage */
-	private function USAGER( ) {
+	private function USAGER() {
 		$ret = array();
 		$defaultOptions = User::getDefaultOptions();
 
@@ -165,9 +178,8 @@ class userOptions {
 		}
 	}
 
-
 	/** Change our users options */
-	private function CHANGER( ) {
+	private function CHANGER() {
 		$this->warn();
 
 		// We list user by user_id from one of the slave database
@@ -198,7 +210,9 @@ class userOptions {
 				if ( !$this->mDry ) {
 					$user->saveSettings();
 				}
-				if ( !$this->mQuiet ) { print " OK\n"; }
+				if ( !$this->mQuiet ) {
+					print " OK\n";
+				}
 
 			} elseif ( !$this->mQuiet ) {
 				print "Not changing '$username' using <{$this->mAnOption}> = '$curValue'\n";
@@ -206,8 +220,10 @@ class userOptions {
 		}
 	}
 
-
-	/** Return an array of option names */
+	/**
+	 * Return an array of option names
+	 * @return array
+	 */
 	public static function getDefaultOptionsNames() {
 		$def = User::getDefaultOptions();
 		$ret = array();
@@ -216,7 +232,6 @@ class userOptions {
 		}
 		return $ret;
 	}
-
 
 	#
 	# Helper methods
@@ -250,7 +265,10 @@ USAGE;
 	exit( 0 );
 	}
 
-	/** The warning message and countdown */
+	/**
+	 * The warning message and countdown
+	 * @return bool
+	 */
 	public function warn() {
 
 		if ( $this->mQuick ) {

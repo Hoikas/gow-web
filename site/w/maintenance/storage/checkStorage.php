@@ -21,10 +21,8 @@
  * @ingroup Maintenance ExternalStorage
  */
 
-define( 'CONCAT_HEADER', 'O:27:"concatenatedgziphistoryblob"' );
-
 if ( !defined( 'MEDIAWIKI' ) ) {
-	require_once( dirname( __FILE__ ) . '/../commandLine.inc' );
+	require_once __DIR__ . '/../commandLine.inc';
 
 	$cs = new CheckStorage;
 	$fix = isset( $options['fix'] );
@@ -36,17 +34,19 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	$cs->check( $fix, $xml );
 }
 
-
 // ----------------------------------------------------------------------------------
 
 /**
+ * Maintenance script to do various checks on external storage.
+ *
  * @ingroup Maintenance ExternalStorage
  */
 class CheckStorage {
-	var $oldIdMap, $errors;
-	var $dbStore = null;
+	const CONCAT_HEADER = 'O:27:"concatenatedgziphistoryblob"';
+	public $oldIdMap, $errors;
+	public $dbStore = null;
 
-	var $errorDescriptions = array(
+	public $errorDescriptions = array(
 		'restore text' => 'Damaged text, need to be restored from a backup',
 		'restore revision' => 'Damaged revision row, need to be restored from a backup',
 		'unfixable' => 'Unexpected errors with no automated fixing method',
@@ -55,15 +55,13 @@ class CheckStorage {
 	);
 
 	function check( $fix = false, $xml = '' ) {
-		$fname = 'checkStorage';
 		$dbr = wfGetDB( DB_SLAVE );
 		if ( $fix ) {
-			$dbw = wfGetDB( DB_MASTER );
 			print "Checking, will fix errors if possible...\n";
 		} else {
 			print "Checking...\n";
 		}
-		$maxRevId = $dbr->selectField( 'revision', 'MAX(rev_id)', false, $fname );
+		$maxRevId = $dbr->selectField( 'revision', 'MAX(rev_id)', false, __METHOD__ );
 		$chunkSize = 1000;
 		$flagStats = array();
 		$objectStats = array();
@@ -76,7 +74,7 @@ class CheckStorage {
 			'fixable' => array(),
 		);
 
-		for ( $chunkStart = 1 ; $chunkStart < $maxRevId; $chunkStart += $chunkSize ) {
+		for ( $chunkStart = 1; $chunkStart < $maxRevId; $chunkStart += $chunkSize ) {
 			$chunkEnd = $chunkStart + $chunkSize - 1;
 			// print "$chunkStart of $maxRevId\n";
 
@@ -84,7 +82,7 @@ class CheckStorage {
 			$this->oldIdMap = array();
 			$dbr->ping();
 			$res = $dbr->select( 'revision', array( 'rev_id', 'rev_text_id' ),
-				array( "rev_id BETWEEN $chunkStart AND $chunkEnd" ), $fname );
+				array( "rev_id BETWEEN $chunkStart AND $chunkEnd" ), __METHOD__ );
 			foreach ( $res as $row ) {
 				$this->oldIdMap[$row->rev_id] = $row->rev_text_id;
 			}
@@ -99,8 +97,11 @@ class CheckStorage {
 			$externalRevs = array();
 			$objectRevs = array();
 			$res = $dbr->select( 'text', array( 'old_id', 'old_flags' ),
-				'old_id IN (' . implode( ',', $this->oldIdMap ) . ')', $fname );
+				'old_id IN (' . implode( ',', $this->oldIdMap ) . ')', __METHOD__ );
 			foreach ( $res as $row ) {
+				/**
+				 * @var $flags int
+				 */
 				$flags = $row->old_flags;
 				$id = $row->old_id;
 
@@ -133,7 +134,7 @@ class CheckStorage {
 						$dbw = wfGetDB( DB_MASTER );
 						$dbw->ping();
 						$dbw->update( 'text', array( 'old_flags' => '' ),
-							array( 'old_id' => $id ), $fname );
+							array( 'old_id' => $id ), __METHOD__ );
 						echo "Fixed\n";
 					} else {
 						$this->error( 'fixable', "Warning: old_flags set to 0", $id );
@@ -154,7 +155,7 @@ class CheckStorage {
 			$externalNormalBlobs = array();
 			if ( count( $externalRevs ) ) {
 				$res = $dbr->select( 'text', array( 'old_id', 'old_flags', 'old_text' ),
-					array( 'old_id IN (' . implode( ',', $externalRevs ) . ')' ), $fname );
+					array( 'old_id IN (' . implode( ',', $externalRevs ) . ')' ), __METHOD__ );
 				foreach ( $res as $row ) {
 					$urlParts = explode( '://', $row->old_text, 2 );
 					if ( count( $urlParts ) !== 2 || $urlParts[1] == '' ) {
@@ -192,7 +193,7 @@ class CheckStorage {
 					$blobsTable = $this->dbStore->getTable( $extDb );
 					$res = $extDb->select( $blobsTable,
 						array( 'blob_id' ),
-						array( 'blob_id IN( ' . implode( ',', $blobIds ) . ')' ), $fname );
+						array( 'blob_id IN( ' . implode( ',', $blobIds ) . ')' ), __METHOD__ );
 					foreach ( $res as $row ) {
 						unset( $xBlobIds[$row->blob_id] );
 					}
@@ -211,7 +212,7 @@ class CheckStorage {
 			if ( count( $objectRevs ) ) {
 				$headerLength = 300;
 				$res = $dbr->select( 'text', array( 'old_id', 'old_flags', "LEFT(old_text, $headerLength) AS header" ),
-					array( 'old_id IN (' . implode( ',', $objectRevs ) . ')' ), $fname );
+					array( 'old_id IN (' . implode( ',', $objectRevs ) . ')' ), __METHOD__ );
 				foreach ( $res as $row ) {
 					$oldId = $row->old_id;
 					$matches = array();
@@ -262,7 +263,7 @@ class CheckStorage {
 			if ( count( $concatBlobs ) ) {
 				$headerLength = 300;
 				$res = $dbr->select( 'text', array( 'old_id', 'old_flags', "LEFT(old_text, $headerLength) AS header" ),
-					array( 'old_id IN (' . implode( ',', array_keys( $concatBlobs ) ) . ')' ), $fname );
+					array( 'old_id IN (' . implode( ',', array_keys( $concatBlobs ) ) . ')' ), __METHOD__ );
 				foreach ( $res as $row ) {
 					$flags = explode( ',', $row->old_flags );
 					if ( in_array( 'external', $flags ) ) {
@@ -285,7 +286,7 @@ class CheckStorage {
 							$this->error( 'unfixable', "Error: invalid flags \"{$row->old_flags}\" on concat bulk row {$row->old_id}",
 								$concatBlobs[$row->old_id] );
 						}
-					} elseif ( strcasecmp( substr( $row->header, 0, strlen( CONCAT_HEADER ) ), CONCAT_HEADER ) ) {
+					} elseif ( strcasecmp( substr( $row->header, 0, strlen( self::CONCAT_HEADER ) ), self::CONCAT_HEADER ) ) {
 						$this->error( 'restore text', "Error: Incorrect object header for concat bulk row {$row->old_id}",
 							$concatBlobs[$row->old_id] );
 					} # else good
@@ -329,7 +330,6 @@ class CheckStorage {
 		}
 	}
 
-
 	function error( $type, $msg, $ids ) {
 		if ( is_array( $ids ) && count( $ids ) == 1 ) {
 			$ids = reset( $ids );
@@ -354,7 +354,6 @@ class CheckStorage {
 	}
 
 	function checkExternalConcatBlobs( $externalConcatBlobs ) {
-		$fname = 'CheckStorage::checkExternalConcatBlobs';
 		if ( !count( $externalConcatBlobs ) ) {
 			return;
 		}
@@ -367,12 +366,12 @@ class CheckStorage {
 			$blobIds = array_keys( $oldIds );
 			$extDb =& $this->dbStore->getSlave( $cluster );
 			$blobsTable = $this->dbStore->getTable( $extDb );
-			$headerLength = strlen( CONCAT_HEADER );
+			$headerLength = strlen( self::CONCAT_HEADER );
 			$res = $extDb->select( $blobsTable,
 				array( 'blob_id', "LEFT(blob_text, $headerLength) AS header" ),
-				array( 'blob_id IN( ' . implode( ',', $blobIds ) . ')' ), $fname );
+				array( 'blob_id IN( ' . implode( ',', $blobIds ) . ')' ), __METHOD__ );
 			foreach ( $res as $row ) {
-				if ( strcasecmp( $row->header, CONCAT_HEADER ) ) {
+				if ( strcasecmp( $row->header, self::CONCAT_HEADER ) ) {
 					$this->error( 'restore text', "Error: invalid header on target $cluster/{$row->blob_id} of two-part ES URL",
 						$oldIds[$row->blob_id] );
 				}
@@ -382,14 +381,15 @@ class CheckStorage {
 			$extDb->freeResult( $res );
 
 			// Print errors for missing blobs rows
-			foreach ( $oldIds as $blobId => $oldIds ) {
-				$this->error( 'restore text', "Error: missing target $cluster/$blobId for two-part ES URL", $oldIds );
+			foreach ( $oldIds as $blobId => $oldIds2 ) {
+				$this->error( 'restore text', "Error: missing target $cluster/$blobId for two-part ES URL", $oldIds2 );
 			}
 		}
 	}
 
 	function restoreText( $revIds, $xml ) {
-		global $wgTmpDirectory, $wgDBname;
+		global $wgDBname;
+		$tmpDir = wfTempDir();
 
 		if ( !count( $revIds ) ) {
 			return;
@@ -397,8 +397,8 @@ class CheckStorage {
 
 		print "Restoring text from XML backup...\n";
 
-		$revFileName = "$wgTmpDirectory/broken-revlist-$wgDBname";
-		$filteredXmlFileName = "$wgTmpDirectory/filtered-$wgDBname.xml";
+		$revFileName = "$tmpDir/broken-revlist-$wgDBname";
+		$filteredXmlFileName = "$tmpDir/filtered-$wgDBname.xml";
 
 		// Write revision list
 		if ( !file_put_contents( $revFileName, implode( "\n", $revIds ) ) ) {
@@ -440,21 +440,27 @@ class CheckStorage {
 	}
 
 	function importRevision( &$revision, &$importer ) {
-		$fname = 'CheckStorage::importRevision';
-
 		$id = $revision->getID();
-		$text = $revision->getText();
+		$content = $revision->getContent( Revision::RAW );
+		$id = $id ? $id : '';
+
+		if ( $content === null ) {
+			echo "Revision $id is broken, we have no content available\n";
+			return;
+		}
+
+		$text = $content->serialize();
 		if ( $text === '' ) {
 			// This is what happens if the revision was broken at the time the
 			// dump was made. Unfortunately, it also happens if the revision was
 			// legitimately blank, so there's no way to tell the difference. To
 			// be safe, we'll skip it and leave it broken
-			$id = $id ? $id : '';
+
 			echo "Revision $id is blank in the dump, may have been broken before export\n";
 			return;
 		}
 
-		if ( !$id )  {
+		if ( !$id ) {
 			// No ID, can't import
 			echo "No id tag in revision, can't import\n";
 			return;
@@ -462,7 +468,7 @@ class CheckStorage {
 
 		// Find text row again
 		$dbr = wfGetDB( DB_SLAVE );
-		$oldId = $dbr->selectField( 'revision', 'rev_text_id', array( 'rev_id' => $id ), $fname );
+		$oldId = $dbr->selectField( 'revision', 'rev_text_id', array( 'rev_id' => $id ), __METHOD__ );
 		if ( !$oldId ) {
 			echo "Missing revision row for rev_id $id\n";
 			return;
@@ -476,7 +482,7 @@ class CheckStorage {
 		$dbw->update( 'text',
 			array( 'old_flags' => $flags, 'old_text' => $text ),
 			array( 'old_id' => $oldId ),
-			$fname, array( 'LIMIT' => 1 )
+			__METHOD__, array( 'LIMIT' => 1 )
 		);
 
 		// Remove it from the unfixed list and add it to the fixed list
@@ -484,4 +490,3 @@ class CheckStorage {
 		$this->errors['fixed'][$id] = true;
 	}
 }
-

@@ -3,7 +3,7 @@
  * Helper class for the --prefetch option of dumpTextPass.php
  *
  * Copyright © 2005 Brion Vibber <brion@pobox.com>
- * http://www.mediawiki.org/
+ * https://www.mediawiki.org/
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -48,10 +48,10 @@ class BaseDump {
 	var $infiles = null;
 
 	function BaseDump( $infile ) {
-		$this->infiles = explode(';',$infile);
+		$this->infiles = explode( ';', $infile );
 		$this->reader = new XMLReader();
-		$infile = array_shift($this->infiles);
-		if (defined( 'LIBXML_PARSEHUGE' ) ) {
+		$infile = array_shift( $this->infiles );
+		if ( defined( 'LIBXML_PARSEHUGE' ) ) {
 			$this->reader->open( $infile, null, LIBXML_PARSEHUGE );
 		}
 		else {
@@ -110,8 +110,8 @@ class BaseDump {
 			}
 		} else {
 			$this->close();
-			if (count($this->infiles)) {
-				$infile = array_shift($this->infiles);
+			if ( count( $this->infiles ) ) {
+				$infile = array_shift( $this->infiles );
 				$this->reader->open( $infile );
 				$this->atEnd = false;
 			}
@@ -133,6 +133,7 @@ class BaseDump {
 
 	/**
 	 * @access private
+	 * @return string
 	 */
 	function nextText() {
 		$this->skipTo( 'text' );
@@ -141,6 +142,9 @@ class BaseDump {
 
 	/**
 	 * @access private
+	 * @param $name string
+	 * @param $parent string
+	 * @return bool|null
 	 */
 	function skipTo( $name, $parent = 'page' ) {
 		if ( $this->atEnd ) {
@@ -177,7 +181,7 @@ class BaseDump {
 		}
 		$buffer = "";
 		while ( $this->reader->read() ) {
-			switch( $this->reader->nodeType ) {
+			switch ( $this->reader->nodeType ) {
 			case XMLReader::TEXT:
 //			case XMLReader::WHITESPACE:
 			case XMLReader::SIGNIFICANT_WHITESPACE:
@@ -192,6 +196,7 @@ class BaseDump {
 
 	/**
 	 * @access private
+	 * @return null
 	 */
 	function close() {
 		$this->reader->close();

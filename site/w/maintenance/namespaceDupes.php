@@ -2,8 +2,8 @@
 /**
  * Check for articles to fix after adding/deleting namespaces
  *
- * Copyright (C) 2005-2007 Brion Vibber <brion@pobox.com>
- * http://www.mediawiki.org/
+ * Copyright © 2005-2007 Brion Vibber <brion@pobox.com>
+ * https://www.mediawiki.org/
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,12 +20,25 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  * http://www.gnu.org/copyleft/gpl.html
  *
+ * @file
  * @ingroup Maintenance
  */
 
-require_once( dirname( __FILE__ ) . '/Maintenance.php' );
+require_once __DIR__ . '/Maintenance.php';
 
+/**
+ * Maintenance script that checks for articles to fix after
+ * adding/deleting namespaces.
+ *
+ * @ingroup Maintenance
+ */
 class NamespaceConflictChecker extends Maintenance {
+
+	/**
+	 * @var DatabaseBase
+	 */
+	protected $db;
+
 	public function __construct() {
 		parent::__construct();
 		$this->mDescription = "";
@@ -37,10 +50,7 @@ class NamespaceConflictChecker extends Maintenance {
 	}
 
 	public function execute() {
-		global $wgTitle;
-
 		$this->db = wfGetDB( DB_MASTER );
-		$wgTitle = Title::newFromText( 'Namespace title conflict cleanup script' );
 
 		$fix = $this->hasOption( 'fix' );
 		$suffix = $this->getOption( 'suffix', '' );
@@ -64,6 +74,8 @@ class NamespaceConflictChecker extends Maintenance {
 	 * @todo Document
 	 * @param $fix Boolean: whether or not to fix broken entries
 	 * @param $suffix String: suffix to append to renamed articles
+	 *
+	 * @return bool
 	 */
 	private function checkAll( $fix, $suffix = '' ) {
 		global $wgContLang, $wgNamespaceAliases, $wgCapitalLinks;
@@ -132,14 +144,13 @@ class NamespaceConflictChecker extends Maintenance {
 	/**
 	 * Get the interwiki list
 	 *
-	 * @todo Needs to respect interwiki cache!
 	 * @return Array
 	 */
 	private function getInterwikiList() {
-		$result = $this->db->select( 'interwiki', array( 'iw_prefix' ) );
+		$result = Interwiki::getAllPrefixes();
 		$prefixes = array();
 		foreach ( $result as $row ) {
-			$prefixes[] = $row->iw_prefix;
+			$prefixes[] = $row['iw_prefix'];
 		}
 		return $prefixes;
 	}
@@ -150,6 +161,7 @@ class NamespaceConflictChecker extends Maintenance {
 	 * @param $name String
 	 * @param $fix Boolean: whether to fix broken entries
 	 * @param $suffix String: suffix to append to renamed articles
+	 * @return bool
 	 */
 	private function checkNamespace( $ns, $name, $fix, $suffix = '' ) {
 		$conflicts = $this->getConflicts( $ns, $name );
@@ -170,7 +182,12 @@ class NamespaceConflictChecker extends Maintenance {
 	}
 
 	/**
-	 * @todo: do this for reals
+	 * @todo Do this for real
+	 * @param $key
+	 * @param $prefix
+	 * @param $fix
+	 * @param $suffix string
+	 * @return bool
 	 */
 	private function checkPrefix( $key, $prefix, $fix, $suffix = '' ) {
 		$this->output( "Checking prefix \"$prefix\" vs namespace $key\n" );
@@ -183,12 +200,14 @@ class NamespaceConflictChecker extends Maintenance {
 	 *
 	 * @param $ns Integer: namespace id (id for new namespace?)
 	 * @param $name String: prefix that is being made a namespace
+	 *
+	 * @return array
 	 */
 	private function getConflicts( $ns, $name ) {
-		$page  = 'page';
+		$page = 'page';
 		$table = $this->db->tableName( $page );
 
-		$prefix     = $this->db->strencode( $name );
+		$prefix = $this->db->strencode( $name );
 		$encNamespace = $this->db->addQuotes( $ns );
 
 		$titleSql = "TRIM(LEADING '$prefix:' FROM {$page}_title)";
@@ -217,6 +236,8 @@ class NamespaceConflictChecker extends Maintenance {
 
 	/**
 	 * Report any conflicts we find
+	 *
+	 * @return bool
 	 */
 	private function reportConflict( $row, $suffix ) {
 		$newTitle = Title::makeTitleSafe( $row->namespace, $row->title );
@@ -239,7 +260,7 @@ class NamespaceConflictChecker extends Maintenance {
 			$newTitle->getDBkey(),
 			$newTitle->getPrefixedText() ) );
 
-		$id = $newTitle->getArticleId();
+		$id = $newTitle->getArticleID();
 		if ( $id ) {
 			$this->output( "...  *** cannot resolve automatically; page exists with ID $id ***\n" );
 			return false;
@@ -254,6 +275,7 @@ class NamespaceConflictChecker extends Maintenance {
 	 * @param $row Object: row from the page table to fix
 	 * @param $resolvable Boolean
 	 * @param $suffix String: suffix to append to the fixed page
+	 * @return bool
 	 */
 	private function resolveConflict( $row, $resolvable, $suffix ) {
 		if ( !$resolvable ) {
@@ -266,7 +288,7 @@ class NamespaceConflictChecker extends Maintenance {
 					$this->output( "... !!! invalid title\n" );
 					return false;
 				}
-				$id = $title->getArticleId();
+				$id = $title->getArticleID();
 				if ( $id ) {
 					$this->output( "...  *** page exists with ID $id ***\n" );
 				} else {
@@ -285,6 +307,7 @@ class NamespaceConflictChecker extends Maintenance {
 	 * @param $row Object: row from the old broken entry
 	 * @param $table String: table to update
 	 * @param $prefix String: prefix for column name, like page or ar
+	 * @return bool
 	 */
 	private function resolveConflictOn( $row, $table, $prefix ) {
 		$this->output( "... resolving on $table... " );
@@ -292,12 +315,12 @@ class NamespaceConflictChecker extends Maintenance {
 		$this->db->update( $table,
 			array(
 				"{$prefix}_namespace" => $newTitle->getNamespace(),
-				"{$prefix}_title"     => $newTitle->getDBkey(),
+				"{$prefix}_title" => $newTitle->getDBkey(),
 			),
 			array(
 				// "{$prefix}_namespace" => 0,
-				// "{$prefix}_title"     => $row->oldtitle,
-				"{$prefix}_id"		 => $row->id,
+				// "{$prefix}_title" => $row->oldtitle,
+				"{$prefix}_id" => $row->id,
 			),
 			__METHOD__ );
 		$this->output( "ok.\n" );
@@ -306,4 +329,4 @@ class NamespaceConflictChecker extends Maintenance {
 }
 
 $maintClass = "NamespaceConflictChecker";
-require_once( RUN_MAINTENANCE_IF_MAIN );
+require_once RUN_MAINTENANCE_IF_MAIN;

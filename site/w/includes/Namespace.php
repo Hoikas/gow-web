@@ -1,6 +1,22 @@
 <?php
 /**
- * Provide things related to namespaces
+ * Provide things related to namespaces.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ * http://www.gnu.org/copyleft/gpl.html
+ *
  * @file
  */
 
@@ -14,7 +30,6 @@
  * Users and translators should not change them
  *
  */
-
 class MWNamespace {
 
 	/**
@@ -27,16 +42,17 @@ class MWNamespace {
 	/**
 	 * Throw an exception when trying to get the subject or talk page
 	 * for a given namespace where it does not make sense.
-	 * Special namespaces are defined in includes/define.php and have
+	 * Special namespaces are defined in includes/Defines.php and have
 	 * a value below 0 (ex: NS_SPECIAL = -1 , NS_MEDIA = -2)
 	 *
 	 * @param $index
 	 * @param $method
 	 *
-	 * @return true
+	 * @throws MWException
+	 * @return bool
 	 */
 	private static function isMethodValidFor( $index, $method ) {
-		if( $index < NS_MAIN ) {
+		if ( $index < NS_MAIN ) {
 			throw new MWException( "$method does not make any sense for given namespace $index" );
 		}
 		return true;
@@ -45,28 +61,47 @@ class MWNamespace {
 	/**
 	 * Can pages in the given namespace be moved?
 	 *
-	 * @param $index Int: namespace index
+	 * @param int $index namespace index
 	 * @return bool
 	 */
 	public static function isMovable( $index ) {
 		global $wgAllowImageMoving;
-		return !( $index < NS_MAIN || ($index == NS_FILE && !$wgAllowImageMoving)  || $index == NS_CATEGORY );
+
+		$result = !( $index < NS_MAIN || ( $index == NS_FILE && !$wgAllowImageMoving ) || $index == NS_CATEGORY );
+
+		/**
+		 * @since 1.20
+		 */
+		wfRunHooks( 'NamespaceIsMovable', array( $index, &$result ) );
+
+		return $result;
 	}
 
 	/**
 	 * Is the given namespace is a subject (non-talk) namespace?
 	 *
-	 * @param $index Int: namespace index
+	 * @param int $index namespace index
+	 * @return bool
+	 * @since 1.19
+	 */
+	public static function isSubject( $index ) {
+		return !self::isTalk( $index );
+	}
+
+	/**
+	 * @see self::isSubject
+	 * @deprecated Please use the more consistently named isSubject (since 1.19)
 	 * @return bool
 	 */
 	public static function isMain( $index ) {
-		return !self::isTalk( $index );
+		wfDeprecated( __METHOD__, '1.19' );
+		return self::isSubject( $index );
 	}
 
 	/**
 	 * Is the given namespace a talk namespace?
 	 *
-	 * @param $index Int: namespace index
+	 * @param int $index namespace index
 	 * @return bool
 	 */
 	public static function isTalk( $index ) {
@@ -77,7 +112,7 @@ class MWNamespace {
 	/**
 	 * Get the talk namespace index for a given namespace
 	 *
-	 * @param $index Int: namespace index
+	 * @param int $index namespace index
 	 * @return int
 	 */
 	public static function getTalk( $index ) {
@@ -91,12 +126,12 @@ class MWNamespace {
 	 * Get the subject namespace index for a given namespace
 	 * Special namespaces (NS_MEDIA, NS_SPECIAL) are always the subject.
 	 *
-	 * @param $index Int: Namespace index
+	 * @param int $index Namespace index
 	 * @return int
 	 */
 	public static function getSubject( $index ) {
 		# Handle special namespaces
-		if( $index < NS_MAIN ) {
+		if ( $index < NS_MAIN ) {
 			return $index;
 		}
 
@@ -110,15 +145,15 @@ class MWNamespace {
 	 * For talk namespaces, returns the subject (non-talk) namespace
 	 * For subject (non-talk) namespaces, returns the talk namespace
 	 *
-	 * @param $index Int: namespace index
+	 * @param int $index namespace index
 	 * @return int or null if no associated namespace could be found
 	 */
 	public static function getAssociated( $index ) {
 		self::isMethodValidFor( $index, __METHOD__ );
 
-		if( self::isMain( $index ) ) {
+		if ( self::isSubject( $index ) ) {
 			return self::getTalk( $index );
-		} elseif( self::isTalk( $index ) ) {
+		} elseif ( self::isTalk( $index ) ) {
 			return self::getSubject( $index );
 		} else {
 			return null;
@@ -129,8 +164,9 @@ class MWNamespace {
 	 * Returns whether the specified namespace exists
 	 *
 	 * @param $index
-	 * 
+	 *
 	 * @return bool
+	 * @since 1.19
 	 */
 	public static function exists( $index ) {
 		$nslist = self::getCanonicalNamespaces();
@@ -138,15 +174,50 @@ class MWNamespace {
 	}
 
 	/**
+	 * Returns whether the specified namespaces are the same namespace
+	 *
+	 * @note It's possible that in the future we may start using something
+	 * other than just namespace indexes. Under that circumstance making use
+	 * of this function rather than directly doing comparison will make
+	 * sure that code will not potentially break.
+	 *
+	 * @param int $ns1 The first namespace index
+	 * @param int $ns2 The second namespace index
+	 *
+	 * @return bool
+	 * @since 1.19
+	 */
+	public static function equals( $ns1, $ns2 ) {
+		return $ns1 == $ns2;
+	}
+
+	/**
+	 * Returns whether the specified namespaces share the same subject.
+	 * eg: NS_USER and NS_USER wil return true, as well
+	 *     NS_USER and NS_USER_TALK will return true.
+	 *
+	 * @param int $ns1 The first namespace index
+	 * @param int $ns2 The second namespace index
+	 *
+	 * @return bool
+	 * @since 1.19
+	 */
+	public static function subjectEquals( $ns1, $ns2 ) {
+		return self::getSubject( $ns1 ) == self::getSubject( $ns2 );
+	}
+
+	/**
 	 * Returns array of all defined namespaces with their canonical
 	 * (English) names.
 	 *
-	 * @return \array
+	 * @param bool $rebuild rebuild namespace list (default = false). Used for testing.
+	 *
+	 * @return array
 	 * @since 1.17
 	 */
-	public static function getCanonicalNamespaces() {
+	public static function getCanonicalNamespaces( $rebuild = false ) {
 		static $namespaces = null;
-		if ( $namespaces === null ) {
+		if ( $namespaces === null || $rebuild ) {
 			global $wgExtraNamespaces, $wgCanonicalNamespaceNames;
 			$namespaces = array( NS_MAIN => '' ) + $wgCanonicalNamespaceNames;
 			if ( is_array( $wgExtraNamespaces ) ) {
@@ -160,12 +231,12 @@ class MWNamespace {
 	/**
 	 * Returns the canonical (English) name for a given index
 	 *
-	 * @param $index Int: namespace index
+	 * @param int $index namespace index
 	 * @return string or false if no canonical definition.
 	 */
 	public static function getCanonicalName( $index ) {
 		$nslist = self::getCanonicalNamespaces();
-		if( isset( $nslist[$index] ) ) {
+		if ( isset( $nslist[$index] ) ) {
 			return $nslist[$index];
 		} else {
 			return false;
@@ -176,7 +247,7 @@ class MWNamespace {
 	 * Returns the index for a given canonical name, or NULL
 	 * The input *must* be converted to lower case first
 	 *
-	 * @param $name String: namespace name
+	 * @param string $name namespace name
 	 * @return int
 	 */
 	public static function getCanonicalIndex( $name ) {
@@ -184,7 +255,7 @@ class MWNamespace {
 		if ( $xNamespaces === false ) {
 			$xNamespaces = array();
 			foreach ( self::getCanonicalNamespaces() as $i => $text ) {
-				$xNamespaces[strtolower($text)] = $i;
+				$xNamespaces[strtolower( $text )] = $i;
 			}
 		}
 		if ( array_key_exists( $name, $xNamespaces ) ) {
@@ -216,18 +287,18 @@ class MWNamespace {
 	/**
 	 * Can this namespace ever have a talk namespace?
 	 *
-	 * @param $index Int: namespace index
+	 * @param int $index namespace index
 	 * @return bool
 	 */
-	 public static function canTalk( $index ) {
+	public static function canTalk( $index ) {
 		return $index >= NS_MAIN;
-	 }
+	}
 
 	/**
 	 * Does this namespace contain content, for the purposes of calculating
 	 * statistics, etc?
 	 *
-	 * @param $index Int: index to check
+	 * @param int $index index to check
 	 * @return bool
 	 */
 	public static function isContent( $index ) {
@@ -248,7 +319,7 @@ class MWNamespace {
 	/**
 	 * Does the namespace allow subpages?
 	 *
-	 * @param $index int Index to check
+	 * @param int $index Index to check
 	 * @return bool
 	 */
 	public static function hasSubpages( $index ) {
@@ -262,8 +333,8 @@ class MWNamespace {
 	 */
 	public static function getContentNamespaces() {
 		global $wgContentNamespaces;
-		if( !is_array( $wgContentNamespaces ) || $wgContentNamespaces === array() ) {
-			return NS_MAIN;
+		if ( !is_array( $wgContentNamespaces ) || $wgContentNamespaces === array() ) {
+			return array( NS_MAIN );
 		} elseif ( !in_array( NS_MAIN, $wgContentNamespaces ) ) {
 			// always force NS_MAIN to be part of array (to match the algorithm used by isContent)
 			return array_merge( array( NS_MAIN ), $wgContentNamespaces );
@@ -271,10 +342,37 @@ class MWNamespace {
 			return $wgContentNamespaces;
 		}
 	}
+
+	/**
+	 * List all namespace indices which are considered subject, aka not a talk
+	 * or special namespace. See also MWNamespace::isSubject
+	 *
+	 * @return array of namespace indices
+	 */
+	public static function getSubjectNamespaces() {
+		return array_filter(
+			MWNamespace::getValidNamespaces(),
+			'MWNamespace::isSubject'
+		);
+	}
+
+	/**
+	 * List all namespace indices which are considered talks, aka not a subject
+	 * or special namespace. See also MWNamespace::isTalk
+	 *
+	 * @return array of namespace indices
+	 */
+	public static function getTalkNamespaces() {
+		return array_filter(
+			MWNamespace::getValidNamespaces(),
+			'MWNamespace::isTalk'
+		);
+	}
+
 	/**
 	 * Is the namespace first-letter capitalized?
 	 *
-	 * @param $index int Index to check
+	 * @param int $index Index to check
 	 * @return bool
 	 */
 	public static function isCapitalized( $index ) {
@@ -289,9 +387,9 @@ class MWNamespace {
 		if ( in_array( $index, self::$alwaysCapitalizedNamespaces ) ) {
 			return true;
 		}
-		if ( isset( $wgCapitalLinkOverrides[ $index ] ) ) {
+		if ( isset( $wgCapitalLinkOverrides[$index] ) ) {
 			// $wgCapitalLinkOverrides is explicitly set
-			return $wgCapitalLinkOverrides[ $index ];
+			return $wgCapitalLinkOverrides[$index];
 		}
 		// Default to the global setting
 		return $wgCapitalLinks;
@@ -302,11 +400,107 @@ class MWNamespace {
 	 * genders. Not all languages make a distinction here.
 	 *
 	 * @since 1.18
-	 * @param $index int Index to check
+	 * @param int $index Index to check
 	 * @return bool
 	 */
 	public static function hasGenderDistinction( $index ) {
 		return $index == NS_USER || $index == NS_USER_TALK;
 	}
 
+	/**
+	 * It is not possible to use pages from this namespace as template?
+	 *
+	 * @since 1.20
+	 * @param int $index Index to check
+	 * @return bool
+	 */
+	public static function isNonincludable( $index ) {
+		global $wgNonincludableNamespaces;
+		return $wgNonincludableNamespaces && in_array( $index, $wgNonincludableNamespaces );
+	}
+
+	/**
+	 * Get the default content model for a namespace
+	 * This does not mean that all pages in that namespace have the model
+	 *
+	 * @since 1.21
+	 * @param int $index Index to check
+	 * @return null|string default model name for the given namespace, if set
+	 */
+	public static function getNamespaceContentModel( $index ) {
+		global $wgNamespaceContentModels;
+		return isset( $wgNamespaceContentModels[$index] )
+			? $wgNamespaceContentModels[$index]
+			: null;
+	}
+
+	/**
+	 * Determine which restriction levels it makes sense to use in a namespace,
+	 * optionally filtered by a user's rights.
+	 *
+	 * @since 1.23
+	 * @param int $index Index to check
+	 * @param User $user User to check
+	 * @return array
+	 */
+	public static function getRestrictionLevels( $index, User $user = null ) {
+		global $wgNamespaceProtection, $wgRestrictionLevels;
+
+		if ( !isset( $wgNamespaceProtection[$index] ) ) {
+			// All levels are valid if there's no namespace restriction.
+			// But still filter by user, if necessary
+			$levels = $wgRestrictionLevels;
+			if ( $user ) {
+				$levels = array_values( array_filter( $levels, function ( $level ) use ( $user ) {
+					$right = $level;
+					if ( $right == 'sysop' ) {
+						$right = 'editprotected'; // BC
+					}
+					if ( $right == 'autoconfirmed' ) {
+						$right = 'editsemiprotected'; // BC
+					}
+					return ( $right == '' || $user->isAllowed( $right ) );
+				} ) );
+			}
+			return $levels;
+		}
+
+		// First, get the list of groups that can edit this namespace.
+		$namespaceGroups = array();
+		$combine = 'array_merge';
+		foreach ( (array)$wgNamespaceProtection[$index] as $right ) {
+			if ( $right == 'sysop' ) {
+				$right = 'editprotected'; // BC
+			}
+			if ( $right == 'autoconfirmed' ) {
+				$right = 'editsemiprotected'; // BC
+			}
+			if ( $right != '' ) {
+				$namespaceGroups = call_user_func( $combine, $namespaceGroups,
+					User::getGroupsWithPermission( $right ) );
+				$combine = 'array_intersect';
+			}
+		}
+
+		// Now, keep only those restriction levels where there is at least one
+		// group that can edit the namespace but would be blocked by the
+		// restriction.
+		$usableLevels = array( '' );
+		foreach ( $wgRestrictionLevels as $level ) {
+			$right = $level;
+			if ( $right == 'sysop' ) {
+				$right = 'editprotected'; // BC
+			}
+			if ( $right == 'autoconfirmed' ) {
+				$right = 'editsemiprotected'; // BC
+			}
+			if ( $right != '' && ( !$user || $user->isAllowed( $right ) ) &&
+				array_diff( $namespaceGroups, User::getGroupsWithPermission( $right ) )
+			) {
+				$usableLevels[] = $level;
+			}
+		}
+
+		return $usableLevels;
+	}
 }

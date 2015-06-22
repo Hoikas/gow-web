@@ -1,7 +1,6 @@
 body {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
-	/*font-size: 10pt;*/
 	font-size: x-small;
 
 
@@ -59,7 +58,7 @@ body {
 	font-variant: small-caps;
 }
 
-#p-personal h5 {
+#p-personal h3 {
 	display: none;
 }
 
@@ -126,6 +125,12 @@ body {
 	background-color: #f0f0f0;
 }
 
+/* Hide, but keep accessible for screen-readers */
+#mw_portlets h2 {
+	position: absolute;
+	top: -9999px;
+}
+
 #mw_main {
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
@@ -150,6 +155,10 @@ div.mw_clear {
 textarea {
 	width: 100%;
 	padding: .1em;
+	display: block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 #searchBody {
@@ -166,11 +175,12 @@ textarea {
 	margin-top: .4em;
 }
 
-.portlet h5 {
+.portlet h3 {
 	padding: 0.1em 0 0.3em 1em;
 	margin: 0 0 0 0;
 	background-color: #dddddd;
 	font-weight: bold;
+	font-size: 0.83em;
 	border-bottom: solid 1px #3c78b5;
 	height: 1.1em;
 }
@@ -239,7 +249,7 @@ ul {
 	color: white;
 }
 
-#p-cactions h5 {
+#p-cactions h3 {
 	display: none;
 }
 
@@ -279,10 +289,6 @@ img {
 	margin: 0 0 0 0;
 }
 
-div.printfooter {
-	display: none;
-}
-
 p {
 	margin: 1em 0 1em 0;
 }
@@ -296,7 +302,7 @@ hr {
 }
 
 #contentSub {
-	color: #888;
+	color: #545454;
 	font-size: small;
 	padding-left: 2em;
 }
@@ -328,10 +334,6 @@ a.new {
 }
 a.new:visited {
 	color: #a55858;
-}
-
-span.editsection {
-	font-size: small;
 }
 
 h1, h2 {
@@ -371,9 +373,6 @@ h1, h2, h3, h4, h5, h6 {
 	border: none;
 }
 
-#preferences h2 {
-}
-
 .mainLegend {
 	display: none;
 }
@@ -405,13 +404,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-decoration: none;
 	color: white;
 }
-
-#mw-pref-clear {
-	clear: both;
-}
-
-#mw_content a.external,
-#mw_content a.external[href ^="gopher://"] {
+#mw_content a.external {
 	/* @embed */
 	background: url(external.png) center right no-repeat;
 	padding-right: 13px;
@@ -428,7 +421,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: url(mail_icon.gif) center right no-repeat;
 	padding-right: 18px;
 }
-#mw_content a.external[href ^="news://"] {
+#mw_content a.external[href ^="news:"] {
 	/* @embed */
 	background: url(news_icon.png) center right no-repeat;
 	padding-right: 18px;
@@ -455,7 +448,7 @@ h1, h2, h3, h4, h5, h6 {
 #mw_content a.external[href $=".wma"], #mw_content a.external[href $=".WMA"],
 .link-audio {
 	/* @embed */
-	background: url("audio.png") center right no-repeat;
+	background: url(audio.png) center right no-repeat;
 	padding-right: 13px;
 }
 #mw_content a.external[href $=".ogm"], #mw_content a.external[href $=".OGM"],
@@ -464,7 +457,7 @@ h1, h2, h3, h4, h5, h6 {
 #mw_content a.external[href $=".mpg"], #mw_content a.external[href $=".MPG"],
 .link-video {
 	/* @embed */
-	background: url("video.png") center right no-repeat;
+	background: url(video.png) center right no-repeat;
 	padding-right: 13px;
 }
 #mw_content a.external[href $=".pdf"], #mw_content a.external[href $=".PDF"],
@@ -472,7 +465,7 @@ h1, h2, h3, h4, h5, h6 {
 #mw_content a.external[href *=".pdf?"], #mw_content a.external[href *=".PDF?"],
 .link-document {
 	/* @embed */
-	background: url("document.png") center right no-repeat;
+	background: url(document.png) center right no-repeat;
 	padding-right: 12px;
 }
 
@@ -480,22 +473,18 @@ h1, h2, h3, h4, h5, h6 {
 /* @noflip */div.floatright, table.floatright {
 	margin: 0 0 .5em .5em;
 	border: 0;
-/*
-	border: .5em solid white;
-	border-width: .5em 0 .8em 1.4em;
-*/
 }
-div.floatright p { font-style: italic; }
+div.floatright p {
+	font-style: italic;
+}
 /* @noflip */div.floatleft, table.floatleft {
 	margin: 0 .5em .5em 0;
 	border: 0;
-/*
-	margin: .3em .5em .5em 0;
-	border: .5em solid white;
-	border-width: .5em 1.4em .8em 0;
-*/
 }
-div.floatleft p { font-style: italic; }
+div.floatleft p {
+	font-style: italic;
+}
+
 /* thumbnails */
 div.thumb {
 	margin-bottom: .5em;
@@ -523,6 +512,7 @@ div.magnify {
 	float: right;
 	border: none !important;
 	background: none !important;
+	margin-left: 3px;
 }
 div.magnify a, div.magnify img {
 	display: block;
@@ -552,6 +542,27 @@ img.thumbborder {
 	border-spacing: 0;
 	background-color: #f0f0f0;
 	border: solid 1px #bbbbbb;
+	display: -moz-inline-block;
+	display: inline-block;
+	display: table;
+
+	/* IE7 and earliers */
+	zoom: 1;
+	*display: inline;
+
+	padding: 7px;
+}
+
+/* CSS for backwards-compatibility with cached page renders and creative uses in wikitext */
+table#toc,
+table.toc {
+	border-collapse: collapse;
+}
+
+/* Remove additional paddings inside table-cells that are not present in <div>s */
+table#toc td,
+table.toc td {
+	padding: 0;
 }
 
 #toc tr, #toc td {
@@ -704,17 +715,17 @@ div.noarticletext {
 }
 
 div#searchTargetContainer {
-	left:       10px;
-	top:        10px;
-	width:      90%;
+	left: 10px;
+	top: 10px;
+	width: 90%;
 	background: white;
 }
 
 div#searchTarget {
-	padding:    3px;
-	margin:     5px;
+	padding: 3px;
+	margin: 5px;
 	background: #F0F0F0;
-	border:     solid 1px blue;
+	border: solid 1px blue;
 }
 
 div#searchTarget ul li {
@@ -729,7 +740,7 @@ div#searchTarget ul li:before {
 div#searchTargetHide {
 	float: right;
 	border: solid 1px black;
-	background: gainsboro;
+	background: #DCDCDC;
 	padding: 2px;
 }
 
@@ -754,7 +765,9 @@ table.multipageimage td {
 	text-align: center;
 }
 
-.templatesUsed { margin-top: 1.5em; }
+.templatesUsed {
+	margin-top: 1.5em;
+}
 
 .mw-summary-preview {
 	margin: 0.1em 0;
@@ -821,7 +834,7 @@ span.subpages {
 	display: block;
 }
 
-pre {
+pre, .mw-code {
 	border: solid 1px #3c78b5;
 	padding: 0.4em;
 	background-color: #f0f0f0;

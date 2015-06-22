@@ -21,7 +21,7 @@
  * @ingroup Maintenance
  */
 
-require( dirname( __FILE__ ) . '/Maintenance.php' );
+require_once __DIR__ . '/Maintenance.php';
 
 global $optionsWithArgs;
 if ( !isset( $optionsWithArgs ) ) {
@@ -37,19 +37,13 @@ class CommandLineInc extends Maintenance {
 		}
 	}
 
-	public function getDbType() {
-		global $wgUseNormalUser;
-
-		return ( isset( $wgUseNormalUser ) && $wgUseNormalUser ) ?
-			Maintenance::DB_STD : Maintenance::DB_ADMIN;
-	}
-
 	/**
 	 * No help, it would just be misleading since it misses custom options
 	 */
 	protected function maybeHelp( $force = false ) {
-		if ( !$force )
+		if ( !$force ) {
 			return;
+		}
 		parent::maybeHelp( true );
 	}
 
@@ -61,5 +55,5 @@ class CommandLineInc extends Maintenance {
 }
 
 $maintClass = 'CommandLineInc';
-require( RUN_MAINTENANCE_IF_MAIN );
+require RUN_MAINTENANCE_IF_MAIN;
 
