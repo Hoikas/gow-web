@@ -37,7 +37,7 @@ class WritersTemplate extends BaseTemplate {
 			<li><a href="//guildofwriters.org/index.php">Home</a></li>
 			<li><a href="//guildofwriters.org/wiki" title="Guild of Writers Wiki">Wiki</a></li>
 			<li><a href="//forum.guildofwriters.org" title="Discussion Forum">Forum</a></li>
-			<li><a href="/guildofwriters.org/council" title="Guild Council">Council</a></li>
+			<li><a href="//guildofwriters.org/council" title="Guild Council">Council</a></li>
 			<li><a href="//guildofwriters.org/journals/" title="Writers&#8217; Development Journals">Development Journals</a></li>
 			<li><a href="//guildofwriters.org/cwe-dev" title="CyanWorlds.com Engine Development">Engine Development</a></li>
 			<li><a href="//guildofwriters.org/gehn/">Gehn Shard</a></li>

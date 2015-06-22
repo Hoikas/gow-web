@@ -333,7 +333,7 @@ div.post p, div.post li, div.post table { line-height: 160%; }
 	list-style-type: disc;
 }
 	
-.post dd p {
+.post p {
 	margin: .5em 0 1em 0;
 }
 
@@ -383,7 +383,7 @@ div.post p, div.post li, div.post table { line-height: 160%; }
 	padding: 0;
 }
 
-.post dd {
+.post {
 	margin-bottom: 3em;
 }
 	
@@ -668,12 +668,12 @@ div#toctitle {
 }
 
 /* Headings */
-span.editsection {
+span.mw-editsection {
 	float: right;
 	font-size: 60%;
 }
 
-span.editsection a {
+span.mw-editsection a {
 	text-decoration: none;
 }
 
