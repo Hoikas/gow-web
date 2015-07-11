@@ -9,6 +9,8 @@
 if( !defined( 'MEDIAWIKI' ) )
 	die( -1 );
 
+$wgValidSkinNames["writers"] = "Writers";
+
 class SkinWriters extends SkinTemplate {
 	var $skinname = 'writers', $stylename = 'writers',
 		$template = 'WritersTemplate', $useHeadElement = true;
