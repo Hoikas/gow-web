@@ -737,6 +737,11 @@ div.portal {
 }
 
 /* Search */
+.mw-search-formheader {
+	background-color: inherit !important;
+	border: none !important;
+}
+
 div#p-search {
 	border-bottom: none;
 	float: right;
