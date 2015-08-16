@@ -53,7 +53,7 @@ if ($output == 'json') {
             kShardStatusKey         =>      $online ? kShardOnlineValue : kShardOfflineValue,
             kShardIconKey           =>      $online ? kShardIconGreen : kShardIconRed,
             kShardMessageKey        =>      $online ? kShardIsRunning : kShardIsDown,
-            kShardPlayerCountKey    =>      $online ? get_online_player_count($pq) : 0,
+            kShardPlayerCountKey    =>      $online ? count(get_online_players($pq)) : 0,
     );
     echo json_encode($array);
 } else if ($output == 'pretty' || $output == 'fancy') {
