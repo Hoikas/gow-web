@@ -602,6 +602,10 @@ div#actions a#ca-unwatch {
 	background-position: left center;
 }
 
+li.selected {
+    background-color: #171717 !important;
+}
+
 /* Categories */
 #catlinks {
 	background-color: #282828;
