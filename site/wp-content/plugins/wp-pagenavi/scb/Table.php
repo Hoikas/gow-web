@@ -1,21 +1,43 @@
 <?php
-
-// Takes care of creating, updating and deleting database tables
-
+/**
+ * Takes care of creating, updating and deleting database tables.
+ */
 class scbTable {
+
+	/**
+	 * The table name.
+	 * @var string
+	 */
 	protected $name;
+
+	/**
+	 * The table columns.
+	 * @var string
+	 */
 	protected $columns;
+
+	/**
+	 * The upgrade method.
+	 * @var string
+	 */
 	protected $upgrade_method;
 
-	function __construct( $name, $file, $columns, $upgrade_method = 'dbDelta' ) {
-		global $wpdb;
-
+	/**
+	 * Sets up table.
+	 *
+	 * @param string $name Table name.
+	 * @param string $file Reference to main plugin file.
+	 * @param string $columns The SQL columns for the CREATE TABLE statement.
+	 * @param array $upgrade_method (optional)
+	 *
+	 * @return void
+	 */
+	public function __construct( $name, $file, $columns, $upgrade_method = 'dbDelta' ) {
 		$this->name = $name;
 		$this->columns = $columns;
 		$this->upgrade_method = $upgrade_method;
 
-		$wpdb->tables[] = $name;
-		$wpdb->$name = $wpdb->prefix . $name;
+		scb_register_table( $name );
 
 		if ( $file ) {
 			scbUtil::add_activation_hook( $file, array( $this, 'install' ) );
@@ -23,37 +45,22 @@ class scbTable {
 		}
 	}
 
-	function install() {
-		global $wpdb;
-
-		$full_table_name = $wpdb->prefix . $this->name;
-
-		$charset_collate = '';
-		if ( $wpdb->has_cap( 'collation' ) ) {
-			if ( ! empty( $wpdb->charset ) )
-				$charset_collate = "DEFAULT CHARACTER SET $wpdb->charset";
-			if ( ! empty( $wpdb->collate ) )
-				$charset_collate .= " COLLATE $wpdb->collate";
-		}
-
-		if ( 'dbDelta' == $this->upgrade_method ) {
-			require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-			dbDelta( "CREATE TABLE $full_table_name ( $this->columns ) $charset_collate" );
-			return;
-		}
-
-		if ( 'delete_first' == $this->upgrade_method )
-			$wpdb->query( "DROP TABLE IF EXISTS $full_table_name;" );
-
-		$wpdb->query( "CREATE TABLE IF NOT EXISTS $full_table_name ( $this->columns ) $charset_collate;" );
+	/**
+	 * Installs table.
+	 *
+	 * @return void
+	 */
+	public function install() {
+		scb_install_table( $this->name, $this->columns, $this->upgrade_method );
 	}
 
-	function uninstall() {
-		global $wpdb;
-
-		$full_table_name = $wpdb->prefix . $this->name;
-
-		$wpdb->query( "DROP TABLE IF EXISTS $full_table_name" );
+	/**
+	 * Uninstalls table.
+	 *
+	 * @return void
+	 */
+	public function uninstall() {
+		scb_uninstall_table( $this->name );
 	}
 }
 
