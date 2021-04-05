@@ -6,6 +6,8 @@ $taglines[] = "body { background: #DCC8A3 url('/wp-content/themes/two/images/bac
 $taglines[] = "body { background: #DCC8A3 url('/wp-content/themes/two/images/backgrounds/bkgrd-body-03.jpg') no-repeat top center; }";
 $taglines[] = "body { background: #DCC8A3 url('/wp-content/themes/two/images/backgrounds/bkgrd-body-04.jpg') no-repeat top center; }";
 $taglines[] = "body { background: #DCC8A3 url('/wp-content/themes/two/images/backgrounds/bkgrd-body-05.jpg') no-repeat top center; }";
+$taglines[] = "body { background: #DCC8A3 url('/wp-content/themes/two/images/backgrounds/bkgrd-body-06.jpg') no-repeat top center; }";
+$taglines[] = "body { background: #DCC8A3 url('/wp-content/themes/two/images/backgrounds/bkgrd-body-07.jpg') no-repeat top center; }";
 
 $longname = "Keith Lord";
 $shortname = "Keith Lord";
